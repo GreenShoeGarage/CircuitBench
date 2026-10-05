@@ -1,0 +1,7 @@
+PASS uno-r3-base.stl: watertight, consistent winding, positive volume, one body
+PASS uno-r3-lid.stl: watertight, consistent winding, positive volume, one body
+PASS mkr-base.stl: watertight, consistent winding, positive volume, one body
+PASS mkr-lid.stl: watertight, consistent winding, positive volume, one body
+PASS pi40-base.stl: watertight, consistent winding, positive volume, one body
+PASS pi40-lid.stl: watertight, consistent winding, positive volume, one body
+6 independent template-enclosure STL checks passed

@@ -1,0 +1,174 @@
+{
+  "format": "circuitbench",
+  "schema": 2,
+  "version": "1.7.0",
+  "title": "Arduino Uno R3 board starter",
+  "revision": "A",
+  "board": {
+    "width": 68.58,
+    "height": 53.34,
+    "thickness": 1.6,
+    "outline": [
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 64.516,
+        "y": 0
+      },
+      {
+        "x": 66.04,
+        "y": 1.524
+      },
+      {
+        "x": 66.04,
+        "y": 12.954
+      },
+      {
+        "x": 68.58,
+        "y": 15.494
+      },
+      {
+        "x": 68.58,
+        "y": 48.26
+      },
+      {
+        "x": 66.04,
+        "y": 50.8
+      },
+      {
+        "x": 66.04,
+        "y": 53.34
+      },
+      {
+        "x": 0,
+        "y": 53.34
+      }
+    ],
+    "origin": {
+      "x": 0,
+      "y": 0
+    },
+    "template": {
+      "family": "uno-r3",
+      "revision": 1,
+      "rotation": 0,
+      "holes": true
+    }
+  },
+  "rules": {
+    "clearance": 0.25,
+    "edge": 0.5,
+    "minWidth": 0.25,
+    "annular": 0.15,
+    "mask": 0.05,
+    "drill": 0.25,
+    "maskWeb": 0.1,
+    "courtyard": 0.25,
+    "silk": 0.15,
+    "silkLine": 0.15
+  },
+  "components": [],
+  "tracks": [],
+  "vias": [],
+  "nets": [
+    "GND",
+    "+5V"
+  ],
+  "assumptions": "Uno R3 reference, USB at the left in the unrotated front view. Check your actual Uno or clone before fabrication; this outline does not establish compatibility with Uno R4, Uno Q or Mega. Add and verify your mating connectors before routing.",
+  "evidence": "Nominal mechanical template from COPPERBENCH v1.7.1, retrieved 2026-10-05. Physical fit not tested. https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf https://raw.githubusercontent.com/KiCad/kicad-footprints/master/Module.pretty/Arduino_UNO_R3.kicad_mod",
+  "baseline": null,
+  "sheets": [
+    {
+      "id": "main",
+      "name": "Main circuit",
+      "parent": null
+    }
+  ],
+  "wires": [],
+  "junctions": [],
+  "labels": [],
+  "ports": [],
+  "holes": [
+    {
+      "id": "idmrxyedap9o",
+      "x": 15.24,
+      "y": 2.54,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "uno-r3",
+        "revision": 1,
+        "index": 0,
+        "x": 15.24,
+        "y": 2.54,
+        "drill": 3.2
+      }
+    },
+    {
+      "id": "id5bt8bffpuh",
+      "x": 13.97,
+      "y": 50.8,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "uno-r3",
+        "revision": 1,
+        "index": 1,
+        "x": 13.97,
+        "y": 50.8,
+        "drill": 3.2
+      }
+    },
+    {
+      "id": "idvsohah4abh",
+      "x": 66.04,
+      "y": 17.78,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "uno-r3",
+        "revision": 1,
+        "index": 2,
+        "x": 66.04,
+        "y": 17.78,
+        "drill": 3.2
+      }
+    },
+    {
+      "id": "id76ii9oau6c",
+      "x": 66.04,
+      "y": 45.72,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "uno-r3",
+        "revision": 1,
+        "index": 3,
+        "x": 66.04,
+        "y": 45.72,
+        "drill": 3.2
+      }
+    }
+  ],
+  "cutouts": [],
+  "silk": [],
+  "zones": [],
+  "library": {
+    "symbols": [],
+    "footprints": [],
+    "devices": [],
+    "blocks": []
+  },
+  "netClasses": [],
+  "importNotes": []
+}

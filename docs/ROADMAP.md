@@ -1,6 +1,6 @@
 # CIRCUITBENCH development roadmap
 
-Status: v1.6.0 software release, 2026-10-05.
+Status: v1.7.0 software release, 2026-10-05.
 
 | Batch | Delivered | Verification |
 | --- | --- | --- |
@@ -86,3 +86,10 @@ The original v1.3 scope ended at the lift-off lid. The following batches extend 
 3. Consider an opposite-edge hinge latch/pin lock, broader closure/shell combinations, concave outline following and richer curves after those hardware trials.
 
 These are future work, with no committed dates. The v1.6 release does not claim printed strength, fatigue, sealing, thermal performance, electrical certification or industrial CAD equivalence.
+
+## v1.7 — delivered
+
+- COPPERBENCH board-shape presets: Uno R3, MKR 28-pin, Raspberry Pi 40-pin HAT-layout.
+- Offline preview, quarter-turn rotation and optional real mounting holes; available in Easy and Advanced modes.
+- Undoable application preserves the electrical design and user-edited mechanical features. Presets remain editable.
+- JSON/autosave, Gerber/NPTH drill, KiCad and enclosure integration verified; no physical fit claim.

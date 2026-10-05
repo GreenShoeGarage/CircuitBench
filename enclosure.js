@@ -1,6 +1,6 @@
 /* CIRCUITBENCH board-derived enclosure model. GPL-3.0-only. */
 (function(root){'use strict';
-const C=typeof module!=='undefined'?require('./board-editing'):root.CB,priorValidate=C.validate;
+const C=typeof module!=='undefined'?require('./board-templates'):root.CB,priorValidate=C.validate;
 const round=C.round,clone=C.clone;
 const isMountingPart=c=>/mounting.?hole/i.test([c.kind,c.deviceName,c.footprintName,c.value].join(' '));
 function candidates(p){let holes=C.holes(p).filter(h=>!h.plated).map(h=>({...h,name:h.component?(p.components.find(c=>c.id===h.component)?.ref||'Footprint')+' hole':'Board hole'}));

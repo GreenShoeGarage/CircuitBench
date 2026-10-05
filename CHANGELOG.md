@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.7.0 — 2026-10-05
+
+- Added Arduino Uno R3 (68.58 × 53.34 mm), Arduino MKR 28-pin (61.5 × 25 mm) and Raspberry Pi 40-pin HAT-layout (65 × 56 mm) board shapes from COPPERBENCH v1.7.1.
+- Added Board templates to the PCB toolbar and Board size dialog, with preview, 0/90/180/270° rotation, optional mounting holes and source dimensions.
+- Apply is one reversible edit. Parts, routing, artwork, thickness and manual/edited holes retain their physical placement. Reapplying avoids duplicate holes and retains same-family support anchors.
+- Template geometry persists in project JSON/autosave and flows into fabrication files, KiCad and enclosure generation.
+- Added three blank example boards, source/license documentation and 17 verification groups covering geometry, manufacturing, solids and browser workflows.
+
+
 
 ## 1.6.0 · 2026-10-05
 

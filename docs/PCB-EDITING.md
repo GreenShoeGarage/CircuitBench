@@ -1,6 +1,6 @@
 # PCB viewing, artwork and board shape
 
-The PCB layout toolbar has five direct controls: **Flip to back**, **Text**, **Image**, **Edit outline** and **Board size**. They work in Easy mode and offline.
+The PCB layout toolbar has six direct controls: **Flip to back**, **Text**, **Image**, **Edit outline**, **Board size** and **Board templates**. They work in Easy mode and offline.
 
 ## View both sides
 
@@ -53,3 +53,7 @@ Cutouts and holes retain their positions. To edit internal cutouts, holes or slo
 Components, tracks, vias, holes, cutouts, silkscreen and source zone boundaries keep their physical sizes and positions. Copper fills recalculate against the new board. Objects left outside the boundary are retained so you can move them, and Review reports their conflicts. Undo restores the previous boundary and thickness.
 
 The project inspector's width/height fields also support custom outlines. Exported Edge.Cuts and 3D use the same saved geometry.
+
+## Start from a standard board shape
+
+Use **Board templates**, also available from **Board size**, to choose Arduino Uno R3, Arduino MKR 28-pin or Raspberry Pi 40-pin HAT-layout geometry. Preview the outline and mounting holes, choose a clockwise rotation and apply. See [Board templates](BOARD-TEMPLATES.md) for exact dimensions and source notes.

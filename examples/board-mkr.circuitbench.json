@@ -1,0 +1,410 @@
+{
+  "format": "circuitbench",
+  "schema": 2,
+  "version": "1.7.0",
+  "title": "Arduino MKR 28-pin board starter",
+  "revision": "A",
+  "board": {
+    "width": 61.5,
+    "height": 25,
+    "thickness": 1.6,
+    "outline": [
+      {
+        "x": 59.5,
+        "y": 0
+      },
+      {
+        "x": 59.696,
+        "y": 0.0096
+      },
+      {
+        "x": 59.8902,
+        "y": 0.0384
+      },
+      {
+        "x": 60.0806,
+        "y": 0.0861
+      },
+      {
+        "x": 60.2654,
+        "y": 0.1522
+      },
+      {
+        "x": 60.4428,
+        "y": 0.2362
+      },
+      {
+        "x": 60.6111,
+        "y": 0.3371
+      },
+      {
+        "x": 60.7688,
+        "y": 0.454
+      },
+      {
+        "x": 60.9142,
+        "y": 0.5858
+      },
+      {
+        "x": 61.046,
+        "y": 0.7312
+      },
+      {
+        "x": 61.1629,
+        "y": 0.8889
+      },
+      {
+        "x": 61.2638,
+        "y": 1.0572
+      },
+      {
+        "x": 61.3478,
+        "y": 1.2346
+      },
+      {
+        "x": 61.4139,
+        "y": 1.4194
+      },
+      {
+        "x": 61.4616,
+        "y": 1.6098
+      },
+      {
+        "x": 61.4904,
+        "y": 1.804
+      },
+      {
+        "x": 61.5,
+        "y": 2
+      },
+      {
+        "x": 61.5,
+        "y": 23
+      },
+      {
+        "x": 61.4904,
+        "y": 23.196
+      },
+      {
+        "x": 61.4616,
+        "y": 23.3902
+      },
+      {
+        "x": 61.4139,
+        "y": 23.5806
+      },
+      {
+        "x": 61.3478,
+        "y": 23.7654
+      },
+      {
+        "x": 61.2638,
+        "y": 23.9428
+      },
+      {
+        "x": 61.1629,
+        "y": 24.1111
+      },
+      {
+        "x": 61.046,
+        "y": 24.2688
+      },
+      {
+        "x": 60.9142,
+        "y": 24.4142
+      },
+      {
+        "x": 60.7688,
+        "y": 24.546
+      },
+      {
+        "x": 60.6111,
+        "y": 24.6629
+      },
+      {
+        "x": 60.4428,
+        "y": 24.7638
+      },
+      {
+        "x": 60.2654,
+        "y": 24.8478
+      },
+      {
+        "x": 60.0806,
+        "y": 24.9139
+      },
+      {
+        "x": 59.8902,
+        "y": 24.9616
+      },
+      {
+        "x": 59.696,
+        "y": 24.9904
+      },
+      {
+        "x": 59.5,
+        "y": 25
+      },
+      {
+        "x": 2,
+        "y": 25
+      },
+      {
+        "x": 1.804,
+        "y": 24.9904
+      },
+      {
+        "x": 1.6098,
+        "y": 24.9616
+      },
+      {
+        "x": 1.4194,
+        "y": 24.9139
+      },
+      {
+        "x": 1.2346,
+        "y": 24.8478
+      },
+      {
+        "x": 1.0572,
+        "y": 24.7638
+      },
+      {
+        "x": 0.8889,
+        "y": 24.6629
+      },
+      {
+        "x": 0.7312,
+        "y": 24.546
+      },
+      {
+        "x": 0.5858,
+        "y": 24.4142
+      },
+      {
+        "x": 0.454,
+        "y": 24.2688
+      },
+      {
+        "x": 0.3371,
+        "y": 24.1111
+      },
+      {
+        "x": 0.2362,
+        "y": 23.9428
+      },
+      {
+        "x": 0.1522,
+        "y": 23.7654
+      },
+      {
+        "x": 0.0861,
+        "y": 23.5806
+      },
+      {
+        "x": 0.0384,
+        "y": 23.3902
+      },
+      {
+        "x": 0.0096,
+        "y": 23.196
+      },
+      {
+        "x": 0,
+        "y": 23
+      },
+      {
+        "x": 0,
+        "y": 2
+      },
+      {
+        "x": 0.0096,
+        "y": 1.804
+      },
+      {
+        "x": 0.0384,
+        "y": 1.6098
+      },
+      {
+        "x": 0.0861,
+        "y": 1.4194
+      },
+      {
+        "x": 0.1522,
+        "y": 1.2346
+      },
+      {
+        "x": 0.2362,
+        "y": 1.0572
+      },
+      {
+        "x": 0.3371,
+        "y": 0.8889
+      },
+      {
+        "x": 0.454,
+        "y": 0.7312
+      },
+      {
+        "x": 0.5858,
+        "y": 0.5858
+      },
+      {
+        "x": 0.7312,
+        "y": 0.454
+      },
+      {
+        "x": 0.8889,
+        "y": 0.3371
+      },
+      {
+        "x": 1.0572,
+        "y": 0.2362
+      },
+      {
+        "x": 1.2346,
+        "y": 0.1522
+      },
+      {
+        "x": 1.4194,
+        "y": 0.0861
+      },
+      {
+        "x": 1.6098,
+        "y": 0.0384
+      },
+      {
+        "x": 1.804,
+        "y": 0.0096
+      },
+      {
+        "x": 2,
+        "y": 0
+      }
+    ],
+    "origin": {
+      "x": 0,
+      "y": 0
+    },
+    "template": {
+      "family": "mkr",
+      "revision": 1,
+      "rotation": 0,
+      "holes": true
+    }
+  },
+  "rules": {
+    "clearance": 0.25,
+    "edge": 0.5,
+    "minWidth": 0.25,
+    "annular": 0.15,
+    "mask": 0.05,
+    "drill": 0.25,
+    "maskWeb": 0.1,
+    "courtyard": 0.25,
+    "silk": 0.15,
+    "silkLine": 0.15
+  },
+  "components": [],
+  "tracks": [],
+  "vias": [],
+  "nets": [
+    "GND",
+    "+5V"
+  ],
+  "assumptions": "Nominal WiFi 1010 envelope, USB at the left in the unrotated front view. Body size and these optional mounting-hole offsets need review against your exact MKR variant. Add and verify your mating connectors before routing.",
+  "evidence": "Nominal mechanical template from COPPERBENCH v1.7.1, retrieved 2026-10-05. Physical fit not tested. https://docs.arduino.cc/resources/pinouts/ABX00012-full-pinout.pdf https://docs.arduino.cc/resources/datasheets/ABX00023-datasheet.pdf",
+  "baseline": null,
+  "sheets": [
+    {
+      "id": "main",
+      "name": "Main circuit",
+      "parent": null
+    }
+  ],
+  "wires": [],
+  "junctions": [],
+  "labels": [],
+  "ports": [],
+  "holes": [
+    {
+      "id": "idkp0rvcinh3",
+      "x": 2.31,
+      "y": 2.31,
+      "drill": 2.25,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "mkr",
+        "revision": 1,
+        "index": 0,
+        "x": 2.31,
+        "y": 2.31,
+        "drill": 2.25
+      }
+    },
+    {
+      "id": "id2hh9xmi6nu",
+      "x": 59.19,
+      "y": 2.31,
+      "drill": 2.25,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "mkr",
+        "revision": 1,
+        "index": 1,
+        "x": 59.19,
+        "y": 2.31,
+        "drill": 2.25
+      }
+    },
+    {
+      "id": "idmrwzq0tnqz",
+      "x": 2.31,
+      "y": 22.69,
+      "drill": 2.25,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "mkr",
+        "revision": 1,
+        "index": 2,
+        "x": 2.31,
+        "y": 22.69,
+        "drill": 2.25
+      }
+    },
+    {
+      "id": "id55pokub4qh",
+      "x": 59.19,
+      "y": 22.69,
+      "drill": 2.25,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "mkr",
+        "revision": 1,
+        "index": 3,
+        "x": 59.19,
+        "y": 22.69,
+        "drill": 2.25
+      }
+    }
+  ],
+  "cutouts": [],
+  "silk": [],
+  "zones": [],
+  "library": {
+    "symbols": [],
+    "footprints": [],
+    "devices": [],
+    "blocks": []
+  },
+  "netClasses": [],
+  "importNotes": []
+}

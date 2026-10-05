@@ -17,6 +17,6 @@ const recipe=old.toRecipe,apply=old.applyRecipe;M.toRecipe=(p,...args)=>({...rec
 M.correction=function(p,v){let manual=p.integration?.manualSupports.find(m=>m.id===v.targetId);let q;if(v.kind==='bore'&&manual){if(!Number.isFinite(v.delta)||!v.delta||Math.abs(v.delta)>20)throw Error('Enter a correction between -20 and 20 mm.');q=validate(p);q.integration.manualSupports.find(m=>m.id===manual.id).bore+=v.delta;q.workflow.adjustments.push({id:M.uid('fit-adjustment'),targetId:manual.id,kind:v.kind,delta:v.delta,date:new Date().toISOString(),note:v.note||'',before:'',after:''});}else q=old.correction(p,v);if(!manual||v.kind!=='bore')q.integration=extension(p.integration);const record=q.workflow.adjustments.at(-1);record.before=M.geometryFingerprint(p);record.after=M.geometryFingerprint(q);return validate(q);};
 M.addEvidence=function(p,kind,v){let q=old.addEvidence(p,kind,v);q.integration=extension(p.integration);q.system.evidence.at(-1).fingerprint=M.geometryFingerprint(p);return validate(q);};
 M.proofStatus=function(p){let stamp=M.geometryFingerprint(p),find=kind=>{let rows=p.system.evidence.filter(e=>e.kind===kind),r=rows.filter(e=>e.fingerprint===stamp).at(-1);return r?{status:r.result==='pass'?'recorded-pass':r.result==='fail'?'recorded-fail':'observed',record:r}:rows.length?{status:'stale'}:{status:'untested'};};return {geometryFingerprint:stamp,slicer:find('slicer'),fit:find('fit')};};
-M.VERSION='1.6.0';M.provenance='Adapted from CASEBENCH 2.3.1';
+M.VERSION='1.7.0';M.provenance='Adapted from CASEBENCH 2.3.1';
 return M;
 });

@@ -1,4 +1,4 @@
-# CIRCUITBENCH 1.6.0
+# CIRCUITBENCH 1.7.0
 
 **A self-hosted schematic and two-layer PCB workbench.**  
 Green Shoe Garage · Field Instrument · GNU GPL v3 only
@@ -7,7 +7,7 @@ Place → connect → lay out → route → inspect → export.
 
 CIRCUITBENCH combines an approachable component workflow with linked schematic and board editing in a local-first browser application. It is an original implementation inspired by LibrePCB and KiCad, not a browser port, fork, endorsed product or feature-equivalent replacement for either desktop suite.
 
-**This v1.6 software release completes the v1.4–v1.6 enclosure batches: secure fastening, markings/vents, fit tools, functional interfaces, assemblies, recipes, and sliding, snap-fit and pin-hinge cases.** A fully routed reference design and software verification are included. No board has been physically fabricated, assembled or electrically tested for this release. That original roadmap hardware gate remains open.
+**v1.7 adds board-shape presets for Arduino Uno R3, Arduino MKR and Raspberry Pi 40-pin HAT-layout boards, matching COPPERBENCH.** In PCB layout, choose **Board templates**, preview the shape, rotate it and include mounting holes as needed. The v1.4–v1.6 enclosure tools remain included. No board or enclosure has been physically fabricated or fit-tested for this release.
 
 ## Run and self-host
 
@@ -27,7 +27,7 @@ To upgrade: export JSON, replace both runtime files together, then reload online
 4. **Advanced mode** exposes footprint geometry, pin types, custom symbol positions, body heights and courtyards. **Libraries** saves symbols, footprints and devices. Symbols can have multiple units, and multiple physical pads can map to one logical pin. Create mapped device provides explicit pin-to-pad assignment. Verify actual parts against their datasheets.
 5. **Sheets** creates a parent/child sheet tree sharing one PCB. Labels are global; prefix local nets with their sheet name. Child ports explicitly bind an existing local net to a parent/global net. This is a flattened graph with sheet bindings, not native hierarchical schematic interchange.
 6. Shift-click parts, or use **Select for block**, then **Blocks** to save a circuit. With no group selected, capture the current sheet. Instances receive unique references and prefixed nets. Explicitly list shared nets. Blocks contain components and internal schematic wires; PCB copper is rerouted after placement.
-7. Place footprints in **PCB layout** using drag, arrows or numeric properties. Back-side placement mirrors local X coordinates; board-editor rotation is clockwise. Lock settled placements.
+7. Choose **PCB layout → Board templates** for an Uno R3, MKR or Raspberry Pi HAT-layout outline and optional mounting holes, or keep a custom board. Then place footprints in **PCB layout** using drag, arrows or numeric properties. Back-side placement mirrors local X coordinates; board-editor rotation is clockwise. Lock settled placements.
 8. **Route** begins on an assigned pad/via. Add manual corners and finish on the same net. With assistance enabled, the last segment avoids foreign copper, cutouts and mechanical holes. **Route to pin** searches a whole path. It does not push existing copper. Failure calls for repositioning, another layer or manual routing.
 9. To change layers, start a route and click a corner at the intended via. **Via transition** commits that segment, adds a through via and continues on the other layer. **Clean tracks** removes redundant vertices and identical duplicate tracks. Review the result.
 10. The PCB toolbar offers **Flip to back** (shortcut **B**), **Text**, **Image**, **Edit outline** and **Board size**. Drag outline corners or enter exact coordinates. Set width, height and thickness; custom outlines scale while components and routing retain their size and position. See `docs/PCB-EDITING.md`. **Board tools** adds cutouts, holes/slots, zones and additional manufacturing silk. **3D assembly** shows board thickness, holes, copper and dimensioned generic bodies, with orbit, top/bottom views, explode and PNG export.
@@ -144,3 +144,9 @@ npm run build
 Set `CHROMIUM_EXECUTABLE` to use an installed browser. `npm run test:enclosure` retains the v1.3 regression suite. `npm run test:workshop` tests the v1.6 feature model, exports and offline browser workflow; `npm run test:workshop-mesh` adds independent STL/3MF inspection. Independent STL checks use `trimesh==4.9.0`, `numpy` and `rtree`: run `npm run test:enclosure-mesh`. The checked-in Manifold JS/WASM require no install at runtime; `npm run build:manifold` refreshes both from the pinned npm dependency. Re-run `npm run build` after rebuilding either vendor bundle. Independent manufacturing tests additionally use `gerbonara==1.6.3` and `shapely`; native tests use KiCad's `pcbnew`. See `docs/TEST-REPORT.md` for release evidence and `docs/ROADMAP.md` for completed batches and outstanding hardware work. No remote Git repository was created.
 
 Copyright © 2026 Michael Parks / Green Shoe Garage. Application: **GPL-3.0-only**, full text in `LICENSE`. Clipper 6.4.2 is Boost-licensed; Three.js is MIT-licensed; Manifold 3.5.4 is Apache-2.0-licensed; notices are in `vendor/`. KiCad 9.0.0 library data is bundled under CC-BY-SA 4.0 with the KiCad exception; see `libraries/LICENSE.txt`. JSZip is MIT-licensed. The integrated enclosure editor is adapted from Green Shoe Garage CASEBENCH 2.3.1 (MIT); its license and upstream BSP notices are retained in `enclosure-workshop/`. Active solid operations use Manifold; the retained primitive/export utilities include adapted CASEBENCH code. No KiCad/LibrePCB application code or logos are bundled.
+
+## Board templates · v1.7
+
+See [Board templates](docs/BOARD-TEMPLATES.md) for source dimensions, hole coordinates, rotation, preservation/Undo behavior and variant limitations. Three empty starters are included as `examples/board-uno-r3.circuitbench.json`, `examples/board-mkr.circuitbench.json` and `examples/board-pi40.circuitbench.json`. These contain mechanical board geometry; add mating connectors from the component library.
+
+Run `npm run test:templates` for the board-preset model, manufacturing, enclosure-solid and offline browser checks.

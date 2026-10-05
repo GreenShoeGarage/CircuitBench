@@ -1,0 +1,410 @@
+{
+  "format": "circuitbench",
+  "schema": 2,
+  "version": "1.7.0",
+  "title": "Raspberry Pi 40-pin board starter",
+  "revision": "A",
+  "board": {
+    "width": 65,
+    "height": 56,
+    "thickness": 1.6,
+    "outline": [
+      {
+        "x": 62,
+        "y": 0
+      },
+      {
+        "x": 62.2941,
+        "y": 0.0144
+      },
+      {
+        "x": 62.5853,
+        "y": 0.0576
+      },
+      {
+        "x": 62.8709,
+        "y": 0.1292
+      },
+      {
+        "x": 63.1481,
+        "y": 0.2284
+      },
+      {
+        "x": 63.4142,
+        "y": 0.3542
+      },
+      {
+        "x": 63.6667,
+        "y": 0.5056
+      },
+      {
+        "x": 63.9032,
+        "y": 0.681
+      },
+      {
+        "x": 64.1213,
+        "y": 0.8787
+      },
+      {
+        "x": 64.319,
+        "y": 1.0968
+      },
+      {
+        "x": 64.4944,
+        "y": 1.3333
+      },
+      {
+        "x": 64.6458,
+        "y": 1.5858
+      },
+      {
+        "x": 64.7716,
+        "y": 1.8519
+      },
+      {
+        "x": 64.8708,
+        "y": 2.1291
+      },
+      {
+        "x": 64.9424,
+        "y": 2.4147
+      },
+      {
+        "x": 64.9856,
+        "y": 2.7059
+      },
+      {
+        "x": 65,
+        "y": 3
+      },
+      {
+        "x": 65,
+        "y": 53
+      },
+      {
+        "x": 64.9856,
+        "y": 53.2941
+      },
+      {
+        "x": 64.9424,
+        "y": 53.5853
+      },
+      {
+        "x": 64.8708,
+        "y": 53.8709
+      },
+      {
+        "x": 64.7716,
+        "y": 54.1481
+      },
+      {
+        "x": 64.6458,
+        "y": 54.4142
+      },
+      {
+        "x": 64.4944,
+        "y": 54.6667
+      },
+      {
+        "x": 64.319,
+        "y": 54.9032
+      },
+      {
+        "x": 64.1213,
+        "y": 55.1213
+      },
+      {
+        "x": 63.9032,
+        "y": 55.319
+      },
+      {
+        "x": 63.6667,
+        "y": 55.4944
+      },
+      {
+        "x": 63.4142,
+        "y": 55.6458
+      },
+      {
+        "x": 63.1481,
+        "y": 55.7716
+      },
+      {
+        "x": 62.8709,
+        "y": 55.8708
+      },
+      {
+        "x": 62.5853,
+        "y": 55.9424
+      },
+      {
+        "x": 62.2941,
+        "y": 55.9856
+      },
+      {
+        "x": 62,
+        "y": 56
+      },
+      {
+        "x": 3,
+        "y": 56
+      },
+      {
+        "x": 2.7059,
+        "y": 55.9856
+      },
+      {
+        "x": 2.4147,
+        "y": 55.9424
+      },
+      {
+        "x": 2.1291,
+        "y": 55.8708
+      },
+      {
+        "x": 1.8519,
+        "y": 55.7716
+      },
+      {
+        "x": 1.5858,
+        "y": 55.6458
+      },
+      {
+        "x": 1.3333,
+        "y": 55.4944
+      },
+      {
+        "x": 1.0968,
+        "y": 55.319
+      },
+      {
+        "x": 0.8787,
+        "y": 55.1213
+      },
+      {
+        "x": 0.681,
+        "y": 54.9032
+      },
+      {
+        "x": 0.5056,
+        "y": 54.6667
+      },
+      {
+        "x": 0.3542,
+        "y": 54.4142
+      },
+      {
+        "x": 0.2284,
+        "y": 54.1481
+      },
+      {
+        "x": 0.1292,
+        "y": 53.8709
+      },
+      {
+        "x": 0.0576,
+        "y": 53.5853
+      },
+      {
+        "x": 0.0144,
+        "y": 53.2941
+      },
+      {
+        "x": 0,
+        "y": 53
+      },
+      {
+        "x": 0,
+        "y": 3
+      },
+      {
+        "x": 0.0144,
+        "y": 2.7059
+      },
+      {
+        "x": 0.0576,
+        "y": 2.4147
+      },
+      {
+        "x": 0.1292,
+        "y": 2.1291
+      },
+      {
+        "x": 0.2284,
+        "y": 1.8519
+      },
+      {
+        "x": 0.3542,
+        "y": 1.5858
+      },
+      {
+        "x": 0.5056,
+        "y": 1.3333
+      },
+      {
+        "x": 0.681,
+        "y": 1.0968
+      },
+      {
+        "x": 0.8787,
+        "y": 0.8787
+      },
+      {
+        "x": 1.0968,
+        "y": 0.681
+      },
+      {
+        "x": 1.3333,
+        "y": 0.5056
+      },
+      {
+        "x": 1.5858,
+        "y": 0.3542
+      },
+      {
+        "x": 1.8519,
+        "y": 0.2284
+      },
+      {
+        "x": 2.1291,
+        "y": 0.1292
+      },
+      {
+        "x": 2.4147,
+        "y": 0.0576
+      },
+      {
+        "x": 2.7059,
+        "y": 0.0144
+      },
+      {
+        "x": 3,
+        "y": 0
+      }
+    ],
+    "origin": {
+      "x": 0,
+      "y": 0
+    },
+    "template": {
+      "family": "pi40",
+      "revision": 1,
+      "rotation": 0,
+      "holes": true
+    }
+  },
+  "rules": {
+    "clearance": 0.25,
+    "edge": 0.5,
+    "minWidth": 0.25,
+    "annular": 0.15,
+    "mask": 0.05,
+    "drill": 0.25,
+    "maskWeb": 0.1,
+    "courtyard": 0.25,
+    "silk": 0.15,
+    "silkLine": 0.15
+  },
+  "components": [],
+  "tracks": [],
+  "vias": [],
+  "nets": [
+    "GND",
+    "+5V"
+  ],
+  "assumptions": "65 × 56 mm legacy-style HAT outline, with GPIO along the top in the unrotated front view. This is an add-on board shape, not the 85 mm Pi host PCB, Pico, Compute Module or HAT/HAT+ certification. Add and verify your mating connectors before routing.",
+  "evidence": "Nominal mechanical template from COPPERBENCH v1.7.1, retrieved 2026-10-05. Physical fit not tested. https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-mechanical-drawing.pdf https://datasheets.raspberrypi.com/hat/hat-plus-specification.pdf",
+  "baseline": null,
+  "sheets": [
+    {
+      "id": "main",
+      "name": "Main circuit",
+      "parent": null
+    }
+  ],
+  "wires": [],
+  "junctions": [],
+  "labels": [],
+  "ports": [],
+  "holes": [
+    {
+      "id": "id915cmsmb03",
+      "x": 3.5,
+      "y": 3.5,
+      "drill": 2.7,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "pi40",
+        "revision": 1,
+        "index": 0,
+        "x": 3.5,
+        "y": 3.5,
+        "drill": 2.7
+      }
+    },
+    {
+      "id": "idbb0y7blxdt",
+      "x": 61.5,
+      "y": 3.5,
+      "drill": 2.7,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "pi40",
+        "revision": 1,
+        "index": 1,
+        "x": 61.5,
+        "y": 3.5,
+        "drill": 2.7
+      }
+    },
+    {
+      "id": "id76wagqcl4c",
+      "x": 3.5,
+      "y": 52.5,
+      "drill": 2.7,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "pi40",
+        "revision": 1,
+        "index": 2,
+        "x": 3.5,
+        "y": 52.5,
+        "drill": 2.7
+      }
+    },
+    {
+      "id": "id040qcrbq26",
+      "x": 61.5,
+      "y": 52.5,
+      "drill": 2.7,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "pi40",
+        "revision": 1,
+        "index": 3,
+        "x": 61.5,
+        "y": 52.5,
+        "drill": 2.7
+      }
+    }
+  ],
+  "cutouts": [],
+  "silk": [],
+  "zones": [],
+  "library": {
+    "symbols": [],
+    "footprints": [],
+    "devices": [],
+    "blocks": []
+  },
+  "netClasses": [],
+  "importNotes": []
+}
