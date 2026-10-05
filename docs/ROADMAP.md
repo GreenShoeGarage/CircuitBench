@@ -1,6 +1,6 @@
 # CIRCUITBENCH development roadmap
 
-Status: v1.7.0 software release, 2026-10-05.
+Status: v1.8.1 software release, 2026-10-05. Board color selection and project persistence are delivered.
 
 | Batch | Delivered | Verification |
 | --- | --- | --- |
@@ -93,3 +93,10 @@ These are future work, with no committed dates. The v1.6 release does not claim 
 - Offline preview, quarter-turn rotation and optional real mounting holes; available in Easy and Advanced modes.
 - Undoable application preserves the electrical design and user-edited mechanical features. Presets remain editable.
 - JSON/autosave, Gerber/NPTH drill, KiCad and enclosure integration verified; no physical fit claim.
+
+## v1.8 — delivered
+
+- Net and plane controls share one compact tool: whole-board plane per face, GND presets and custom supply/signal nets.
+- Searchable and canvas lead picking, explicit net assignment, whole-net routing and checked wire/plane previews.
+- Direct contact, nearby attached-via reuse and short trace/via connections; physical main-region/split-plane status.
+- Cancellable local workers, stale-result rejection, atomic Keep/Undo, JSON/autosave and manufacturing export coverage.

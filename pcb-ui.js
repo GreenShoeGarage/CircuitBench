@@ -17,7 +17,7 @@ function flipBoard(){
  say(pcbBackView()?'Viewing the back of the board. Back copper is active; coordinates remain board coordinates.':'Viewing the front of the board. Front copper is active.');
 }
 const oldRender=render,oldCanvas=renderCanvas,oldInspector=renderInspector;
-render=function(){oldRender();if(!$('#pcbDesignTools'))$('#extendedTools').insertAdjacentHTML('beforebegin',`<div id="pcbDesignTools" class="pcbDesignTools" aria-label="Board design tools">${button('↔ Flip to back','flip')}${button('Text','text')}${button('Image','image')}${button('Edit outline','outline')}${button('Board size','size')}${button('Board templates','templates')}<span id="boardSizeReadout"></span></div>`);$('#pcbDesignTools').hidden=view!=='pcb';$('#boardSizeReadout').textContent=p.board.width+' × '+p.board.height+' mm';viewLabel();};
+render=function(){oldRender();if(!$('#pcbDesignTools'))$('#extendedTools').insertAdjacentHTML('beforebegin',`<div id="pcbDesignTools" class="pcbDesignTools" aria-label="Board design tools">${button('↔ Flip to back','flip')}${button('Text','text')}${button('Image','image')}${button('Edit outline','outline')}${button('Board size','size')}${button('Board color','color')}${button('Board templates','templates')}<span id="boardSizeReadout"></span></div>`);$('#pcbDesignTools').hidden=view!=='pcb';$('#boardSizeReadout').textContent=p.board.width+' × '+p.board.height+' mm';viewLabel();};
 renderCanvas=function(){oldCanvas();if(pcbBackView()){
  // Keep assembly annotations readable. Fabricated text remains real geometry.
  for(let t of $$('#boardScene text')){let x=Number(t.getAttribute('x')||0);t.setAttribute('transform',`translate(${2*x} 0) scale(-1 1)`);}
@@ -31,8 +31,37 @@ boardDialog=function(kind){if(kind==='image'||(!kind&&selectedObject()?.kind==='
 const oldRotate=rotateSelected;
 rotateSelected=function(){let a=selectedObject();if(view==='pcb'&&a&&p.silk.includes(a)&&['text','image'].includes(a.kind))return W.safeEdit(()=>a.rotation=(a.rotation+90)%360,'Silkscreen rotated.');oldRotate();};
 
+
+const boardColors=[['Green','#153e35'],['Blue','#173d91'],['Red','#922d35'],['Black','#202429'],['White','#f0eee6'],['Yellow','#e3bb34'],['Purple','#643688']];
+function boardColorDialog(){
+ const color=CB.boardAppearance(p.board).color;
+ dialog('PCB board color',`<p>Choose the board color for both sides. Saved with this project.</p><div class="boardColorControls"><label>Preset<select id="pcbColorPreset">${options([...boardColors.map(([name,hex])=>[hex,name]),['custom','Custom']],boardColors.some(([,hex])=>hex===color)?color:'custom')}</select></label><label>Custom color<input type="color" id="pcbColorPicker" value="${color}"></label><label>Hex color<input type="text" id="pcbColorHex" value="${color}" maxlength="7" pattern="#[0-9a-fA-F]{6}" spellcheck="false" autocomplete="off" aria-describedby="pcbColorHint"></label></div><svg id="pcbColorPreview" viewBox="0 0 240 108" role="img" aria-label="Board color preview"></svg><p class="helptext" id="pcbColorHint">Use # followed by six hex digits. Labels adjust for contrast. Select the solder-mask color separately when ordering a PCB.</p><p id="extraError" role="alert"></p><div class="buttonrow">${button('Apply color','apply-color','primary')}${button('Cancel','cancel')}</div>`);
+ updateBoardColorPreview(color);
+}
+function updateBoardColorPreview(color){
+ const a=CB.boardAppearance({color});
+ $('#pcbColorPreview').innerHTML=`<rect x="4" y="4" width="232" height="100" rx="10" fill="${a.color}" stroke="${a.edge}" stroke-width="2"/><circle cx="18" cy="18" r="4" fill="var(--panel)"/><circle cx="222" cy="90" r="4" fill="var(--panel)"/><path d="M35 76H96V54H165" fill="none" stroke="#efbb7c" stroke-width="5"/><circle cx="35" cy="76" r="8" fill="#efbb7c"/><circle cx="35" cy="76" r="3" fill="var(--panel)"/><rect x="146" y="32" width="48" height="44" rx="3" fill="#262a30" stroke="${a.ink}"/><text x="24" y="38" fill="${a.ink}" font-size="14" font-family="monospace">CIRCUITBENCH</text><text x="25" y="96" fill="${a.muted}" font-size="10" font-family="monospace">${a.color.toUpperCase()}</text>`;
+}
+function applyBoardColor(){
+ const value=$('#pcbColorHex').value.trim();
+ if(!/^#[0-9a-f]{6}$/i.test(value)){W.showFormError(Error('Enter a hex color such as #173d91.'));$('#pcbColorHex').focus();return;}
+ const color=value.toLowerCase();if(color===CB.boardAppearance(p.board).color){closeDialog();return;}
+ if(W.safeEdit(()=>{p.board.color=color;},'Board color saved.'))closeDialog();
+}
+document.addEventListener('input',e=>{
+ if(!['pcbColorPicker','pcbColorHex'].includes(e.target.id))return;
+ const color=e.target.value.trim();if(!/^#[0-9a-f]{6}$/i.test(color))return;
+ $('#pcbColorPicker').value=color;$('#pcbColorHex').value=color;
+ $('#pcbColorPreset').value=boardColors.some(([,hex])=>hex===color.toLowerCase())?color.toLowerCase():'custom';
+ $('#extraError').textContent='';updateBoardColorPreview(color);
+});
+document.addEventListener('change',e=>{
+ if(e.target.id!=='pcbColorPreset'||e.target.value==='custom')return;
+ const color=e.target.value;$('#pcbColorPicker').value=$('#pcbColorHex').value=color;$('#extraError').textContent='';updateBoardColorPreview(color);
+});
+
 function boardSizeDialog(){
- dialog('Board dimensions',`${button('Choose a board template…','templates')}<p>Set the finished outer dimensions in millimeters. ${p.board.outline.length?'The custom outline scales to the new size.':'The rectangular boundary resizes.'} Components, routing, holes and artwork keep their physical sizes and positions.</p><div class="row2">${F('Width mm','pcbWidth',p.board.width,'number','min="5" max="500" step=".1"')}${F('Height mm','pcbHeight',p.board.height,'number','min="5" max="500" step=".1"')}${F('Thickness mm','pcbThickness',p.board.thickness,'number','min=".1" max="10" step=".1"')}</div><p class="helptext">Any objects left outside the resized board appear in Review. Undo restores the previous boundary.</p><p id="extraError" role="alert"></p><div class="buttonrow">${button('Apply dimensions','apply-size','primary')}${button('Cancel','cancel')}</div>`);
+ dialog('Board dimensions',`${button('Choose a board template…','templates')}${button('Board color…','color')}<p>Set the finished outer dimensions in millimeters. ${p.board.outline.length?'The custom outline scales to the new size.':'The rectangular boundary resizes.'} Components, routing, holes and artwork keep their physical sizes and positions.</p><div class="row2">${F('Width mm','pcbWidth',p.board.width,'number','min="5" max="500" step=".1"')}${F('Height mm','pcbHeight',p.board.height,'number','min="5" max="500" step=".1"')}${F('Thickness mm','pcbThickness',p.board.thickness,'number','min=".1" max="10" step=".1"')}</div><p class="helptext">Any objects left outside the resized board appear in Review. Undo restores the previous boundary.</p><p id="extraError" role="alert"></p><div class="buttonrow">${button('Apply dimensions','apply-size','primary')}${button('Cancel','cancel')}</div>`);
 }
 function applySize(){if(W.safeEdit(()=>{CB.resizeBoard(p,number('pcbWidth'),number('pcbHeight'));p.board.thickness=number('pcbThickness');},'Board dimensions updated. Review edge clearances before exporting.')){closeDialog();fit();}}
 
@@ -86,7 +115,7 @@ function outlinePoint(e){let q=new DOMPoint(e.clientX,e.clientY).matrixTransform
 function renderOutline(sync=false){
  let editor=$('#outlineEditor');if(!editor||!outlineDraft)return;let b=CB.G.bounds([outlineDraft]),valid=CB.G.polygonValid(outlineDraft),r=Math.max(outlineBox.w,outlineBox.h)*.011;
  editor.setAttribute('viewBox',`${outlineBox.x} ${outlineBox.y} ${outlineBox.w} ${outlineBox.h}`);
- editor.innerHTML=`<path d="${W.polyPath([outlineDraft])}" fill="#153e35" stroke="${valid?'#7bb79a':'#f08c80'}" stroke-width="${r*.3}"/>`+p.cutouts.map(c=>`<path d="${W.polyPath([c.points])}" fill="var(--field)" stroke="#d29c72" stroke-width="${r*.2}" pointer-events="none"/>`).join('')+p.components.map(c=>`<rect x="${c.pcb.x-c.body[0]/2}" y="${c.pcb.y-c.body[1]/2}" width="${c.body[0]}" height="${c.body[1]}" transform="rotate(${c.pcb.rotation} ${c.pcb.x} ${c.pcb.y})" fill="none" stroke="#77968b" stroke-width="${r*.2}" pointer-events="none"/>`).join('')+outlineDraft.map((q,i)=>line(q,outlineDraft[(i+1)%outlineDraft.length],'transparent',r*2,`data-edge="${i}" style="cursor:copy"`)).join('')+outlineDraft.map((q,i)=>`<circle cx="${q.x}" cy="${q.y}" r="${r}" fill="${i===corner?'#ffc663':'#edf3dd'}" stroke="#254d3d" stroke-width="${r*.25}" data-corner="${i}" style="cursor:move"><title>Corner ${i+1}: ${q.x}, ${q.y} mm</title></circle>`).join('');
+ editor.innerHTML=`<path d="${W.polyPath([outlineDraft])}" fill="${CB.boardAppearance(p.board).color}" stroke="${valid?'#7bb79a':'#f08c80'}" stroke-width="${r*.3}"/>`+p.cutouts.map(c=>`<path d="${W.polyPath([c.points])}" fill="var(--field)" stroke="#d29c72" stroke-width="${r*.2}" pointer-events="none"/>`).join('')+p.components.map(c=>`<rect x="${c.pcb.x-c.body[0]/2}" y="${c.pcb.y-c.body[1]/2}" width="${c.body[0]}" height="${c.body[1]}" transform="rotate(${c.pcb.rotation} ${c.pcb.x} ${c.pcb.y})" fill="none" stroke="#77968b" stroke-width="${r*.2}" pointer-events="none"/>`).join('')+outlineDraft.map((q,i)=>line(q,outlineDraft[(i+1)%outlineDraft.length],'transparent',r*2,`data-edge="${i}" style="cursor:copy"`)).join('')+outlineDraft.map((q,i)=>`<circle cx="${q.x}" cy="${q.y}" r="${r}" fill="${i===corner?'#ffc663':'#edf3dd'}" stroke="#254d3d" stroke-width="${r*.25}" data-corner="${i}" style="cursor:move"><title>Corner ${i+1}: ${q.x}, ${q.y} mm</title></circle>`).join('');
  $('#outlineDimensions').textContent=`${CB.round(b.maxX-b.minX)} × ${CB.round(b.maxY-b.minY)} mm · ${outlineDraft.length} corners`+(valid?'':' · Crossing or degenerate edges; adjust before applying.');
  $('#outlineCorner').innerHTML=options(outlineDraft.map((q,i)=>[String(i),'Corner '+(i+1)]),String(corner));$('#cornerX').value=outlineDraft[corner].x;$('#cornerY').value=outlineDraft[corner].y;
  $('[data-pcb=remove-corner]').disabled=outlineDraft.length<=3;
@@ -96,7 +125,7 @@ function applyOutline(){if(W.safeEdit(()=>CB.setOutline(p,W.parsePoints($('#outl
 function resizeOutlinePreview(){let b=CB.G.bounds([outlineDraft]),width=Math.max(p.board.width,b.maxX,5),height=Math.max(p.board.height,b.maxY,5);outlineBox={x:-width*.12,y:-height*.12,w:width*1.24,h:height*1.24};}
 
 document.addEventListener('click',e=>{let a=e.target.closest('[data-pcb]')?.dataset.pcb;if(!a)return;
- const actions={flip:flipBoard,text:()=>{selected=null;boardDialog('text');},image:()=>imageDialog(),size:boardSizeDialog,outline:outlineDialog,'apply-size':applySize,'apply-image':applyImage,'apply-outline':applyOutline,cancel:closeDialog,'edit-art':()=>boardDialog(selectedObject()?.kind),'rotate-art':rotateSelected,
+ const actions={flip:flipBoard,text:()=>{selected=null;boardDialog('text');},image:()=>imageDialog(),size:boardSizeDialog,color:boardColorDialog,'apply-color':applyBoardColor,outline:outlineDialog,'apply-size':applySize,'apply-image':applyImage,'apply-outline':applyOutline,cancel:closeDialog,'edit-art':()=>boardDialog(selectedObject()?.kind),'rotate-art':rotateSelected,
  'add-corner':()=>{if(outlineDraft.length>=200)return W.showFormError(Error('The outline supports up to 200 corners.'));let a=outlineDraft[corner],b=outlineDraft[(corner+1)%outlineDraft.length];outlineDraft.splice(++corner,0,{x:CB.round((a.x+b.x)/2),y:CB.round((a.y+b.y)/2)});renderOutline(true);},
  'remove-corner':()=>{if(outlineDraft.length<=3)return;outlineDraft.splice(corner,1);corner=Math.min(corner,outlineDraft.length-1);renderOutline(true);},
  rectangle:()=>{outlineDraft=[{x:0,y:0},{x:p.board.width,y:0},{x:p.board.width,y:p.board.height},{x:0,y:p.board.height}];corner=0;renderOutline(true);},

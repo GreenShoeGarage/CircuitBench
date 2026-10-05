@@ -155,7 +155,7 @@
     if(shape==='polygon')sourceOutline=polygon(b.points,'board.points');
     else if(shape==='circle')sourceOutline=Array.from({length:128},(_,i)=>({x:q(w/2+Math.cos(i/128*2*Math.PI)*w/2),y:q(h/2+Math.sin(i/128*2*Math.PI)*h/2)}));
     else {radius=shape==='rounded'?number(b.radius,'board.radius',0,Math.min(w,h)/2):0;sourceOutline=roundRect(w,h,radius);}
-    const outline=ccw(sourceOutline.map(p=>({x:p.x,y:-p.y}))),board={id:'board',width:w,height:h,thickness:t,shape,radius,sourcePoints:clone(b.points||[]),outline,sourceOutline:clone(sourceOutline),bounds:bounds(outline.flatMap(p=>[{...p,z:0},{...p,z:t}])),geometryStatus:'imported-nominal'};
+    const outline=ccw(sourceOutline.map(p=>({x:p.x,y:-p.y}))),board={id:'board',color:typeof b.color==='string'&&/^#[0-9a-f]{6}$/i.test(b.color)?b.color.toLowerCase():null,width:w,height:h,thickness:t,shape,radius,sourcePoints:clone(b.points||[]),outline,sourceOutline:clone(sourceOutline),bounds:bounds(outline.flatMap(p=>[{...p,z:0},{...p,z:t}])),geometryStatus:'imported-nominal'};
     if(shape==='polygon'&&(Math.abs(size(board.bounds).x-w)>.001||Math.abs(size(board.bounds).y-h)>.001))add('warning','outline-dimensions','The polygon extent differs from the width/height fields. The polygon controls geometry.',['board'],'Both original dimensions and polygon points are preserved.');
     const ids=new Set(['board']);function unique(id,path){id=identifier(id,path);if(ids.has(id))throw new ImportError('duplicate object ID '+id,path);ids.add(id);return id;}
     const components=[],pads=[],bores=[],cutouts=[];

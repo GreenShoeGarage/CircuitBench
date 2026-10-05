@@ -1,4 +1,4 @@
-# CIRCUITBENCH 1.7.0
+# CIRCUITBENCH 1.8.1
 
 **A self-hosted schematic and two-layer PCB workbench.**  
 Green Shoe Garage · Field Instrument · GNU GPL v3 only
@@ -7,7 +7,9 @@ Place → connect → lay out → route → inspect → export.
 
 CIRCUITBENCH combines an approachable component workflow with linked schematic and board editing in a local-first browser application. It is an original implementation inspired by LibrePCB and KiCad, not a browser port, fork, endorsed product or feature-equivalent replacement for either desktop suite.
 
-**v1.7 adds board-shape presets for Arduino Uno R3, Arduino MKR and Raspberry Pi 40-pin HAT-layout boards, matching COPPERBENCH.** In PCB layout, choose **Board templates**, preview the shape, rotate it and include mounting holes as needed. The v1.4–v1.6 enclosure tools remain included. No board or enclosure has been physically fabricated or fit-tested for this release.
+**v1.8.1 adds PCB board colors.** Open **PCB layout → Board color**, choose a preset or custom color, then **Apply color**. The choice applies to both sides, the 3D assembly, enclosure previews and exported PCB SVGs. It is saved in project JSON and local autosave, supports undo/redo, and keeps older projects green. Labels adjust automatically for light colors. Solder-mask ordering colors must still be selected with your fabricator; Gerber and drill geometry do not change.
+
+**v1.8 adds quick ground, power and signal planes, lead-to-net assignment, and checked wire/plane connection previews inspired by COPPERBENCH.** Open **PCB layout → Nets & planes** to get started. Existing board templates and enclosure tools remain included. No board or enclosure has been physically fabricated or fit-tested for this release.
 
 ## Run and self-host
 
@@ -150,3 +152,9 @@ Copyright © 2026 Michael Parks / Green Shoe Garage. Application: **GPL-3.0-only
 See [Board templates](docs/BOARD-TEMPLATES.md) for source dimensions, hole coordinates, rotation, preservation/Undo behavior and variant limitations. Three empty starters are included as `examples/board-uno-r3.circuitbench.json`, `examples/board-mkr.circuitbench.json` and `examples/board-pi40.circuitbench.json`. These contain mechanical board geometry; add mating connectors from the component library.
 
 Run `npm run test:templates` for the board-preset model, manufacturing, enclosure-solid and offline browser checks.
+
+## Quick nets and planes · v1.8
+
+Use **Nets & planes** for back-side GND or GND on both sides, per-face net selection, custom supply/signal planes, and physical connection status. Pick leads on the board or in the searchable table, assign a named net, then preview wires or a plane connection. Keep adds real checked tracks/vias in one undoable edit. Different-net leads are blocked; stale and cancelled previews cannot change the board.
+
+Read [Nets and planes](docs/NETS-AND-PLANES.md) for the workflow, settings, supported limits and export behavior. `examples/planes-and-wires.circuitbench.json` demonstrates two planes, a via connection and signal wiring. Run `npm run test:nets` for engine/browser checks or `npm run test:nets-manufacturing` for independent Gerbonara/Shapely export checks.

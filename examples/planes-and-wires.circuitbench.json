@@ -1,0 +1,462 @@
+{
+  "format": "circuitbench",
+  "schema": 2,
+  "version": "1.8.0",
+  "title": "Planes and wires sampler",
+  "revision": "A",
+  "board": {
+    "width": 60,
+    "height": 40,
+    "thickness": 1.6,
+    "outline": [],
+    "origin": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "rules": {
+    "clearance": 0.25,
+    "edge": 0.5,
+    "minWidth": 0.25,
+    "annular": 0.15,
+    "mask": 0.05,
+    "drill": 0.25,
+    "maskWeb": 0.1,
+    "courtyard": 0.25,
+    "silk": 0.15,
+    "silkLine": 0.15
+  },
+  "components": [
+    {
+      "id": "idlffvzo26kt",
+      "kind": "header3",
+      "ref": "J1",
+      "value": "I/O",
+      "mpn": "",
+      "body": [
+        3,
+        7.62
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": 0,
+          "y": -2.54,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "GND",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "GND",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 0,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "+3V3",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "+3V3",
+          "slot": 0
+        },
+        {
+          "n": "3",
+          "name": "3",
+          "x": 0,
+          "y": 2.54,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "SDA",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "SDA",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 8,
+        "y": 20,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 20,
+        "y": 20,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 8.5,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "header3",
+        "pins": []
+      },
+      "footprintName": "header3"
+    },
+    {
+      "id": "idqjf4yd2x95",
+      "kind": "header3",
+      "ref": "J2",
+      "value": "I/O",
+      "mpn": "",
+      "body": [
+        3,
+        7.62
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": 0,
+          "y": -2.54,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "GND",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "GND",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 0,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "+3V3",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "+3V3",
+          "slot": 0
+        },
+        {
+          "n": "3",
+          "name": "3",
+          "x": 0,
+          "y": 2.54,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "SDA",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "SDA",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 50,
+        "y": 20,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 55,
+        "y": 20,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 8.5,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "header3",
+        "pins": []
+      },
+      "footprintName": "header3"
+    },
+    {
+      "id": "idaf1g3d53ko",
+      "kind": "smd2",
+      "ref": "C1",
+      "value": "100 nF",
+      "mpn": "",
+      "body": [
+        2,
+        1.25
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": -1.1,
+          "y": 0,
+          "diameter": 1.2,
+          "drill": 0,
+          "type": "passive",
+          "mount": "smd",
+          "net": "+3V3",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.2,
+          "height": 1.2,
+          "rotation": 0,
+          "labelNet": "+3V3",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 1.1,
+          "y": 0,
+          "diameter": 1.2,
+          "drill": 0,
+          "type": "passive",
+          "mount": "smd",
+          "net": "GND",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.2,
+          "height": 1.2,
+          "rotation": 0,
+          "labelNet": "GND",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 25,
+        "y": 12,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 90,
+        "y": 20,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 3,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "capacitor",
+        "pins": []
+      },
+      "footprintName": "smd2"
+    },
+    {
+      "id": "idttcjkjyygo",
+      "kind": "smd2",
+      "ref": "R1",
+      "value": "10k pull-up",
+      "mpn": "",
+      "body": [
+        2,
+        1.25
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": -1.1,
+          "y": 0,
+          "diameter": 1.2,
+          "drill": 0,
+          "type": "passive",
+          "mount": "smd",
+          "net": "+3V3",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.2,
+          "height": 1.2,
+          "rotation": 0,
+          "labelNet": "+3V3",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 1.1,
+          "y": 0,
+          "diameter": 1.2,
+          "drill": 0,
+          "type": "passive",
+          "mount": "smd",
+          "net": "SDA",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.2,
+          "height": 1.2,
+          "rotation": 0,
+          "labelNet": "SDA",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 35,
+        "y": 28,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 125,
+        "y": 20,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 3,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "smd2",
+        "pins": []
+      },
+      "footprintName": "smd2"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "ida97nodilq4",
+      "net": "GND",
+      "layer": "F",
+      "width": 0.4,
+      "points": [
+        {
+          "x": 26.1,
+          "y": 12
+        },
+        {
+          "x": 27.698528,
+          "y": 12
+        }
+      ]
+    },
+    {
+      "id": "idm5yko37mb5",
+      "net": "SDA",
+      "layer": "F",
+      "width": 0.4,
+      "points": [
+        {
+          "x": 50,
+          "y": 22.54
+        },
+        {
+          "x": 36.1,
+          "y": 28
+        }
+      ]
+    },
+    {
+      "id": "idvr4te4g6s5",
+      "net": "SDA",
+      "layer": "F",
+      "width": 0.4,
+      "points": [
+        {
+          "x": 8,
+          "y": 22.54
+        },
+        {
+          "x": 34.4,
+          "y": 26.8
+        },
+        {
+          "x": 36.1,
+          "y": 28
+        }
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "id": "idiiqealbf65",
+      "x": 27.698528,
+      "y": 12,
+      "net": "GND",
+      "diameter": 0.9,
+      "drill": 0.4
+    }
+  ],
+  "nets": [
+    "GND",
+    "+5V",
+    "+3V3",
+    "SDA"
+  ],
+  "assumptions": "Unfabricated teaching layout with generic footprints. Verify actual connector pinout, supply, component values, dimensions, current and clearances before manufacture.",
+  "evidence": "v1.8 software example: front +3V3 plane, back GND plane, SMD-to-ground stub/via, routed SDA. No physical validation.",
+  "baseline": null,
+  "sheets": [
+    {
+      "id": "main",
+      "name": "Main circuit",
+      "parent": null
+    }
+  ],
+  "wires": [],
+  "junctions": [],
+  "labels": [],
+  "ports": [],
+  "holes": [],
+  "cutouts": [],
+  "silk": [],
+  "zones": [
+    {
+      "id": "id7u5fcyydby",
+      "boardPlane": true,
+      "points": [],
+      "net": "GND",
+      "layer": "B",
+      "clearance": 0.25,
+      "thermal": true,
+      "thermalGap": 0.3,
+      "spoke": 0.5
+    },
+    {
+      "id": "id884i837dg4",
+      "boardPlane": true,
+      "points": [],
+      "net": "+3V3",
+      "layer": "F",
+      "clearance": 0.25,
+      "thermal": true,
+      "thermalGap": 0.3,
+      "spoke": 0.5
+    }
+  ],
+  "library": {
+    "symbols": [],
+    "footprints": [],
+    "devices": [],
+    "blocks": []
+  },
+  "netClasses": [],
+  "importNotes": []
+}

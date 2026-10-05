@@ -1,7 +1,7 @@
 {
   "format": "circuitbench",
   "schema": 2,
-  "version": "1.7.0",
+  "version": "1.8.0",
   "title": "Catalog reference — regulated LED supply",
   "revision": "A",
   "board": {
@@ -28,7 +28,7 @@
   },
   "components": [
     {
-      "id": "idnaq0u4aoyt",
+      "id": "id2wdih3aa6h",
       "kind": "device",
       "ref": "J1",
       "value": "DC input",
@@ -527,12 +527,12 @@
         },
         "datasheet": "~",
         "catalogId": "lib_aae3390",
-        "version": "1.7.0"
+        "version": "1.8.0"
       },
       "deviceName": "Header 1x02"
     },
     {
-      "id": "id3wr5jsvc0p",
+      "id": "idhj273ce8t3",
       "kind": "device",
       "ref": "U1",
       "value": "LM7805_TO220",
@@ -1065,12 +1065,12 @@
         },
         "datasheet": "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF",
         "catalogId": "lib_f08fcb87",
-        "version": "1.7.0"
+        "version": "1.8.0"
       },
       "deviceName": "LM7805_TO220"
     },
     {
-      "id": "id8kh0lsgd3p",
+      "id": "idmaq8riqd8x",
       "kind": "device",
       "ref": "C1",
       "value": "10uF",
@@ -4183,12 +4183,12 @@
         },
         "datasheet": "~",
         "catalogId": "lib_1b1b9797",
-        "version": "1.7.0"
+        "version": "1.8.0"
       },
       "deviceName": "Polarized capacitor"
     },
     {
-      "id": "idsq3sd4vkbm",
+      "id": "idrvql7zb0cr",
       "kind": "device",
       "ref": "C2",
       "value": "10uF",
@@ -7301,12 +7301,12 @@
         },
         "datasheet": "~",
         "catalogId": "lib_1b1b9797",
-        "version": "1.7.0"
+        "version": "1.8.0"
       },
       "deviceName": "Polarized capacitor"
     },
     {
-      "id": "idkdjv4mtons",
+      "id": "id4222js9v7t",
       "kind": "device",
       "ref": "C3",
       "value": "100nF",
@@ -7735,12 +7735,12 @@
         },
         "datasheet": "~",
         "catalogId": "lib_55d5e9a6",
-        "version": "1.7.0"
+        "version": "1.8.0"
       },
       "deviceName": "Capacitor"
     },
     {
-      "id": "idvgl2u1yd8x",
+      "id": "idoo34u15hno",
       "kind": "device",
       "ref": "R1",
       "value": "330R",
@@ -8198,12 +8198,12 @@
         },
         "datasheet": "~",
         "catalogId": "lib_66d60469",
-        "version": "1.7.0"
+        "version": "1.8.0"
       },
       "deviceName": "Resistor"
     },
     {
-      "id": "id7spi0h5urb",
+      "id": "id1ejetix5m3",
       "kind": "device",
       "ref": "D1",
       "value": "Power LED",
@@ -9624,12 +9624,12 @@
         },
         "datasheet": "~",
         "catalogId": "lib_4ea10576",
-        "version": "1.7.0"
+        "version": "1.8.0"
       },
       "deviceName": "LED"
     },
     {
-      "id": "idu6nhu8ej6x",
+      "id": "idaqdajt7yto",
       "kind": "device",
       "ref": "J2",
       "value": "5V output",
@@ -10128,14 +10128,14 @@
         },
         "datasheet": "~",
         "catalogId": "lib_aae3390",
-        "version": "1.7.0"
+        "version": "1.8.0"
       },
       "deviceName": "Header 1x02"
     }
   ],
   "tracks": [
     {
-      "id": "idv3ii2mj8ft",
+      "id": "idhywgn1qwyc",
       "net": "GND",
       "layer": "F",
       "width": 0.4,
@@ -10151,7 +10151,7 @@
       ]
     },
     {
-      "id": "idpafoycfc8d",
+      "id": "idnwv5o6a7ep",
       "net": "GND",
       "layer": "F",
       "width": 0.4,
@@ -10167,7 +10167,7 @@
       ]
     },
     {
-      "id": "idocu6upb0sv",
+      "id": "idryehi2e5qp",
       "net": "GND",
       "layer": "F",
       "width": 0.4,
@@ -10187,7 +10187,7 @@
       ]
     },
     {
-      "id": "idiehavzvdi9",
+      "id": "idtmlwu9x3i2",
       "net": "GND",
       "layer": "F",
       "width": 0.4,
@@ -10207,7 +10207,7 @@
       ]
     },
     {
-      "id": "id8myryn68kn",
+      "id": "idk9ndupddg4",
       "net": "GND",
       "layer": "F",
       "width": 0.4,
@@ -10223,7 +10223,7 @@
       ]
     },
     {
-      "id": "id4dosmg5url",
+      "id": "idetqdt1p4p1",
       "net": "GND",
       "layer": "F",
       "width": 0.4,
@@ -10239,7 +10239,7 @@
       ]
     },
     {
-      "id": "idcq8fpi8pt3",
+      "id": "idy79nl5w62q",
       "net": "+5V",
       "layer": "F",
       "width": 0.4,
@@ -10263,7 +10263,7 @@
       ]
     },
     {
-      "id": "idxpxp6eote4",
+      "id": "id9o3t0curno",
       "net": "+5V",
       "layer": "F",
       "width": 0.4,
@@ -10279,7 +10279,7 @@
       ]
     },
     {
-      "id": "id3ic7lxp7ff",
+      "id": "idvfteoutign",
       "net": "+5V",
       "layer": "F",
       "width": 0.4,
@@ -10327,7 +10327,7 @@
       ]
     },
     {
-      "id": "idl1lf9wtzr7",
+      "id": "id01eul38j2j",
       "net": "+5V",
       "layer": "F",
       "width": 0.4,
@@ -10343,7 +10343,7 @@
       ]
     },
     {
-      "id": "id0tarxmyhtb",
+      "id": "id35g0kzvf7n",
       "net": "VIN",
       "layer": "F",
       "width": 0.4,
@@ -10367,7 +10367,7 @@
       ]
     },
     {
-      "id": "id2tswb7krjt",
+      "id": "idqgzic8s23i",
       "net": "VIN",
       "layer": "F",
       "width": 0.4,
@@ -10395,7 +10395,7 @@
       ]
     },
     {
-      "id": "idkjuyksfazd",
+      "id": "idsxxrwtcpuw",
       "net": "LED+",
       "layer": "B",
       "width": 0.4,

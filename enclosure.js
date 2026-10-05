@@ -1,6 +1,6 @@
 /* CIRCUITBENCH board-derived enclosure model. GPL-3.0-only. */
 (function(root){'use strict';
-const C=typeof module!=='undefined'?require('./board-templates'):root.CB,priorValidate=C.validate;
+const C=typeof module!=='undefined'?require('./net-planes'):root.CB,priorValidate=C.validate;
 const round=C.round,clone=C.clone;
 const isMountingPart=c=>/mounting.?hole/i.test([c.kind,c.deviceName,c.footprintName,c.value].join(' '));
 function candidates(p){let holes=C.holes(p).filter(h=>!h.plated).map(h=>({...h,name:h.component?(p.components.find(c=>c.id===h.component)?.ref||'Footprint')+' hole':'Board hole'}));
@@ -54,7 +54,7 @@ function plan(p,config=p.enclosure||defaults(p)){
  for(let c of components)if(c.side==='F'&&c.bottom+c.height>baseTop-e.lipDepth){let b=G.bounds([bodyPolygon(p.components.find(x=>x.id===c.id))]);if(b.minX-ox<e.wall+e.fit+e.lipWall||b.maxX-ox>width-e.wall-e.fit-e.lipWall||b.minY-oy<e.wall+e.fit+e.lipWall||b.maxY-oy>depth-e.wall-e.fit-e.lipWall)add('error','LIP_COMPONENT','The lid lip intersects '+c.ref+'. Increase side clearance or inside height.');}
  if(p.components.length)add('warning','HEIGHT_ESTIMATES','Component bodies use the editable stored heights. Check real parts, connector access and lead lengths before printing.','', 'Medium');
  const convert=q=>({x:q.x-ox,y:q.y-oy});
- return {config:e,width,depth,insideHeight,baseTop,totalHeight:baseTop+e.lid,origin:{x:ox,y:oy},pcbBottom,pcbThickness:p.board.thickness,topHeight,bottomHeight,below,requiredHeight,mounts,components,board:{outline:G.outline(p).map(convert),cutouts:p.cutouts.map(c=>c.points.map(convert)),holes:[...C.holes(p),...C.pads(p).filter(a=>a.drill)].map(h=>G.drillPolygon(h).map(convert))},issues};
+ return {config:e,width,depth,insideHeight,baseTop,totalHeight:baseTop+e.lid,origin:{x:ox,y:oy},pcbBottom,pcbThickness:p.board.thickness,topHeight,bottomHeight,below,requiredHeight,mounts,components,board:{color:C.boardAppearance(p.board).color,outline:G.outline(p).map(convert),cutouts:p.cutouts.map(c=>c.points.map(convert)),holes:[...C.holes(p),...C.pads(p).filter(a=>a.drill)].map(h=>G.drillPolygon(h).map(convert))},issues};
 }
 function validate(input){let p=priorValidate(input);if(p.enclosure!=null)validateConfig(p.enclosure);if(p.baseline?.snapshot?.enclosure!=null)validateConfig(p.baseline.snapshot.enclosure);return p;}
 Object.assign(C,{validate,enclosureDefaults:defaults,enclosureCandidates:candidates,enclosureSyncMounts:syncMounts,enclosurePlan:plan,validateEnclosure:validateConfig});

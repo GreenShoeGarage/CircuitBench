@@ -2,11 +2,12 @@
 (function(root){
 'use strict';
 const C=typeof module!=='undefined'?require('./core.js'):root.CB,base={...C};
-C.VERSION='1.7.0';
+C.VERSION='1.8.1';
 const id=()=>C.uid(),cl=C.clone;
 function migrate(input){let p=cl(input);if(p.format!=='circuitbench'||![1,2].includes(p.schema))throw Error('Unsupported project. Expected CIRCUITBENCH schema 1 or 2.');
  const legacy=p.schema===1;p.schema=2;p.version=C.VERSION;
  p.sheets??=[{id:'main',name:'Main circuit',parent:null}];p.wires??=[];p.junctions??=[];p.labels??=[];p.ports??=[];p.holes??=[];p.cutouts??=[];p.silk??=[];p.zones??=[];p.library??={symbols:[],footprints:[],devices:[],blocks:[]};p.netClasses??=[];p.importNotes??=[];p.rules.drill??=.25;p.rules.maskWeb??=.1;p.rules.courtyard??=.25;p.rules.silk??=.15;p.rules.silkLine??=.15;
+ p.board.color??='#153e35';if(typeof p.board.color!=='string'||!/^#[0-9a-f]{6}$/i.test(p.board.color))throw Error('Invalid project: board color must be a six-digit hex color.');p.board.color=p.board.color.toLowerCase();
  p.board.outline??=[];p.board.origin??={x:0,y:0};
  for(let c of p.components){c.sheet??='main';c.height??=c.kind==='led'?8:c.kind.startsWith('header')?8.5:c.kind.startsWith('dip')?4:3;c.courtyard??=.25;c.locked??=false;c.symbol??={kind:c.kind,pins:[]};c.footprintName??=c.kind;for(let a of c.pads){a.shape??='circle';a.width??=a.diameter;a.height??=a.diameter;a.rotation??=0;a.labelNet??=legacy?a.net:'';a.slot??=0;}}
  if(legacy){for(let l of base.connections(p,'sch'))p.wires.push({id:id(),net:l.net,sheet:'main',from:{kind:'pin',component:l.a.component,pin:l.a.n},to:{kind:'pin',component:l.b.component,pin:l.b.n},points:[{x:(l.a.x+l.b.x)/2,y:l.a.y},{x:(l.a.x+l.b.x)/2,y:l.b.y}]});}
@@ -57,6 +58,11 @@ function validate(input){let p=migrate(input),legacy=cl(p);legacy.schema=1;legac
  arr(p.netClasses,20,'net classes');for(let a of p.netClasses){str(a.name,'class name');arr(a.nets,256,'class nets');a.nets.forEach(net);num(a.width,.05,10,'class width');num(a.clearance,.05,5,'class clearance');}
  if(!p.library||typeof p.library!=='object')fail('library');for(let k of ['symbols','footprints','devices','blocks']){arr(p.library[k],2000,'library '+k);for(let a of p.library[k]){str(a.id,'library id');str(a.name,'library name',160);if(JSON.stringify(a).length>200000)fail('oversize library entry');}}arr(p.importNotes,100,'import notes');p.importNotes.forEach(a=>str(a,'import note',1000));return p;
 }
-Object.assign(C,{logicalPads,holes,silks,migrate,validate,fresh:blank,sample,component,schLocal,position,pads,endpoint,endpointKey,wirePath,mergeNet,rebuildNets,link,splitWire,removeWire,removeComponent,renumber,symbolFrom,footprintFrom,applySymbol,applyFootprint});
+function boardAppearance(board){
+ const color=typeof board?.color==='string'&&/^#[0-9a-f]{6}$/i.test(board.color)?board.color.toLowerCase():'#153e35';
+ const rgb=[1,3,5].map(i=>parseInt(color.slice(i,i+2),16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4),l=.2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2],light=l>.18;
+ return {color,ink:light?'#172321':'#f1f3d9',muted:light?'#34423b':'#b3cdb9',edge:light?'#53645b':'#89b49c',light};
+}
+Object.assign(C,{boardAppearance,logicalPads,holes,silks,migrate,validate,fresh:blank,sample,component,schLocal,position,pads,endpoint,endpointKey,wirePath,mergeNet,rebuildNets,link,splitWire,removeWire,removeComponent,renumber,symbolFrom,footprintFrom,applySymbol,applyFootprint});
 if(typeof module!=='undefined')module.exports=C;else root.CB=C;
 })(typeof globalThis!=='undefined'?globalThis:this);

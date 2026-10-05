@@ -1,0 +1,5 @@
+PASS F_Cu.gbr: independently parsed copper area, position and polarity match; delta 0.00000000 mm²
+PASS B_Cu.gbr: independently parsed copper area, position and polarity match; delta 0.00000000 mm²
+PASS Plated Excellon drill is at the generated through-via with the expected diameter
+PASS Real front copper connects the SMD lead to the via annulus; back plane meets the same annulus; drilling clears the center on both faces
+4 independent net/plane manufacturing checks passed

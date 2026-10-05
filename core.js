@@ -1,7 +1,7 @@
-/* CIRCUITBENCH v1.7.0 — GPL-3.0-only */
+/* CIRCUITBENCH v1.8.1 — GPL-3.0-only */
 (function(root){
 'use strict';
-const VERSION='1.7.0', clone=x=>JSON.parse(JSON.stringify(x)), uid=()=> 'id'+Math.random().toString(36).slice(2,12), round=x=>Math.round(x*1e6)/1e6;
+const VERSION='1.8.1', clone=x=>JSON.parse(JSON.stringify(x)), uid=()=> 'id'+Math.random().toString(36).slice(2,12), round=x=>Math.round(x*1e6)/1e6;
 const pad=(n,x,y,name=n,diameter=1.8,drill=.8,type='passive',mount='tht')=>({n:String(n),name:String(name),x,y,diameter,drill,type,mount,net:'',nc:false});
 const defs=[
  {key:'resistor',name:'Resistor · axial',prefix:'R',value:'1k',body:[6.3,2.5],pads:[pad(1,-5.08,0),pad(2,5.08,0)]},
@@ -17,7 +17,7 @@ const defs=[
  {key:'smd2',name:'SMD · 0805, round pads',prefix:'R',value:'10k',body:[2,1.25],pads:[pad(1,-1.1,0,'1',1.2,0,'passive','smd'),pad(2,1.1,0,'2',1.2,0,'passive','smd')]},
  {key:'custom',name:'Custom · terminal block',prefix:'X',value:'Custom part',body:[8,6],pads:[pad(1,-5,0),pad(2,5,0)]}
 ];
-function fresh(){return {format:'circuitbench',schema:1,version:VERSION,title:'Untitled circuit',revision:'A',board:{width:60,height:40,thickness:1.6},rules:{clearance:.25,edge:.5,minWidth:.25,annular:.15,mask:.05},components:[],tracks:[],vias:[],nets:['GND','+5V'],assumptions:'Two copper layers. Board dimensions and footprints must be checked against your actual parts and fabricator capabilities.',evidence:'',baseline:null};}
+function fresh(){return {format:'circuitbench',schema:1,version:VERSION,title:'Untitled circuit',revision:'A',board:{width:60,height:40,thickness:1.6,color:'#153e35'},rules:{clearance:.25,edge:.5,minWidth:.25,annular:.15,mask:.05},components:[],tracks:[],vias:[],nets:['GND','+5V'],assumptions:'Two copper layers. Board dimensions and footprints must be checked against your actual parts and fabricator capabilities.',evidence:'',baseline:null};}
 function component(p,key,x=30,y=20){let d=defs.find(d=>d.key===key)||defs[0],i=1;while(p.components.some(c=>c.ref===d.prefix+i))i++;return {id:uid(),kind:d.key,ref:d.prefix+i,value:d.value,mpn:'',body:clone(d.body),pads:clone(d.pads),pcb:{x,y,rotation:0,side:'F'},sch:{x:20+(p.components.length%4)*35,y:20+Math.floor(p.components.length/4)*35,rotation:0}};}
 function sample(){let p=fresh();p.title='Hello, copper';p.nets=['+5V','GND','LED+'];let specs=[['header2',9,20,20,35,'5V IN',['+5V','GND']],['resistor',28,11,60,20,'330Ω',['+5V','LED+']],['led',47,20,100,35,'Green LED',['LED+','GND']],['capacitor',28,29,60,55,'100nF',['+5V','GND']],['header2',51,32,100,65,'Test points',['+5V','GND']]];for(let [k,x,y,sx,sy,v,nets]of specs){let c=component(p,k,x,y);c.sch.x=sx;c.sch.y=sy;c.value=v;c.pads.forEach((a,i)=>a.net=nets[i]);p.components.push(c);}let a=p.components[1],b=p.components[2];let ap=position(a,a.pads[1]),bp=position(b,b.pads[0]);p.tracks.push({id:uid(),net:'LED+',layer:'F',width:.6,points:[ap,{x:bp.x,y:ap.y},bp]});p.assumptions+=' Demo uses a 5 V source and a 330 Ω LED resistor; electrical behavior is not simulated.';return p;}
 function rotate(x,y,deg){let a=deg*Math.PI/180;return {x:round(x*Math.cos(a)-y*Math.sin(a)),y:round(x*Math.sin(a)+y*Math.cos(a))};}

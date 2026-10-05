@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.8.1 — 2026-10-05
+
+- Added PCB layout → Board color with seven named presets, a native color picker and custom hex entry. Changes preview before Apply; Cancel/Escape preserve the project.
+- Saved color in the board model with autosave, JSON transfer and undo/redo; older projects default to green and malformed colors are rejected.
+- Applied color to both PCB faces, the outline editor, assembly SVG, 3D board and enclosure board previews. Light boards use dark annotations and silkscreen visualization.
+- Retained manufacturing geometry and bumped the offline shell cache.
+
+## v1.8.0 — 2026-10-05
+
+- Added Nets & planes: back GND / both-face GND presets and per-face selectors for existing or new ground, power and signal nets.
+- Added searchable lead picking, click-to-pick on the PCB, inspector pin shortcuts, named-net assignment and whole-net routing shortcuts.
+- Added cancellable checked previews for direct plane contact, attached-via reuse, short trace/new-via connections, and same-/opposite-face wires. Keep commits the complete proposal as one undoable edit.
+- Added physical main-region connectivity and split-plane findings. Different-net and NC leads are rejected without implicit net merges. Stale previews cannot overwrite newer work.
+- Manual zones now take priority over managed whole-board planes; native KiCad exports include matching zone priorities. Managed planes follow board/outline edits and refill automatically.
+- Added focused/whole-board copper previews, a power/ground/signal sample project, documentation and independent Gerber/Excellon checks.
+- Strengthened the enclosure browser regression's asynchronous PCB-import wait to check imported state before checking generation completion.
+
+
 ## v1.7.0 — 2026-10-05
 
 - Added Arduino Uno R3 (68.58 × 53.34 mm), Arduino MKR 28-pin (61.5 × 25 mm) and Raspberry Pi 40-pin HAT-layout (65 × 56 mm) board shapes from COPPERBENCH v1.7.1.

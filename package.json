@@ -1,11 +1,11 @@
 {
   "name": "circuitbench",
-  "version": "1.7.0",
+  "version": "1.8.1",
   "private": true,
   "description": "Local-first schematic and two-layer PCB workbench",
   "license": "GPL-3.0-only",
   "scripts": {
-    "test": "node tests/core.test.cjs && node tests/advanced.test.cjs && node tests/release.test.cjs && node tests/library.test.cjs && node tests/library-fixtures.cjs && node tests/board-editing.test.cjs && node tests/browser.test.cjs && node tests/advanced-browser.test.cjs && node tests/library-browser.test.cjs && node tests/board-editing-browser.test.cjs && node tests/enclosure.test.cjs && node tests/enclosure-browser.test.cjs && node tests/workshop.test.cjs && node tests/workshop-browser.test.cjs && node tests/board-templates.test.cjs && node tests/board-templates-browser.test.cjs",
+    "test": "node tests/core.test.cjs && node tests/advanced.test.cjs && node tests/release.test.cjs && node tests/library.test.cjs && node tests/library-fixtures.cjs && node tests/board-editing.test.cjs && node tests/browser.test.cjs && node tests/advanced-browser.test.cjs && node tests/library-browser.test.cjs && node tests/board-editing-browser.test.cjs && node tests/enclosure.test.cjs && node tests/enclosure-browser.test.cjs && node tests/workshop.test.cjs && node tests/workshop-browser.test.cjs && node tests/board-templates.test.cjs && node tests/board-templates-browser.test.cjs && node tests/net-planes.test.cjs && node tests/net-planes-browser.test.cjs",
     "test:core": "node tests/core.test.cjs",
     "test:browser": "node tests/browser.test.cjs",
     "test:engine": "node tests/core.test.cjs && node tests/advanced.test.cjs && node tests/release.test.cjs",
@@ -21,7 +21,9 @@
     "test:workshop": "node tests/workshop.test.cjs && node tests/workshop-browser.test.cjs",
     "test:workshop-mesh": "node tests/workshop.test.cjs && python3 tests/workshop-mesh.test.py",
     "test:templates": "node tests/board-templates.test.cjs && node tests/board-templates-browser.test.cjs",
-    "test:templates-mesh": "node tests/board-templates.test.cjs && python3 tests/board-templates-mesh.test.py"
+    "test:templates-mesh": "node tests/board-templates.test.cjs && python3 tests/board-templates-mesh.test.py",
+    "test:nets": "node tests/net-planes.test.cjs && node tests/net-planes-browser.test.cjs",
+    "test:nets-manufacturing": "node tests/net-planes.test.cjs && python3 tests/net-planes-manufacturing.test.py"
   },
   "devDependencies": {
     "esbuild": "0.28.2",

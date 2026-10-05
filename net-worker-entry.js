@@ -1,0 +1,1 @@
+self.onmessage=function(e){const {id,kind,project,ids,net,layer,options}=e.data;try{const progress=value=>postMessage({id,progress:value}),result=kind==='plane'?CB.planPlaneConnections(project,ids,layer,options,progress):CB.planNetWires(project,ids,net,options,progress);postMessage({id,result});}catch(error){postMessage({id,error:error.message});}};
