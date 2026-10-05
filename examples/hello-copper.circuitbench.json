@@ -1,0 +1,292 @@
+{
+  "format": "circuitbench",
+  "schema": 1,
+  "version": "0.1.0",
+  "title": "Hello, copper",
+  "revision": "A",
+  "board": {
+    "width": 60,
+    "height": 40,
+    "thickness": 1.6
+  },
+  "rules": {
+    "clearance": 0.25,
+    "edge": 0.5,
+    "minWidth": 0.25,
+    "annular": 0.15,
+    "mask": 0.05
+  },
+  "components": [
+    {
+      "id": "idm9znp92lbh",
+      "kind": "header2",
+      "ref": "J1",
+      "value": "5V IN",
+      "mpn": "",
+      "body": [
+        3,
+        5.08
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": 0,
+          "y": -1.27,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "+5V",
+          "nc": false
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 0,
+          "y": 1.27,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "GND",
+          "nc": false
+        }
+      ],
+      "pcb": {
+        "x": 9,
+        "y": 20,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 20,
+        "y": 35,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "idy2c4617reg",
+      "kind": "resistor",
+      "ref": "R1",
+      "value": "330Ω",
+      "mpn": "",
+      "body": [
+        6.3,
+        2.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": -5.08,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "+5V",
+          "nc": false
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 5.08,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "LED+",
+          "nc": false
+        }
+      ],
+      "pcb": {
+        "x": 28,
+        "y": 11,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 60,
+        "y": 20,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "id6kb3o5mhck",
+      "kind": "led",
+      "ref": "D1",
+      "value": "Green LED",
+      "mpn": "",
+      "body": [
+        5,
+        5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "Anode",
+          "x": -1.27,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "LED+",
+          "nc": false
+        },
+        {
+          "n": "2",
+          "name": "Cathode",
+          "x": 1.27,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "GND",
+          "nc": false
+        }
+      ],
+      "pcb": {
+        "x": 47,
+        "y": 20,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 100,
+        "y": 35,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "idryvserlip5",
+      "kind": "capacitor",
+      "ref": "C1",
+      "value": "100nF",
+      "mpn": "",
+      "body": [
+        5,
+        3
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": -2.54,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "+5V",
+          "nc": false
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 2.54,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "GND",
+          "nc": false
+        }
+      ],
+      "pcb": {
+        "x": 28,
+        "y": 29,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 60,
+        "y": 55,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "id3cj7dxbfhd",
+      "kind": "header2",
+      "ref": "J2",
+      "value": "Test points",
+      "mpn": "",
+      "body": [
+        3,
+        5.08
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": 0,
+          "y": -1.27,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "+5V",
+          "nc": false
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 0,
+          "y": 1.27,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "GND",
+          "nc": false
+        }
+      ],
+      "pcb": {
+        "x": 51,
+        "y": 32,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 100,
+        "y": 65,
+        "rotation": 0
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "idnfhl8t818j",
+      "net": "LED+",
+      "layer": "F",
+      "width": 0.6,
+      "points": [
+        {
+          "x": 33.08,
+          "y": 11
+        },
+        {
+          "x": 45.73,
+          "y": 11
+        },
+        {
+          "x": 45.73,
+          "y": 20
+        }
+      ]
+    }
+  ],
+  "vias": [],
+  "nets": [
+    "+5V",
+    "GND",
+    "LED+"
+  ],
+  "assumptions": "Two copper layers. Board dimensions and footprints must be checked against your actual parts and fabricator capabilities. Demo uses a 5 V source and a 330 Ω LED resistor; electrical behavior is not simulated.",
+  "evidence": "",
+  "baseline": null
+}

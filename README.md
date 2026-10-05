@@ -1,0 +1,124 @@
+# CIRCUITBENCH 1.0.0
+
+**A self-hosted schematic and two-layer PCB workbench.**  
+Green Shoe Garage · Field Instrument · GNU GPL v3 only
+
+Place → connect → lay out → route → inspect → export.
+
+CIRCUITBENCH combines an approachable component workflow with linked schematic and board editing in a local-first browser application. It is an original implementation inspired by LibrePCB and KiCad, not a browser port, fork, endorsed product or feature-equivalent replacement for either desktop suite.
+
+**This is the v1.0 software release.** A fully routed reference design and software verification are included. No board has been physically fabricated, assembled or electrically tested for this release. That original roadmap hardware gate remains open.
+
+## Run and self-host
+
+Open **`index.html`** directly in a modern browser. It contains the application, styles, geometry libraries, templates and 3D renderer. There are no runtime packages, CDN calls, accounts, backend services, telemetry or project uploads.
+
+For self-hosting, put **`index.html` and `sw.js`** together in a static directory such as `/circuitbench/`. Visit it over HTTPS. No build, database or environment variables are needed. The HTML works alone; the service worker enables installed offline reload after an initial HTTPS or localhost visit. Example Nginx and Caddy configurations are in `deploy/`.
+
+For local serving, run `python3 -m http.server 8000` in this directory and open <http://localhost:8000/>. On Windows, `py -m http.server 8000` may be appropriate. Deploy only the two runtime files if you do not want to expose the source/docs directory. This downloadable release has not been deployed to a public server.
+
+To upgrade: export JSON, replace both runtime files together, then reload online. The shell cache is versioned and installation-scoped. Schema 1 projects migrate on load; schema 2 is current. Retain the same origin to keep browser saves. A custom Content Security Policy must allow the bundled inline scripts/styles and local WebGL; use a tested hash-based policy if required.
+
+## First design
+
+1. First launch opens **Hello, copper**, an intentionally unfinished five-part LED circuit. Use **Project → New empty project** for a blank design. Open `examples/routed-reference.circuitbench.json` for the fully routed software reference.
+2. Add parts in **Schematic**. **Connect** follows pin → optional corners → pin, junction or existing wire. **Junction** splits an existing wire. Crossings alone never connect. Endpoints follow their components; authored internal corners stay in place.
+3. Select a part and use **Label / power** for named connections. The inspector assigns nets or intentional NC. Matching explicit labels connect across sheets. Deleting unnamed wires recomputes connectivity; matching explicit labels remain connected.
+4. **Advanced mode** exposes footprint geometry, pin types, custom symbol positions, body heights and courtyards. **Libraries** saves symbols, footprints and devices. Applying a different symbol/footprint requires matching one-to-one pin numbers. Generic templates require datasheet verification.
+5. **Sheets** creates a parent/child sheet tree sharing one PCB. Labels are global; prefix local nets with their sheet name. Child ports explicitly bind an existing local net to a parent/global net. This is a flattened graph with sheet bindings, not native hierarchical schematic interchange.
+6. Shift-click parts, or use **Select for block**, then **Blocks** to save a circuit. With no group selected, capture the current sheet. Instances receive unique references and prefixed nets. Explicitly list shared nets. Blocks contain components and internal schematic wires; PCB copper is rerouted after placement.
+7. Place footprints in **PCB layout** using drag, arrows or numeric properties. Back-side placement mirrors local X coordinates; board-editor rotation is clockwise. Lock settled placements.
+8. **Route** begins on an assigned pad/via. Add manual corners and finish on the same net. With assistance enabled, the last segment avoids foreign copper, cutouts and mechanical holes. **Route to pin** searches a whole path. It does not push existing copper. Failure calls for repositioning, another layer or manual routing.
+9. To change layers, start a route and click a corner at the intended via. **Via transition** commits that segment, adds a through via and continues on the other layer. **Clean tracks** removes redundant vertices and identical duplicate tracks. Review the result.
+10. **Board tools** adds outlines, cutouts, holes/slots, zones and manufacturing silk. **3D assembly** shows board thickness, holes, copper and dimensioned generic bodies, with orbit, top/bottom views, explode and PNG export.
+11. **Review & output** lists findings, BOM, assumptions/evidence and full-object baseline comparison. Export JSON and independently inspect manufacturing files before ordering.
+
+Tracks stay in place when parts move. Displaced connections become airwires; reroute or edit their vertices. Same-layer, same-net copper overlaps connect. Through-hole pads/vias bridge layers; SMD pads exist on their placement side.
+
+## Geometry and manufacturing
+
+Supported: two copper layers; polygon boards/cutouts; round, rectangular and oval pads; straight track segments; through vias; round or slotted plated pad drills; nonplated mechanical holes/slots; polygon zones with solid/thermal pad connections; line and vectorized-text silkscreen.
+
+Zones regenerate after edits. Earlier zones have priority, same-net vias connect solidly, and separate islands remain separate in connectivity analysis. Nominal pad/track chord deviation is below 0.002 mm; offset arc tolerance is 0.002 mm on a 0.0001 mm integer grid. Clearance comparisons have a 0.002 mm numeric tolerance. Do not design at the edge of fabrication capability.
+
+| File | Contents |
+| --- | --- |
+| `F_Cu.gbr`, `B_Cu.gbr` | Copper, actual pad outlines and filled zones |
+| `F_Mask.gbr`, `B_Mask.gbr` | Positive mask openings around pads and untented vias |
+| `F_Paste.gbr`, `B_Paste.gbr` | SMD paste; inset is the smaller of 0.025 mm or 2% of pad width/height |
+| `F_SilkS.gbr`, `B_SilkS.gbr` | Explicit manufacturing silk; bottom text mirrored for underside reading |
+| `Edge_Cuts.gbr` | Closed outer contour and cutouts |
+| `Plated.drl`, `Nonplated.drl` | Separate drill files; slots use G85 |
+| `BOM.csv`, `Placement.csv`, `Netlist.csv` | Assembly data and pin-level net assignments |
+| `project.circuitbench.json`, `checks.json` | Editable source and findings at export |
+| `FABRICATION-README.txt` | Dimensions, conventions, assumptions and evidence |
+
+The ZIP has 17 files. Gerbers are X2, metric, 4.6 coordinates. Drills use explicit decimal millimeters. Coordinates use the lower-left board origin. **Do not mirror bottom Gerbers.** Placement rotation is CCW from +X, viewed from the top for both sides; adapt it to your assembler's convention. Body outlines and UI labels are assembly guides; generate manufacturing reference silk deliberately in Board tools.
+
+Text uses an original vectorized 5 × 7 font: A–Z, digits, spaces and `+ - . / _ :`. Confirm actual footprint dimensions, polarity, pin mapping and rotation conventions. CSV formula-prefix escaping may add an apostrophe; JSON is authoritative.
+
+Schematic/assembly SVG, printable PDF reports, 3D PNG and native `.kicad_pcb` export are separate options. Native interchange is a documented subset; see `docs/COMPATIBILITY.md`.
+
+## Design checks
+
+- Electrical pin roles, NC conflicts, multiple declared signal/power outputs, missing drivers, one-pin nets and child-port direction consistency.
+- Actual pad/track/via/zone connectivity, including plated drill voids and separate fill islands.
+- Different-net shorts/clearance, net-class track width/clearance and copper-to-board/cutout clearance.
+- Annular rings, hole spacing, nonplated-hole copper clearance and holes outside board material.
+- Rotated courtyard overlaps, pad/via mask webs, silk-to-mask/edge conflicts and minimum silk feature width.
+- Unsupported KiCad import geometry, with blocking diagnostics for incomplete imports.
+
+Generic pins begin passive until their roles are assigned. Courtyards are rectangular body envelopes. Editable rules and the conservative JLCPCB example cover only a documented subset, not complete fabricator certification.
+
+No simulation, voltage/current/rating inference, impedance/length matching, creepage, thermal or solder-joint analysis is implemented. Ordinary design errors require an in-app confirmation before inspection export. Incomplete imports with blocking diagnostics cannot export fabrication or native replacement boards; continue those designs in their original tool.
+
+## Data and recovery
+
+Projects remain on your device. `localStorage` stores the active design and three prior autosaves; explicit JSON export is the durable backup. Instances on the same origin share the CIRCUITBENCH active-project key. Preferences are local. Undo/redo is session-only, capped at 60 actions.
+
+Corrupt saved data is preserved and autosave pauses until you explicitly choose a copy in **Project & recovery**. A conflicting save from another tab also pauses saving. Load the stored design or keep this tab; the competing stored copy is retained in the raw recovery download. Storage quota failures are reported; download JSON to preserve the in-memory design.
+
+Raw recovery downloads contain strings, not directly editable projects. Extract a valid `current`, `previous` or `conflict` string into a project JSON file and open that file. Export recovery records before clearing browser data. The service worker caches the app shell, not project backups.
+
+## Limits and accessibility
+
+| Item | Limit |
+| --- | --- |
+| Board | 5–500 mm per axis; 0.1–10 mm thickness |
+| Components / pins | 150 components; 40 pins per component |
+| Copper | 500 tracks; 200 vias; 200 points per track; 2,000 pad/segment/via primitives total |
+| Nets / sheets | 256 nets; 40 sheets; 100 child ports |
+| Drawing | 1,000 wires; 500 junctions; 300 labels |
+| Board objects | 20 zones; 100 mechanical holes; 30 cutouts; 300 silk objects |
+| Files | Project/library JSON up to 5 MB; KiCad input up to 10 MB |
+
+Complex fills may pause the browser. Route search is bounded to 180,000 visits and may miss a geometrically possible route; it does not promise shortest or 45° routes. Inner layers, arbitrary curved copper, push-and-shove, external STEP, SPICE and native LibrePCB import are future work.
+
+Light, dark and high-contrast themes, visible focus, labeled controls, modal focus containment, status announcements and numeric editing alternatives are included. The canvas has no complete screen-reader geometry model. Mobile panels/basic editing were tested at 390 px; dense PCB work is best on desktop. No pinch gesture is implemented.
+
+| Action | Shortcut |
+| --- | --- |
+| Select / pan / wire or route | S / H / W |
+| Rotate / fit | R / F |
+| Nudge | Arrows; Shift = 10 steps |
+| Finish route / cancel | Enter / Escape |
+| Delete | Delete or Backspace |
+| Undo / redo | Ctrl or Command Z / Shift Z |
+| Export JSON | Ctrl or Command S |
+
+## Source and tests
+
+The HTML is ready to deploy. After source edits, `python3 build.py` concatenates the checked-in files with Python's standard library. Model extensions follow `core.js`: `model`, `geometry`, `eda`, `kicad`, `routing`, `blocks`, `hardening`. UI modules follow `app.js`. `viewer-entry.js` builds the already-vendored 3D bundle.
+
+```sh
+npm ci
+npx playwright install chromium
+npm test
+# Only after editing the 3D source:
+npm run build:viewer
+npm run build
+```
+
+Set `CHROMIUM_EXECUTABLE` to use an installed browser. Independent manufacturing tests additionally use `gerbonara==1.6.3` and `shapely`; native tests use KiCad's `pcbnew`. See `docs/TEST-REPORT.md` for release evidence and `docs/ROADMAP.md` for completed batches and outstanding hardware work. No remote Git repository was created.
+
+Copyright © 2026 Michael Parks / Green Shoe Garage. Application: **GPL-3.0-only**, full text in `LICENSE`. Clipper 6.4.2 is Boost-licensed; Three.js is MIT-licensed; notices are in `vendor/`. No KiCad/LibrePCB code, logos or libraries are bundled.

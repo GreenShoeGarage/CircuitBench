@@ -1,0 +1,596 @@
+{
+  "format": "circuitbench",
+  "schema": 2,
+  "version": "1.0.0",
+  "title": "Hello copper - routed reference",
+  "revision": "1.0",
+  "board": {
+    "width": 60,
+    "height": 40,
+    "thickness": 1.6,
+    "outline": [],
+    "origin": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "rules": {
+    "clearance": 0.25,
+    "edge": 0.5,
+    "minWidth": 0.25,
+    "annular": 0.15,
+    "mask": 0.05,
+    "drill": 0.25,
+    "maskWeb": 0.1,
+    "courtyard": 0.25,
+    "silk": 0.15,
+    "silkLine": 0.15
+  },
+  "components": [
+    {
+      "id": "iddw4y1sjxnc",
+      "kind": "header2",
+      "ref": "J1",
+      "value": "5V IN",
+      "mpn": "",
+      "body": [
+        3,
+        5.08
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": 0,
+          "y": -1.27,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "+5V",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "+5V",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 0,
+          "y": 1.27,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "GND",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "GND",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 9,
+        "y": 20,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 20,
+        "y": 35,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 8.5,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "header2",
+        "pins": []
+      },
+      "footprintName": "header2"
+    },
+    {
+      "id": "idecuu6jeaj5",
+      "kind": "resistor",
+      "ref": "R1",
+      "value": "330Ω",
+      "mpn": "",
+      "body": [
+        6.3,
+        2.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": -5.08,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "+5V",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "+5V",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 5.08,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "LED+",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "LED+",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 28,
+        "y": 11,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 60,
+        "y": 20,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 3,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "resistor",
+        "pins": []
+      },
+      "footprintName": "resistor"
+    },
+    {
+      "id": "idr6fjyfd8h4",
+      "kind": "led",
+      "ref": "D1",
+      "value": "Green LED",
+      "mpn": "",
+      "body": [
+        5,
+        5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "Anode",
+          "x": -1.27,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "LED+",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "LED+",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "Cathode",
+          "x": 1.27,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "GND",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "GND",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 47,
+        "y": 20,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 100,
+        "y": 35,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 8,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "led",
+        "pins": []
+      },
+      "footprintName": "led"
+    },
+    {
+      "id": "idmss25sj9fq",
+      "kind": "capacitor",
+      "ref": "C1",
+      "value": "100nF",
+      "mpn": "",
+      "body": [
+        5,
+        3
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": -2.54,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "+5V",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "+5V",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 2.54,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "GND",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "GND",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 28,
+        "y": 29,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 60,
+        "y": 55,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 3,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "capacitor",
+        "pins": []
+      },
+      "footprintName": "capacitor"
+    },
+    {
+      "id": "idm7vezu756d",
+      "kind": "header2",
+      "ref": "J2",
+      "value": "Test points",
+      "mpn": "",
+      "body": [
+        3,
+        5.08
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": 0,
+          "y": -1.27,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "+5V",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "+5V",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 0,
+          "y": 1.27,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "GND",
+          "nc": false,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "GND",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 51,
+        "y": 32,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 100,
+        "y": 65,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 8.5,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "header2",
+        "pins": []
+      },
+      "footprintName": "header2"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "idcfjjgtas9x",
+      "net": "LED+",
+      "layer": "F",
+      "width": 0.6,
+      "points": [
+        {
+          "x": 33.08,
+          "y": 11
+        },
+        {
+          "x": 45.73,
+          "y": 11
+        },
+        {
+          "x": 45.73,
+          "y": 20
+        }
+      ]
+    },
+    {
+      "id": "ido7fa32zin3",
+      "net": "+5V",
+      "layer": "F",
+      "width": 0.5,
+      "points": [
+        {
+          "x": 9,
+          "y": 18.73
+        },
+        {
+          "x": 22.92,
+          "y": 11
+        }
+      ]
+    },
+    {
+      "id": "id3qwhcaq8z3",
+      "net": "+5V",
+      "layer": "F",
+      "width": 0.5,
+      "points": [
+        {
+          "x": 22.92,
+          "y": 11
+        },
+        {
+          "x": 25.46,
+          "y": 29
+        }
+      ]
+    },
+    {
+      "id": "id16i62uyhgz",
+      "net": "+5V",
+      "layer": "F",
+      "width": 0.5,
+      "points": [
+        {
+          "x": 25.46,
+          "y": 29
+        },
+        {
+          "x": 30.5,
+          "y": 30.5
+        },
+        {
+          "x": 51,
+          "y": 30.73
+        }
+      ]
+    },
+    {
+      "id": "idt844ofkh4m",
+      "net": "GND",
+      "layer": "B",
+      "width": 0.5,
+      "points": [
+        {
+          "x": 9,
+          "y": 21.27
+        },
+        {
+          "x": 46.25,
+          "y": 21.5
+        },
+        {
+          "x": 48.27,
+          "y": 20
+        }
+      ]
+    },
+    {
+      "id": "idpvuj0awhca",
+      "net": "GND",
+      "layer": "B",
+      "width": 0.5,
+      "points": [
+        {
+          "x": 48.27,
+          "y": 20
+        },
+        {
+          "x": 45,
+          "y": 22.25
+        },
+        {
+          "x": 30.54,
+          "y": 29
+        }
+      ]
+    },
+    {
+      "id": "id0dggrgjg8k",
+      "net": "GND",
+      "layer": "B",
+      "width": 0.5,
+      "points": [
+        {
+          "x": 30.54,
+          "y": 29
+        },
+        {
+          "x": 51,
+          "y": 33.27
+        }
+      ]
+    }
+  ],
+  "vias": [],
+  "nets": [
+    "+5V",
+    "GND",
+    "LED+"
+  ],
+  "assumptions": "Two copper layers. Board dimensions and footprints must be checked against your actual parts and fabricator capabilities. Demo uses a 5 V source and a 330 Ω LED resistor; electrical behavior is not simulated. Generic footprints require confirmation against actual selected parts. This is a software verification fixture, not a proven hardware design.",
+  "evidence": "Software reference design only. All nets routed and CIRCUITBENCH checks passed at release. Gerbers and drills independently parsed. Not physically fabricated, assembled or electrically tested.",
+  "baseline": null,
+  "sheets": [
+    {
+      "id": "main",
+      "name": "Main circuit",
+      "parent": null
+    }
+  ],
+  "wires": [
+    {
+      "id": "idgv9y7mq2oh",
+      "net": "LED+",
+      "sheet": "main",
+      "from": {
+        "kind": "pin",
+        "component": "idecuu6jeaj5",
+        "pin": "2"
+      },
+      "to": {
+        "kind": "pin",
+        "component": "idr6fjyfd8h4",
+        "pin": "1"
+      },
+      "points": [
+        {
+          "x": 80,
+          "y": 20
+        },
+        {
+          "x": 80,
+          "y": 35
+        }
+      ]
+    }
+  ],
+  "junctions": [],
+  "labels": [],
+  "ports": [],
+  "holes": [
+    {
+      "id": "iduryrmbx3u0",
+      "x": 5,
+      "y": 5,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false
+    },
+    {
+      "id": "idk9y0u61orx",
+      "x": 55,
+      "y": 5,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false
+    }
+  ],
+  "cutouts": [],
+  "silk": [
+    {
+      "id": "id74qr6kvi15",
+      "kind": "text",
+      "text": "HELLO COPPER 1.0",
+      "layer": "F",
+      "x": 5,
+      "y": 36,
+      "size": 1.4,
+      "width": 0.2,
+      "rotation": 0,
+      "mirror": false
+    }
+  ],
+  "zones": [],
+  "library": {
+    "symbols": [],
+    "footprints": [],
+    "devices": [],
+    "blocks": []
+  },
+  "netClasses": [],
+  "importNotes": []
+}

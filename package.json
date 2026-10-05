@@ -1,0 +1,22 @@
+{
+  "name": "circuitbench",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local-first schematic and two-layer PCB workbench",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "test": "node tests/core.test.cjs && node tests/advanced.test.cjs && node tests/release.test.cjs && node tests/browser.test.cjs && node tests/advanced-browser.test.cjs",
+    "test:core": "node tests/core.test.cjs",
+    "test:browser": "node tests/browser.test.cjs",
+    "test:engine": "node tests/core.test.cjs && node tests/advanced.test.cjs && node tests/release.test.cjs",
+    "test:manufacturing": "node tests/manufacturing-fixture.cjs && python3 tests/manufacturing.test.py",
+    "build": "python3 build.py",
+    "build:viewer": "esbuild viewer-entry.js --bundle --minify --format=iife --global-name=CB3D --outfile=vendor/viewer.js"
+  },
+  "devDependencies": {
+    "jszip": "3.10.1",
+    "playwright": "1.62.1",
+    "three": "0.186.1",
+    "esbuild": "0.28.2"
+  }
+}

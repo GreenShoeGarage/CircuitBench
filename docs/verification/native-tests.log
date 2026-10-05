@@ -1,0 +1,11 @@
+PASS native KiCad J1 1 position, size and angle
+PASS native KiCad J1 2 position, size and angle
+PASS native KiCad R1 1 position, size and angle
+PASS native KiCad R1 2 position, size and angle
+PASS native KiCad D1 1 position, size and angle
+PASS native KiCad D1 2 position, size and angle
+PASS native KiCad C1 1 position, size and angle
+PASS native KiCad C1 2 position, size and angle
+PASS native KiCad J2 1 position, size and angle
+PASS native KiCad J2 2 position, size and angle
+PASS native board load and save

@@ -1,0 +1,76 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> circuitbench@1.0.0 test
+> node tests/core.test.cjs && node tests/advanced.test.cjs && node tests/release.test.cjs && node tests/browser.test.cjs && node tests/advanced-browser.test.cjs
+
+PASS Example is a valid project with exactly six remaining connections
+PASS Actual copper joins two pads and displacement breaks it
+PASS Crossing segments connect same-net copper without shared vertices
+PASS Different-net tracks crossing on the same layer cause a short
+PASS Clearance, edge, trace width and annular ring rules catch violations
+PASS SMD pads only connect on their physical layer
+PASS Unassigned pins remain distinct; NC declarations and output conflicts work
+PASS Net merging updates pins, tracks and vias coherently
+PASS Rotation and bottom mirroring use one consistent transform
+PASS Project JSON preserves all geometry and rejects malformed or future input
+PASS Gerber and drill share a lower-left origin without mirroring bottom
+PASS Connecting two unassigned pins creates a new named net
+12 core test groups passed
+PASS independent ZIP CRC and contents
+PASS Schema 1 migration preserves geometry, nets, and backup compatibility
+PASS Explicit wire connects and deleting it splits an unnamed net
+PASS Junction split and branch maintain one electrical net
+PASS Explicit matching labels remain connected after a drawing wire is removed
+PASS Renumbering updates wire anchors without changing electrical identity
+PASS Reusable symbol and footprint applications retain nets and reject mismatched pin maps
+PASS A trace wholly inside a plated drill void does not connect to the pad
+PASS Rectangular pad dimensions and rotation control real copper geometry
+PASS Disconnected copper-zone islands do not falsely resolve an airwire
+PASS Copper plane joins same-net pads and clears a foreign-net pad
+PASS Mask, drill, courtyard and silkscreen checks expose fabrication conflicts
+PASS Manufacturing output includes separate plated/NPTH drills, paste, silk and placement
+12 extended test groups passed
+PASS Router detours around foreign copper and a drilled slot with rule clearance
+PASS Router refuses an impassable layer instead of crossing a barrier
+PASS Track cleanup preserves geometry and removes redundant vertices
+PASS Repeated block instances have unique references and isolated nets
+PASS Child sheet ports merge nets explicitly and reject hierarchy cycles
+PASS Malformed library and duplicate net-class assignments are rejected
+PASS Board interchange preserves rotated front/back rectangles, ovals and slots
+PASS Unsupported KiCad geometry creates blocking diagnostics and cannot fabricate
+PASS Bottom text mirrors actual manufacturing geometry
+PASS Object baselines detect placement changes and reject recursive snapshots
+PASS Curved pad approximations stay within two microns across permitted sizes
+BENCHMARK 150 components / 300 pads: 687 ms
+PASS 150-component benchmark validates and completes real geometry checks
+12 release engine test groups passed
+PASS Cold start at a static subfolder
+PASS Fresh start and component placement
+PASS Pointer-based schematic connectivity
+PASS Pad-to-pad routing resolves the actual airwire
+PASS Keyboard editing and undo/redo
+PASS Footprint editing, duplicate, delete, rotation
+PASS Autosave survives reload
+PASS JSON download/import round trip
+PASS Malformed imports preserve the current project
+PASS Review, baseline and evidence register
+PASS Fabrication ZIP download with valid CRC
+PASS Printable PDF design report
+PASS Light, dark and high-contrast themes
+PASS Named nets, renaming, via placement and numeric via editing
+PASS Pan, fit and rendered snap grid
+PASS Previous autosave recovery and undo of recovery
+PASS Offline reload at the installed subfolder
+PASS 390 px touch layout: panels, placement and property edit
+PASS Standalone file:// HTML works without a server
+PASS No uncaught browser errors
+PASS Real WebGL assembly meshes, bottom view, explode and image export
+PASS Board tools create slotted holes, thermal zones and mirrored silkscreen
+PASS Placement locks and saved device library
+PASS Child sheets and reusable block capture/placement
+PASS Full snapshot baseline and object-level comparison
+PASS Native KiCad UI export, preview, import and undo
+PASS Multi-tab conflict pauses autosave and explicitly adopts the saved copy
+PASS Schema 2 reload preserves libraries, blocks and baseline
+PASS Corrupt stored data remains untouched while autosave is paused
+PASS No uncaught errors across advanced workflows

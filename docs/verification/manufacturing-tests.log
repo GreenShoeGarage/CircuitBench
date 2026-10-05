@@ -1,0 +1,12 @@
+Complex manufacturing fixture generated
+PASS F_Cu.gbr independent polygon area/position/polarity; difference 0.0 mm²
+PASS F_Mask.gbr independent polygon area/position/polarity; difference 0.0 mm²
+PASS F_Paste.gbr independent polygon area/position/polarity; difference 0.0 mm²
+PASS F_SilkS.gbr independent polygon area/position/polarity; difference 0.0 mm²
+PASS B_Cu.gbr independent polygon area/position/polarity; difference 0.0 mm²
+PASS B_Mask.gbr independent polygon area/position/polarity; difference 0.0 mm²
+PASS B_Paste.gbr independent polygon area/position/polarity; difference 0.0 mm²
+PASS B_SilkS.gbr independent polygon area/position/polarity; difference 0.0 mm²
+PASS Plated.drl hole counts, positions, diameters, slot lengths and angles
+PASS Nonplated.drl hole counts, positions, diameters, slot lengths and angles
+PASS Edge_Cuts.gbr closed outline and cutout segment counts
