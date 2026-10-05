@@ -1,0 +1,3205 @@
+{
+  "devices": [
+    {
+      "id": "lib_d8f09ac4",
+      "name": "NE555P",
+      "prefix": "U",
+      "value": "NE555P",
+      "category": "Timers",
+      "description": "Precision Timers, 555 compatible,  PDIP-8",
+      "keywords": "single timer 555",
+      "mpn": "NE555P",
+      "symbolId": "lib_9c47370",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Timer:NE555P",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_e5afd814",
+      "name": "TLC555xP",
+      "prefix": "U",
+      "value": "TLC555xP",
+      "category": "Timers",
+      "description": "Single LinCMOS Timer, 555 compatible, PDIP-8",
+      "keywords": "single timer 555",
+      "mpn": "TLC555xP",
+      "symbolId": "lib_3bb5b200",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Timer:TLC555xP",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_4f37e72b",
+      "name": "ICM7555xP",
+      "prefix": "U",
+      "value": "ICM7555xP",
+      "category": "Timers",
+      "description": "CMOS General Purpose Timer, 555 compatible, PDIP-8",
+      "keywords": "single timer 555",
+      "mpn": "ICM7555xP",
+      "symbolId": "lib_6bd3516f",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Timer:ICM7555xP",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_3643d7e0",
+      "name": "CD4541BE",
+      "prefix": "U",
+      "value": "CD4541BE",
+      "category": "Timers",
+      "description": "20V, Programmable Timer, PDIP-14",
+      "keywords": "cmos",
+      "mpn": "CD4541BE",
+      "symbolId": "lib_474f64bc",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Timer:CD4541BE",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_c4ec5b70",
+      "name": "82C54",
+      "prefix": "U",
+      "value": "82C54",
+      "category": "Timers",
+      "description": "CHMOS Programmable Interval Timer, PDIP-24",
+      "keywords": "Timer Counter",
+      "mpn": "82C54",
+      "symbolId": "lib_5f10ecc",
+      "footprintIds": [
+        "lib_c7572ad2"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Timer:82C54",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_f08fcb87",
+      "name": "LM7805_TO220",
+      "prefix": "U",
+      "value": "LM7805_TO220",
+      "category": "Power",
+      "description": "Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220",
+      "keywords": "Voltage Regulator 1A Positive",
+      "mpn": "LM7805_TO220",
+      "symbolId": "lib_5feb4b1b",
+      "footprintIds": [
+        "lib_94fc0c5f"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Regulator_Linear:LM7805_TO220",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_a97eee0d",
+      "name": "LM317_TO-220",
+      "prefix": "U",
+      "value": "LM317_TO-220",
+      "category": "Power",
+      "description": "1.5A 35V Adjustable Linear Regulator, TO-220",
+      "keywords": "Adjustable Voltage Regulator 1A Positive",
+      "mpn": "LM317_TO-220",
+      "symbolId": "lib_8c8bdaf1",
+      "footprintIds": [
+        "lib_94fc0c5f"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Regulator_Linear:LM317_TO-220",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_ae1217a",
+      "name": "LM337_TO220",
+      "prefix": "U",
+      "value": "LM337_TO220",
+      "category": "Power",
+      "description": "Negative 1.5A 35V Adjustable Linear Regulator, TO-220",
+      "keywords": "Adjustable Voltage Regulator 1.5A Negative",
+      "mpn": "LM337_TO220",
+      "symbolId": "lib_e94b91e",
+      "footprintIds": [
+        "lib_94fc0c5f"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Regulator_Linear:LM337_TO220",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_ddccd4e6",
+      "name": "AMS1117-3.3",
+      "prefix": "U",
+      "value": "AMS1117-3.3",
+      "category": "Power",
+      "description": "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223",
+      "keywords": "linear regulator ldo fixed positive",
+      "mpn": "AMS1117-3.3",
+      "symbolId": "lib_b4f35cca",
+      "footprintIds": [
+        "lib_789ca921"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Regulator_Linear:AMS1117-3.3",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_dd1879ff",
+      "name": "AP2112K-3.3",
+      "prefix": "U",
+      "value": "AP2112K-3.3",
+      "category": "Power",
+      "description": "600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5",
+      "keywords": "linear regulator ldo fixed positive",
+      "mpn": "AP2112K-3.3",
+      "symbolId": "lib_1e8bf4a3",
+      "footprintIds": [
+        "lib_d154f4a4"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Regulator_Linear:AP2112K-3.3",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_498aacca",
+      "name": "LP2950-3.3_TO92",
+      "prefix": "U",
+      "value": "LP2950-3.3_TO92",
+      "category": "Power",
+      "description": "Positive 100mA 30V Linear Micropower Voltage Regulator, Fixed Output 3.3V, TO-92",
+      "keywords": "Micropower Voltage Regulator 100mA Positive",
+      "mpn": "LP2950-3.3_TO92",
+      "symbolId": "lib_3c3c2e86",
+      "footprintIds": [
+        "lib_3f15447d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Regulator_Linear:LP2950-3.3_TO92",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_8678883b",
+      "name": "LD1117S33TR_SOT223",
+      "prefix": "U",
+      "value": "LD1117S33TR_SOT223",
+      "category": "Power",
+      "description": "800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, SOT-223",
+      "keywords": "REGULATOR LDO 3.3V",
+      "mpn": "LD1117S33TR_SOT223",
+      "symbolId": "lib_17ae482f",
+      "footprintIds": [
+        "lib_789ca921"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Regulator_Linear:LD1117S33TR_SOT223",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_dc1a24f7",
+      "name": "2N3904",
+      "prefix": "Q",
+      "value": "2N3904",
+      "category": "Transistors",
+      "description": "0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92",
+      "keywords": "NPN Transistor",
+      "mpn": "2N3904",
+      "symbolId": "lib_f53942cd",
+      "footprintIds": [
+        "lib_3f15447d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_BJT:2N3904",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_de1a281d",
+      "name": "2N3906",
+      "prefix": "Q",
+      "value": "2N3906",
+      "category": "Transistors",
+      "description": "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, TO-92",
+      "keywords": "PNP Transistor",
+      "mpn": "2N3906",
+      "symbolId": "lib_f3393fa7",
+      "footprintIds": [
+        "lib_3f15447d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_BJT:2N3906",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_d8d88a9e",
+      "name": "BC547",
+      "prefix": "Q",
+      "value": "BC547",
+      "category": "Transistors",
+      "description": "0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92",
+      "keywords": "NPN Transistor",
+      "mpn": "BC547",
+      "symbolId": "lib_44bfb7b0",
+      "footprintIds": [
+        "lib_3f15447d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_BJT:BC547",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_d8d64c07",
+      "name": "BC557",
+      "prefix": "Q",
+      "value": "BC557",
+      "category": "Transistors",
+      "description": "0.1A Ic, 45V Vce, PNP Small Signal Transistor, TO-92",
+      "keywords": "PNP Transistor",
+      "mpn": "BC557",
+      "symbolId": "lib_44bd7919",
+      "footprintIds": [
+        "lib_3f15447d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_BJT:BC557",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_b6ec9791",
+      "name": "S8050",
+      "prefix": "Q",
+      "value": "S8050",
+      "category": "Transistors",
+      "description": "0.7A Ic, 20V Vce, Low Voltage High Current NPN Transistor, TO-92",
+      "keywords": "S8050 NPN Low Voltage High Current Transistor",
+      "mpn": "S8050",
+      "symbolId": "lib_8b86875b",
+      "footprintIds": [
+        "lib_3f15447d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_BJT:S8050",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_5571c121",
+      "name": "TIP120",
+      "prefix": "Q",
+      "value": "TIP120",
+      "category": "Transistors",
+      "description": "5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220",
+      "keywords": "Darlington Power NPN Transistor",
+      "mpn": "TIP120",
+      "symbolId": "lib_b9d1b4f7",
+      "footprintIds": [
+        "lib_94fc0c5f"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_BJT:TIP120",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_5871c5da",
+      "name": "TIP125",
+      "prefix": "Q",
+      "value": "TIP125",
+      "category": "Transistors",
+      "description": "5A Ic, 60V Vce, Silicon Darlington Power PNP Transistor, TO-220",
+      "keywords": "Darlington Power PNP Transistor",
+      "mpn": "TIP125",
+      "symbolId": "lib_b4d1ad18",
+      "footprintIds": [
+        "lib_94fc0c5f"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_BJT:TIP125",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_949240d8",
+      "name": "BD139",
+      "prefix": "Q",
+      "value": "BD139",
+      "category": "Transistors",
+      "description": "1.5A Ic, 80V Vce, Low Voltage Transistor, TO-126",
+      "keywords": "Low Voltage Transistor",
+      "mpn": "BD139",
+      "symbolId": "lib_efdc1006",
+      "footprintIds": [
+        "lib_5e45b116"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_BJT:BD139",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_651b1435",
+      "name": "2N7000",
+      "prefix": "Q",
+      "value": "2N7000",
+      "category": "Transistors",
+      "description": "0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92",
+      "keywords": "N-Channel MOSFET Logic-Level",
+      "mpn": "2N7000",
+      "symbolId": "lib_6e939da9",
+      "footprintIds": [
+        "lib_3f15447d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_FET:2N7000",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_631b110f",
+      "name": "2N7002",
+      "prefix": "Q",
+      "value": "2N7002",
+      "category": "Transistors",
+      "description": "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23",
+      "keywords": "N-Channel Switching MOSFET",
+      "mpn": "2N7002",
+      "symbolId": "lib_6c939a83",
+      "footprintIds": [
+        "lib_39db626e"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_FET:2N7002",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_c65c7e8e",
+      "name": "BSS138",
+      "prefix": "Q",
+      "value": "BSS138",
+      "category": "Transistors",
+      "description": "50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23",
+      "keywords": "N-Channel MOSFET",
+      "mpn": "BSS138",
+      "symbolId": "lib_129fcda2",
+      "footprintIds": [
+        "lib_39db626e"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_FET:BSS138",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_fee491ef",
+      "name": "BS170",
+      "prefix": "Q",
+      "value": "BS170",
+      "category": "Transistors",
+      "description": "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92",
+      "keywords": "N-Channel MOSFET",
+      "mpn": "BS170",
+      "symbolId": "lib_fe188313",
+      "footprintIds": [
+        "lib_3f15447d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_FET:BS170",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_41bb460c",
+      "name": "AO3400A",
+      "prefix": "Q",
+      "value": "AO3400A",
+      "category": "Transistors",
+      "description": "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23",
+      "keywords": "N-Channel MOSFET",
+      "mpn": "AO3400A",
+      "symbolId": "lib_50d90618",
+      "footprintIds": [
+        "lib_39db626e"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_FET:AO3400A",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_9db80549",
+      "name": "AO3401A",
+      "prefix": "Q",
+      "value": "AO3401A",
+      "category": "Transistors",
+      "description": "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23",
+      "keywords": "P-Channel MOSFET",
+      "mpn": "AO3401A",
+      "symbolId": "lib_acd75855",
+      "footprintIds": [
+        "lib_39db626e"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_FET:AO3401A",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_c027726e",
+      "name": "IRF540N",
+      "prefix": "Q",
+      "value": "IRF540N",
+      "category": "Transistors",
+      "description": "33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220",
+      "keywords": "HEXFET N-Channel MOSFET",
+      "mpn": "IRF540N",
+      "symbolId": "lib_ea37ff6a",
+      "footprintIds": [
+        "lib_94fc0c5f"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_FET:IRF540N",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_371d6cdb",
+      "name": "IRLZ44N",
+      "prefix": "Q",
+      "value": "IRLZ44N",
+      "category": "Transistors",
+      "description": "47A Id, 55V Vds, 22mOhm Rds Single N-Channel HEXFET Power MOSFET, TO-220AB",
+      "keywords": "N-Channel HEXFET MOSFET Logic-Level",
+      "mpn": "IRLZ44N",
+      "symbolId": "lib_500129c7",
+      "footprintIds": [
+        "lib_94fc0c5f"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Transistor_FET:IRLZ44N",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_37e321c0",
+      "name": "1N4148",
+      "prefix": "D",
+      "value": "1N4148",
+      "category": "Diodes & LEDs",
+      "description": "100V 0.15A standard switching diode, DO-35",
+      "keywords": "diode",
+      "mpn": "1N4148",
+      "symbolId": "lib_9b017b60",
+      "footprintIds": [
+        "lib_17bc8eb6"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Diode:1N4148",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_b385108e",
+      "name": "1N4007",
+      "prefix": "D",
+      "value": "1N4007",
+      "category": "Diodes & LEDs",
+      "description": "1000V 1A General Purpose Rectifier Diode, DO-41",
+      "keywords": "diode",
+      "mpn": "1N4007",
+      "symbolId": "lib_97dfd52e",
+      "footprintIds": [
+        "lib_aeee244"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Diode:1N4007",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_3be212c",
+      "name": "1N5819",
+      "prefix": "D",
+      "value": "1N5819",
+      "category": "Diodes & LEDs",
+      "description": "40V 1A Schottky Barrier Rectifier Diode, DO-41",
+      "keywords": "diode Schottky",
+      "mpn": "1N5819",
+      "symbolId": "lib_5b728b4c",
+      "footprintIds": [
+        "lib_aeee244"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Diode:1N5819",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_b462a1ff",
+      "name": "BAV99",
+      "prefix": "D",
+      "value": "BAV99",
+      "category": "Diodes & LEDs",
+      "description": "BAV99 High-speed switching diodes, SOT-23",
+      "keywords": "diode",
+      "mpn": "BAV99",
+      "symbolId": "lib_9819741f",
+      "footprintIds": [
+        "lib_39db626e"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Diode:BAV99",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_8ca40b17",
+      "name": "SS14",
+      "prefix": "D",
+      "value": "SS14",
+      "category": "Diodes & LEDs",
+      "description": "40V 1A Schottky Diode, SMA",
+      "keywords": "diode Schottky",
+      "mpn": "SS14",
+      "symbolId": "lib_ef7a9f7",
+      "footprintIds": [
+        "lib_2378600"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Diode:SS14",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_7cb690e2",
+      "name": "1N5822",
+      "prefix": "D",
+      "value": "1N5822",
+      "category": "Diodes & LEDs",
+      "description": "40V 3A Schottky Barrier Rectifier Diode, DO-201AD",
+      "keywords": "diode Schottky",
+      "mpn": "1N5822",
+      "symbolId": "lib_546bc482",
+      "footprintIds": [
+        "lib_da46a2eb"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Diode:1N5822",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_82ea6366",
+      "name": "MCP6001-OT",
+      "prefix": "U",
+      "value": "MCP6001-OT",
+      "category": "Analog",
+      "description": "1MHz, Low-Power Op Amp, SOT-23-5",
+      "keywords": "single opamp",
+      "mpn": "MCP6001-OT",
+      "symbolId": "lib_89c9b4c4",
+      "footprintIds": [
+        "lib_d154f4a4"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Amplifier_Operational:MCP6001-OT",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_b77905f",
+      "name": "AD8603",
+      "prefix": "U",
+      "value": "AD8603",
+      "category": "Analog",
+      "description": "Precision Micropower, Low Noise CMOS, Rail-to-Rail Input/Output Operational Amplifier, TSOT-23-5",
+      "keywords": "single opamp",
+      "mpn": "AD8603",
+      "symbolId": "lib_2586c481",
+      "footprintIds": [
+        "lib_63e5b238"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Amplifier_Operational:AD8603",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_d7b1d25e",
+      "name": "LM358",
+      "prefix": "U",
+      "value": "LM358",
+      "category": "Analog",
+      "description": "Low-Power, Dual Operational Amplifiers, DIP-8/SOIC-8/TO-99-8",
+      "keywords": "dual opamp",
+      "mpn": "",
+      "symbolId": "lib_1849ebf8",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Amplifier_Operational:LM358",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_d5a50345",
+      "name": "LM324",
+      "prefix": "U",
+      "value": "LM324",
+      "category": "Analog",
+      "description": "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14",
+      "keywords": "quad opamp",
+      "mpn": "",
+      "symbolId": "lib_165b31f3",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Amplifier_Operational:LM324",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_bc0bba76",
+      "name": "TL072",
+      "prefix": "U",
+      "value": "TL072",
+      "category": "Analog",
+      "description": "Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8",
+      "keywords": "dual opamp",
+      "mpn": "",
+      "symbolId": "lib_42dc4164",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Amplifier_Operational:TL072",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_be0bbd9c",
+      "name": "TL074",
+      "prefix": "U",
+      "value": "TL074",
+      "category": "Analog",
+      "description": "Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14",
+      "keywords": "quad opamp",
+      "mpn": "",
+      "symbolId": "lib_40dc3e3e",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Amplifier_Operational:TL074",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_384c023b",
+      "name": "NE5532",
+      "prefix": "U",
+      "value": "NE5532",
+      "category": "Analog",
+      "description": "Dual Low-Noise Operational Amplifiers, DIP-8/SOIC-8",
+      "keywords": "dual opamp",
+      "mpn": "",
+      "symbolId": "lib_f1fe6e29",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Amplifier_Operational:NE5532",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_803ad3c0",
+      "name": "LM741",
+      "prefix": "U",
+      "value": "LM741",
+      "category": "Analog",
+      "description": "Operational Amplifier, DIP-8/TO-99-8",
+      "keywords": "single opamp",
+      "mpn": "",
+      "symbolId": "lib_e8d71232",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Amplifier_Operational:LM741",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_62923771",
+      "name": "LM393",
+      "prefix": "U",
+      "value": "LM393",
+      "category": "Analog",
+      "description": "Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/TO-99-8",
+      "keywords": "cmp open collector",
+      "mpn": "",
+      "symbolId": "lib_770bbfb7",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Comparator:LM393",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_6483300d",
+      "name": "LM339",
+      "prefix": "U",
+      "value": "LM339",
+      "category": "Analog",
+      "description": "Quad Differential Comparators, SOIC-14/TSSOP-14",
+      "keywords": "cmp open collector",
+      "mpn": "",
+      "symbolId": "lib_64f39e7b",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Comparator:LM339",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_964a4d34",
+      "name": "74HC00",
+      "prefix": "U",
+      "value": "74HC00",
+      "category": "Logic",
+      "description": "quad 2-input NAND gate",
+      "keywords": "HCMOS nand 2-input",
+      "mpn": "",
+      "symbolId": "lib_b95db74",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC00",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_984a505a",
+      "name": "74HC02",
+      "prefix": "U",
+      "value": "74HC02",
+      "category": "Logic",
+      "description": "quad 2-input NOR gate",
+      "keywords": "HCMOS Nor2",
+      "mpn": "",
+      "symbolId": "lib_d95de9a",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC02",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_924a46e8",
+      "name": "74HC04",
+      "prefix": "U",
+      "value": "74HC04",
+      "category": "Logic",
+      "description": "Hex Inverter",
+      "keywords": "HCMOS not inv",
+      "mpn": "",
+      "symbolId": "lib_795d528",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC04",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_984c8ef1",
+      "name": "74HC14",
+      "prefix": "U",
+      "value": "74HC14",
+      "category": "Logic",
+      "description": "Hex inverter schmitt trigger",
+      "keywords": "HCMOS not inverter",
+      "mpn": "",
+      "symbolId": "lib_d981d31",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC14",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_144741f7",
+      "name": "74HC74",
+      "prefix": "U",
+      "value": "74HC74",
+      "category": "Logic",
+      "description": "Dual D Flip-flop, Set & Reset",
+      "keywords": "TTL DFF",
+      "mpn": "",
+      "symbolId": "lib_8992d037",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC74",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_845db896",
+      "name": "74HC86",
+      "prefix": "U",
+      "value": "74HC86",
+      "category": "Logic",
+      "description": "Quad 2-input XOR",
+      "keywords": "TTL XOR2",
+      "mpn": "",
+      "symbolId": "lib_f9a946d6",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC86",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_a8a0eac",
+      "name": "74HC123",
+      "prefix": "U",
+      "value": "74HC123",
+      "category": "Logic",
+      "description": "Dual retriggerable monostable multivibrator",
+      "keywords": "TTL monostable, multivibrator",
+      "mpn": "",
+      "symbolId": "lib_f07afd6c",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC123",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_f87d7f4",
+      "name": "74HC138",
+      "prefix": "U",
+      "value": "74HC138",
+      "category": "Logic",
+      "description": "3-to-8 line decoder/multiplexer inverting, DIP-16/SOIC-16/SSOP-16",
+      "keywords": "demux",
+      "mpn": "",
+      "symbolId": "lib_f578c6b4",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC138",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_988060da",
+      "name": "74HC165",
+      "prefix": "U",
+      "value": "74HC165",
+      "category": "Logic",
+      "description": "Shift Register, 8-bit, Parallel Load",
+      "keywords": "8 bit shift register parallel load cmos",
+      "mpn": "",
+      "symbolId": "lib_7e714f9a",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC165",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_65058f31",
+      "name": "74HC595",
+      "prefix": "U",
+      "value": "74HC595",
+      "category": "Logic",
+      "description": "8-bit serial in/out Shift Register 3-State Outputs",
+      "keywords": "HCMOS SR 3State",
+      "mpn": "",
+      "symbolId": "lib_4af67df1",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC595",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_74e0ae05",
+      "name": "74HC245",
+      "prefix": "U",
+      "value": "74HC245",
+      "category": "Logic",
+      "description": "Octal BUS Transceivers, 3-State outputs",
+      "keywords": "HCMOS BUS 3State",
+      "mpn": "",
+      "symbolId": "lib_5ad19cc5",
+      "footprintIds": [
+        "lib_27078a39"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC245",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_73321446",
+      "name": "74HC4060",
+      "prefix": "U",
+      "value": "74HC4060",
+      "category": "Logic",
+      "description": "Binary counter (14-stages) and oscillator",
+      "keywords": "binary counter oscillator",
+      "mpn": "",
+      "symbolId": "lib_2d79ec86",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "74xx:74HC4060",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_8a0cb78d",
+      "name": "4011",
+      "prefix": "U",
+      "value": "4011",
+      "category": "Logic",
+      "description": "Quad Nand 2 inputs",
+      "keywords": "CMOS Nand2",
+      "mpn": "",
+      "symbolId": "lib_4c46426b",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "4xxx:4011",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_880cb467",
+      "name": "4013",
+      "prefix": "U",
+      "value": "4013",
+      "category": "Logic",
+      "description": "Dual D  FlipFlop, Set & reset",
+      "keywords": "CMOS DFF",
+      "mpn": "",
+      "symbolId": "lib_4e464591",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "4xxx:4013",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_840cae1b",
+      "name": "4017",
+      "prefix": "U",
+      "value": "4017",
+      "category": "Logic",
+      "description": "Johnson Counter ( 10 outputs )",
+      "keywords": "CNT CNT10",
+      "mpn": "",
+      "symbolId": "lib_52464bdd",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "4xxx:4017",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_830a6df1",
+      "name": "4020",
+      "prefix": "U",
+      "value": "4020",
+      "category": "Logic",
+      "description": "Binary counter 14 stages (asynchronous)",
+      "keywords": "CMOS CNT CNT14",
+      "mpn": "",
+      "symbolId": "lib_bd4db013",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "4xxx:4020",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_87197ec7",
+      "name": "4040",
+      "prefix": "U",
+      "value": "4040",
+      "category": "Logic",
+      "description": "Binary Counter 12 stages (Asynchronous)",
+      "keywords": "CMOS CNT CNT12",
+      "mpn": "",
+      "symbolId": "lib_495309a5",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "4xxx:4040",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_85197ba1",
+      "name": "4046",
+      "prefix": "U",
+      "value": "4046",
+      "category": "Logic",
+      "description": "Phase Comp & VCO",
+      "keywords": "CMOS PLL",
+      "mpn": "",
+      "symbolId": "lib_43530033",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "4xxx:4046",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_2166ed1",
+      "name": "4051",
+      "prefix": "U",
+      "value": "4051",
+      "category": "Logic",
+      "description": "Analog Multiplexer 8 to 1 lins",
+      "keywords": "CMOS MUX MUX8",
+      "mpn": "",
+      "symbolId": "lib_4450c32f",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "4xxx:4051",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_fb142535",
+      "name": "4060",
+      "prefix": "U",
+      "value": "4060",
+      "category": "Logic",
+      "description": "Binary counter (14-stages) and oscillator",
+      "keywords": "binary counter oscillator",
+      "mpn": "",
+      "symbolId": "lib_555799b7",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "4xxx:4060",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_f5141bc3",
+      "name": "4066",
+      "prefix": "U",
+      "value": "4066",
+      "category": "Logic",
+      "description": "Quad Analog Switches",
+      "keywords": "CMOS SWITCH",
+      "mpn": "",
+      "symbolId": "lib_53579691",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "4xxx:4066",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_b18c9aea",
+      "name": "CH340G",
+      "prefix": "U",
+      "value": "CH340G",
+      "category": "Interfaces",
+      "description": "USB serial converter, UART, SOIC-16",
+      "keywords": "USB UART Serial Converter Interface",
+      "mpn": "CH340G",
+      "symbolId": "lib_17db9914",
+      "footprintIds": [
+        "lib_72be3b29"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_USB:CH340G",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_ad8c949e",
+      "name": "CH340C",
+      "prefix": "U",
+      "value": "CH340C",
+      "category": "Interfaces",
+      "description": "USB serial converter, crystal-less, UART, SOIC-16",
+      "keywords": "USB UART Serial Converter Interface",
+      "mpn": "CH340C",
+      "symbolId": "lib_13db92c8",
+      "footprintIds": [
+        "lib_72be3b29"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_USB:CH340C",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_af8c97c4",
+      "name": "CH340E",
+      "prefix": "U",
+      "value": "CH340E",
+      "category": "Interfaces",
+      "description": "USB serial converter, UART, MSOP-10",
+      "keywords": "USB UART Serial Converter Interface",
+      "mpn": "CH340E",
+      "symbolId": "lib_19db9c3a",
+      "footprintIds": [
+        "lib_89d1052b"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_USB:CH340E",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_e9ad7a68",
+      "name": "CH330N",
+      "prefix": "U",
+      "value": "CH330N",
+      "category": "Interfaces",
+      "description": "USB serial converter, UART, SOIC-8",
+      "keywords": "usb uart wch serial",
+      "mpn": "CH330N",
+      "symbolId": "lib_9b73071e",
+      "footprintIds": [
+        "lib_f5989d95"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_USB:CH330N",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_ab2d6de5",
+      "name": "CP2102N-Axx-xQFN24",
+      "prefix": "U",
+      "value": "CP2102N-Axx-xQFN24",
+      "category": "Interfaces",
+      "description": "USB to UART master bridge, QFN-24",
+      "keywords": "USB UART bridge",
+      "mpn": "CP2102N-Axx-xQFN24",
+      "symbolId": "lib_517377bf",
+      "footprintIds": [
+        "lib_7c283051"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_USB:CP2102N-Axx-xQFN24",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_2bfaef67",
+      "name": "MCP23017_SP",
+      "prefix": "U",
+      "value": "MCP23017_SP",
+      "category": "Interfaces",
+      "description": "16-bit I/O expander, I2C, interrupts, w pull-ups, SPDIP-28",
+      "keywords": "I2C parallel port expander",
+      "mpn": "MCP23017_SP",
+      "symbolId": "lib_c5401f0b",
+      "footprintIds": [
+        "lib_f6d77b81"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_Expansion:MCP23017_SP",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_6363a55a",
+      "name": "MCP23008-xP",
+      "prefix": "U",
+      "value": "MCP23008-xP",
+      "category": "Interfaces",
+      "description": "8-bit I/O expander, I2C, interrupts, PDIP-18",
+      "keywords": "I2C parallel port expander",
+      "mpn": "MCP23008-xP",
+      "symbolId": "lib_aa10ecd6",
+      "footprintIds": [
+        "lib_d868010e"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_Expansion:MCP23008-xP",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_f1a2f4c9",
+      "name": "PCF8574P",
+      "prefix": "U",
+      "value": "PCF8574P",
+      "category": "Interfaces",
+      "description": "8 Bit Port/Expander to I2C Bus, fixed address bits 0b0100, DIP-16",
+      "keywords": "I2C Expander",
+      "mpn": "PCF8574P",
+      "symbolId": "lib_790ca60d",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_Expansion:PCF8574P",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_41670de0",
+      "name": "TCA9548APWR",
+      "prefix": "U",
+      "value": "TCA9548APWR",
+      "category": "Interfaces",
+      "description": "Low voltage 8-channel I2C switch with reset, TSSOP-24",
+      "keywords": "Low voltage 8-channel I2C switch with reset",
+      "mpn": "TCA9548APWR",
+      "symbolId": "lib_d6f8729c",
+      "footprintIds": [
+        "lib_4aee3ac7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_Expansion:TCA9548APWR",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_ae2a756c",
+      "name": "ATmega328P-P",
+      "prefix": "U",
+      "value": "ATmega328P-P",
+      "category": "Microcontrollers",
+      "description": "20MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, DIP-28",
+      "keywords": "AVR 8bit Microcontroller MegaAVR PicoPower",
+      "mpn": "ATmega328P-P",
+      "symbolId": "lib_8b3e94d6",
+      "footprintIds": [
+        "lib_f6d77b81"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_Microchip_ATmega:ATmega328P-P",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_bf2a902f",
+      "name": "ATmega328P-A",
+      "prefix": "U",
+      "value": "ATmega328P-A",
+      "category": "Microcontrollers",
+      "description": "20MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, TQFP-32",
+      "keywords": "AVR 8bit Microcontroller MegaAVR PicoPower",
+      "mpn": "ATmega328P-A",
+      "symbolId": "lib_7c3e7d39",
+      "footprintIds": [
+        "lib_231d15fb"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_Microchip_ATmega:ATmega328P-A",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_c30b518a",
+      "name": "ATmega32U4-A",
+      "prefix": "U",
+      "value": "ATmega32U4-A",
+      "category": "Microcontrollers",
+      "description": "16MHz, 32kB Flash, 2.5kB SRAM, 1kB EEPROM, USB 2.0, TQFP-44",
+      "keywords": "AVR 8bit Microcontroller MegaAVR USB",
+      "mpn": "ATmega32U4-A",
+      "symbolId": "lib_b94d9d6c",
+      "footprintIds": [
+        "lib_5c7521de"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_Microchip_ATmega:ATmega32U4-A",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_e6d10fc0",
+      "name": "ATmega2560-16A",
+      "prefix": "U",
+      "value": "ATmega2560-16A",
+      "category": "Microcontrollers",
+      "description": "16MHz, 256kB Flash, 8kB SRAM, 4kB EEPROM, JTAG, TQFP-100",
+      "keywords": "AVR 8bit Microcontroller MegaAVR",
+      "mpn": "ATmega2560-16A",
+      "symbolId": "lib_8c3c5ec6",
+      "footprintIds": [
+        "lib_8de1f5ac"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_Microchip_ATmega:ATmega2560-16A",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_9c2bd2cc",
+      "name": "ATtiny85-20P",
+      "prefix": "U",
+      "value": "ATtiny85-20P",
+      "category": "Microcontrollers",
+      "description": "20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, DIP-8",
+      "keywords": "AVR 8bit Microcontroller tinyAVR",
+      "mpn": "ATtiny85-20P",
+      "symbolId": "lib_ec8ae082",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_Microchip_ATtiny:ATtiny85-20P",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_97ff753a",
+      "name": "ATtiny84A-P",
+      "prefix": "U",
+      "value": "ATtiny84A-P",
+      "category": "Microcontrollers",
+      "description": "20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, DIP-14",
+      "keywords": "AVR 8bit Microcontroller tinyAVR",
+      "mpn": "ATtiny84A-P",
+      "symbolId": "lib_129a1ab0",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_Microchip_ATtiny:ATtiny84A-P",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_6b42f8b",
+      "name": "ATtiny1614-SS",
+      "prefix": "U",
+      "value": "ATtiny1614-SS",
+      "category": "Microcontrollers",
+      "description": "20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, SOIC-14",
+      "keywords": "AVR 8bit Microcontroller tinyAVR",
+      "mpn": "ATtiny1614-SS",
+      "symbolId": "lib_e15925fd",
+      "footprintIds": [
+        "lib_32abf612"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_Microchip_ATtiny:ATtiny1614-SS",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_27887396",
+      "name": "ATtiny13A-P",
+      "prefix": "U",
+      "value": "ATtiny13A-P",
+      "category": "Microcontrollers",
+      "description": "20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, DIP-8",
+      "keywords": "AVR 8bit Microcontroller tinyAVR",
+      "mpn": "ATtiny13A-P",
+      "symbolId": "lib_b4e45fb0",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_Microchip_ATtiny:ATtiny13A-P",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_6e7e6e2",
+      "name": "RP2040",
+      "prefix": "U",
+      "value": "RP2040",
+      "category": "Microcontrollers",
+      "description": "A microcontroller by Raspberry Pi",
+      "keywords": "RP2040 ARM Cortex-M0+ USB",
+      "mpn": "RP2040",
+      "symbolId": "lib_bb688176",
+      "footprintIds": [
+        "lib_1d9df129"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_RaspberryPi:RP2040",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_dabde29b",
+      "name": "STM32F103C8Tx",
+      "prefix": "U",
+      "value": "STM32F103C8Tx",
+      "category": "Microcontrollers",
+      "description": "STMicroelectronics Arm Cortex-M3 MCU, 64KB flash, 20KB RAM, 72 MHz, 2.0-3.6V, 37 GPIO, LQFP48",
+      "keywords": "Arm Cortex-M3 STM32F1 STM32F103",
+      "mpn": "STM32F103C8Tx",
+      "symbolId": "lib_609e47f9",
+      "footprintIds": [
+        "lib_31d10043"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_ST_STM32F1:STM32F103C8Tx",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_64d61caf",
+      "name": "STM32F407ZGTx",
+      "prefix": "U",
+      "value": "STM32F407ZGTx",
+      "category": "Microcontrollers",
+      "description": "STMicroelectronics Arm Cortex-M4 MCU, 1024KB flash, 192KB RAM, 168 MHz, 1.8-3.6V, 114 GPIO, LQFP144",
+      "keywords": "Arm Cortex-M4 STM32F4 STM32F407/417",
+      "mpn": "STM32F407ZGTx",
+      "symbolId": "lib_d9ac7357",
+      "footprintIds": [
+        "lib_b86dd042"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_ST_STM32F4:STM32F407ZGTx",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_4676d052",
+      "name": "DS18B20",
+      "prefix": "U",
+      "value": "DS18B20",
+      "category": "Sensors",
+      "description": "Programmable Resolution 1-Wire Digital Thermometer TO-92",
+      "keywords": "OneWire 1Wire Dallas Maxim",
+      "mpn": "DS18B20",
+      "symbolId": "lib_9669fc6",
+      "footprintIds": [
+        "lib_3f15447d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Sensor_Temperature:DS18B20",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_a890aafc",
+      "name": "LM35-LP",
+      "prefix": "U",
+      "value": "LM35-LP",
+      "category": "Sensors",
+      "description": "Precision centigrade temperature sensor, TO-92",
+      "keywords": "temperature sensor thermistor",
+      "mpn": "LM35-LP",
+      "symbolId": "lib_ed66cff0",
+      "footprintIds": [
+        "lib_3f15447d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Sensor_Temperature:LM35-LP",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_58f5a46e",
+      "name": "TMP102xxDRL",
+      "prefix": "U",
+      "value": "TMP102xxDRL",
+      "category": "Sensors",
+      "description": "Digital Temperature Sensor, ±3°C, low-Power, SMBus, 12 bit, Two-Wire Serial Interface, SOT-563",
+      "keywords": "digital temperature sensor i2c smbus",
+      "mpn": "TMP102xxDRL",
+      "symbolId": "lib_a57f938a",
+      "footprintIds": [
+        "lib_5deb9cf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Sensor_Temperature:TMP102xxDRL",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_e545b3cb",
+      "name": "MCP9808_MSOP",
+      "prefix": "U",
+      "value": "MCP9808_MSOP",
+      "category": "Sensors",
+      "description": "±0.25°C (±0.5°C) Typical (Maximum), Digital Temperature Sensor, MSOP-8",
+      "keywords": "temperature sensor I2C",
+      "mpn": "MCP9808_MSOP",
+      "symbolId": "lib_76897daf",
+      "footprintIds": [
+        "lib_ff13f6fe"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Sensor_Temperature:MCP9808_MSOP",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_7cebf79a",
+      "name": "BMP280",
+      "prefix": "U",
+      "value": "BMP280",
+      "category": "Sensors",
+      "description": "Absolute Barometric Pressure Sensor, LGA-8",
+      "keywords": "I2C, SPI, pressure, temperature, sensor",
+      "mpn": "BMP280",
+      "symbolId": "lib_de020dd8",
+      "footprintIds": [
+        "lib_5a5ba803"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Sensor_Pressure:BMP280",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_ab0b5e2d",
+      "name": "ADXL343",
+      "prefix": "U",
+      "value": "ADXL343",
+      "category": "Sensors",
+      "description": "3-Axis MEMS Accelerometer, 2/4/8/16g range, I2C/SPI, LGA-14",
+      "keywords": "3-axis accelerometer i2c spi mems",
+      "mpn": "ADXL343",
+      "symbolId": "lib_8fe2e519",
+      "footprintIds": [
+        "lib_209fcfca"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Sensor_Motion:ADXL343",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_a5ec2aea",
+      "name": "MPU-6050",
+      "prefix": "U",
+      "value": "MPU-6050",
+      "category": "Sensors",
+      "description": "InvenSense 6-Axis Motion Sensor, Gyroscope, Accelerometer, I2C",
+      "keywords": "mems",
+      "mpn": "MPU-6050",
+      "symbolId": "lib_ba7cfcce",
+      "footprintIds": [
+        "lib_646f710f"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Sensor_Motion:MPU-6050",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_540bf3e7",
+      "name": "BNO055",
+      "prefix": "U",
+      "value": "BNO055",
+      "category": "Sensors",
+      "description": "Intelligent 9-axis absolute orientation sensor, LGA-28",
+      "keywords": "IMU Fusion I2C UART",
+      "mpn": "BNO055",
+      "symbolId": "lib_202f14c3",
+      "footprintIds": [
+        "lib_8c1b8261"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Sensor_Motion:BNO055",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_cb79c13f",
+      "name": "BMI160",
+      "prefix": "U",
+      "value": "BMI160",
+      "category": "Sensors",
+      "description": "Small, low power inertial measurement unit, LGA-14",
+      "keywords": "Bosh IMU small low power inertial measurement unit",
+      "mpn": "BMI160",
+      "symbolId": "lib_180f3d1b",
+      "footprintIds": [
+        "lib_4a3e515e"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Sensor_Motion:BMI160",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_b2188a98",
+      "name": "24AA02E-SN",
+      "prefix": "U",
+      "value": "24AA02E-SN",
+      "category": "Memory",
+      "description": "I2C Serial EEPROM with EUI-48 or EUI-64, 2Kb, SOIC-8",
+      "keywords": "Microchip",
+      "mpn": "24AA02E-SN",
+      "symbolId": "lib_3ae9e52a",
+      "footprintIds": [
+        "lib_f5989d95"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Memory_EEPROM:24AA02E-SN",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_50bd53a1",
+      "name": "W25Q32JVSS",
+      "prefix": "U",
+      "value": "W25Q32JVSS",
+      "category": "Memory",
+      "description": "32Mbit / 4MiB Serial Flash Memory, Standard/Dual/Quad SPI, 2.7-3.6V, SOIC-8 (208 mil)",
+      "keywords": "flash memory SPI",
+      "mpn": "W25Q32JVSS",
+      "symbolId": "lib_b990ac47",
+      "footprintIds": [
+        "lib_513f0734"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Memory_Flash:W25Q32JVSS",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_5eb923f9",
+      "name": "AT25SF081-SSHD-X",
+      "prefix": "U",
+      "value": "AT25SF081-SSHD-X",
+      "category": "Memory",
+      "description": "8-Mbit, 2.5V Minimum SPI Serial Flash Memory with Dual-I/O and Quad-I/O Support, SOIC-8",
+      "keywords": "SPI DSPI QSPI 8Mbit 2.5V",
+      "mpn": "AT25SF081-SSHD-X",
+      "symbolId": "lib_fc4a3053",
+      "footprintIds": [
+        "lib_f5989d95"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Memory_Flash:AT25SF081-SSHD-X",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_29980e5",
+      "name": "ESP-12E",
+      "prefix": "U",
+      "value": "ESP-12E",
+      "category": "Modules",
+      "description": "802.11 b/g/n Wi-Fi Module",
+      "keywords": "802.11 Wi-Fi",
+      "mpn": "ESP-12E",
+      "symbolId": "lib_ebdd06d",
+      "footprintIds": [
+        "lib_62132282"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "RF_Module:ESP-12E",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_29b11b4a",
+      "name": "ESP32-WROOM-32",
+      "prefix": "U",
+      "value": "ESP32-WROOM-32",
+      "category": "Modules",
+      "description": "RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD",
+      "keywords": "RF Radio BT ESP ESP32 Espressif onboard PCB antenna",
+      "mpn": "ESP32-WROOM-32",
+      "symbolId": "lib_e3d03302",
+      "footprintIds": [
+        "lib_2c111173"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "RF_Module:ESP32-WROOM-32",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_65ad0313",
+      "name": "ESP32-C3-DevKitM-1",
+      "prefix": "U",
+      "value": "ESP32-C3-DevKitM-1",
+      "category": "Modules",
+      "description": "Development board featuring ESP32-C3-MINI-1 module",
+      "keywords": "riscv wifi bluetooth ble",
+      "mpn": "ESP32-C3-DevKitM-1",
+      "symbolId": "lib_19b4553b",
+      "footprintIds": [
+        "lib_86a7fd3e"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "RF_Module:ESP32-C3-DevKitM-1",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_3fb4c989",
+      "name": "RFM69HW",
+      "prefix": "U",
+      "value": "RFM69HW",
+      "category": "Modules",
+      "description": "ISM Radio Transceiver Module, SPI interface",
+      "keywords": "Radio ISM Transceiver Module AES",
+      "mpn": "RFM69HW",
+      "symbolId": "lib_7705ecb1",
+      "footprintIds": [
+        "lib_f9ba6f65"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "RF_Module:RFM69HW",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_da158794",
+      "name": "Arduino_UNO_R3",
+      "prefix": "A",
+      "value": "Arduino_UNO_R3",
+      "category": "Modules",
+      "description": "Arduino UNO Microcontroller Module, release 3",
+      "keywords": "Arduino UNO R3 Microcontroller Module Atmel AVR USB",
+      "mpn": "Arduino_UNO_R3",
+      "symbolId": "lib_24aed562",
+      "footprintIds": [
+        "lib_52f1e485"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_Module:Arduino_UNO_R3",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_48ab367c",
+      "name": "Arduino_Nano_v3.x",
+      "prefix": "A",
+      "value": "Arduino_Nano_v3.x",
+      "category": "Modules",
+      "description": "Arduino Nano v3.x",
+      "keywords": "Arduino nano microcontroller module USB",
+      "mpn": "Arduino_Nano_v3.x",
+      "symbolId": "lib_13d26b26",
+      "footprintIds": [
+        "lib_d557f70d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "MCU_Module:Arduino_Nano_v3.x",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_1e67cbd5",
+      "name": "PC817",
+      "prefix": "U",
+      "value": "PC817",
+      "category": "Isolation",
+      "description": "DC Optocoupler, Vce 35V, CTR 50-300%, DIP-4",
+      "keywords": "NPN DC Optocoupler",
+      "mpn": "PC817",
+      "symbolId": "lib_a46bccb1",
+      "footprintIds": [
+        "lib_64c9d05b"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Isolator:PC817",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_5950021",
+      "name": "4N25",
+      "prefix": "U",
+      "value": "4N25",
+      "category": "Isolation",
+      "description": "DC Optocoupler Base Connected, Vce 30V, CTR 20%, Viso 2500V, DIP6",
+      "keywords": "NPN DC Optocoupler Base Connected",
+      "mpn": "4N25",
+      "symbolId": "lib_78698365",
+      "footprintIds": [
+        "lib_1472d07d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Isolator:4N25",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_2f92d543",
+      "name": "6N137",
+      "prefix": "U",
+      "value": "6N137",
+      "category": "Isolation",
+      "description": "Single High Speed LSTTL/TTL Compatible Optocoupler with enable, dV/dt 1000/us, VCM 10, max 7V VCC, DIP-8",
+      "keywords": "High speed optically coupled gates enable",
+      "mpn": "6N137",
+      "symbolId": "lib_251cbcff",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Isolator:6N137",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_1b8136bb",
+      "name": "L293D",
+      "prefix": "U",
+      "value": "L293D",
+      "category": "Drivers",
+      "description": "Quadruple Half-H Drivers",
+      "keywords": "Half-H Driver Motor",
+      "mpn": "L293D",
+      "symbolId": "lib_d37c5591",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Driver_Motor:L293D",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_4a3b9c6b",
+      "name": "G5LE-1",
+      "prefix": "K",
+      "value": "G5LE-1",
+      "category": "Switches & relays",
+      "description": "Omron G5LE relay, Miniature Single Pole, SPDT, 10A",
+      "keywords": "Miniature Single Pole Relay",
+      "mpn": "G5LE-1",
+      "symbolId": "lib_8c8fdb97",
+      "footprintIds": [
+        "lib_befd1233"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Relay:G5LE-1",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_17c31a4e",
+      "name": "G5V-1",
+      "prefix": "K",
+      "value": "G5V-1",
+      "category": "Switches & relays",
+      "description": "Ultra-miniature, Highly Sensitive SPDT Relay for Signal Circuits",
+      "keywords": "Single Pole Relay SPDT",
+      "mpn": "G5V-1",
+      "symbolId": "lib_c132e88a",
+      "footprintIds": [
+        "lib_d2a92b14"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Relay:G5V-1",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_16c318bb",
+      "name": "G5V-2",
+      "prefix": "K",
+      "value": "G5V-2",
+      "category": "Switches & relays",
+      "description": "Relay Miniature Omron DPDT",
+      "keywords": "Miniature Relay Dual Pole DPDT Omron",
+      "mpn": "G5V-2",
+      "symbolId": "lib_c032e6f7",
+      "footprintIds": [
+        "lib_95880ad2"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Relay:G5V-2",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_66d60469",
+      "name": "Resistor",
+      "prefix": "R",
+      "value": "R",
+      "category": "Passives",
+      "description": "Resistor",
+      "keywords": "R res resistor",
+      "mpn": "",
+      "symbolId": "lib_8eff3253",
+      "footprintIds": [
+        "lib_d6562eb6",
+        "lib_2d1b2fe8",
+        "lib_95076726",
+        "lib_59572577",
+        "lib_605bbc20",
+        "lib_89ee564b",
+        "lib_8bd35d0a",
+        "lib_cfaf8554",
+        "lib_f41f5069"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Device:R",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_55d5e9a6",
+      "name": "Capacitor",
+      "prefix": "C",
+      "value": "C",
+      "category": "Passives",
+      "description": "Unpolarized capacitor",
+      "keywords": "cap capacitor",
+      "mpn": "",
+      "symbolId": "lib_9dff49f0",
+      "footprintIds": [
+        "lib_16fcd714",
+        "lib_2794b856",
+        "lib_38ff6f80",
+        "lib_585722d5",
+        "lib_e0f51a52",
+        "lib_b369a429"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Device:C",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_1b1b9797",
+      "name": "Polarized capacitor",
+      "prefix": "C",
+      "value": "C_Polarized",
+      "category": "Passives",
+      "description": "Polarized capacitor",
+      "keywords": "cap capacitor",
+      "mpn": "",
+      "symbolId": "lib_ee704e09",
+      "footprintIds": [
+        "lib_bc8c115f",
+        "lib_8a1a28a2",
+        "lib_71dd80d8",
+        "lib_2e55038c"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Device:C_Polarized",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_60d5faf7",
+      "name": "Inductor",
+      "prefix": "L",
+      "value": "L",
+      "category": "Passives",
+      "description": "Inductor",
+      "keywords": "inductor choke coil reactor magnetic",
+      "mpn": "",
+      "symbolId": "lib_acff618d",
+      "footprintIds": [
+        "lib_6b65c831",
+        "lib_96ae39b4"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Device:L",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_4ea10576",
+      "name": "LED",
+      "prefix": "D",
+      "value": "LED",
+      "category": "Diodes & LEDs",
+      "description": "Light emitting diode",
+      "keywords": "LED diode",
+      "mpn": "",
+      "symbolId": "lib_e0e80c94",
+      "footprintIds": [
+        "lib_803c8eb1",
+        "lib_3c155423",
+        "lib_522c98ef",
+        "lib_31d83b11",
+        "lib_376a7294"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Device:LED",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_e9478f5d",
+      "name": "Crystal",
+      "prefix": "Y",
+      "value": "Crystal",
+      "category": "Passives",
+      "description": "Two pin crystal",
+      "keywords": "quartz ceramic resonator oscillator",
+      "mpn": "",
+      "symbolId": "lib_7d996107",
+      "footprintIds": [
+        "lib_a900c185",
+        "lib_1f8c3654"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Device:Crystal",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_9dd4a28b",
+      "name": "Trimmer potentiometer",
+      "prefix": "RV",
+      "value": "R_Potentiometer",
+      "category": "Passives",
+      "description": "Potentiometer",
+      "keywords": "resistor variable",
+      "mpn": "",
+      "symbolId": "lib_3c80ed59",
+      "footprintIds": [
+        "lib_6ce3ba"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Device:R_Potentiometer",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_9d92e6f6",
+      "name": "Pushbutton",
+      "prefix": "SW",
+      "value": "SW_Push",
+      "category": "Switches & relays",
+      "description": "Push button switch, generic, two pins",
+      "keywords": "switch normally-open pushbutton push-button",
+      "mpn": "",
+      "symbolId": "lib_1742aa2c",
+      "footprintIds": [
+        "lib_afcc078a"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Switch:SW_Push",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_3d807d86",
+      "name": "Test point",
+      "prefix": "TP",
+      "value": "TestPoint",
+      "category": "Connectors",
+      "description": "test point",
+      "keywords": "test point tp",
+      "mpn": "",
+      "symbolId": "lib_afd366d6",
+      "footprintIds": [
+        "lib_f594f6f4",
+        "lib_25d312d9",
+        "lib_dafb7af4"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector:TestPoint",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_aae3390",
+      "name": "Header 1x02",
+      "prefix": "J",
+      "value": "Conn_01x02",
+      "category": "Connectors",
+      "description": "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_dfd94da8",
+      "footprintIds": [
+        "lib_e8c97ae9",
+        "lib_cc158671"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_01x02",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_bae3523",
+      "name": "Header 1x03",
+      "prefix": "J",
+      "value": "Conn_01x03",
+      "category": "Connectors",
+      "description": "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_e0d94f3b",
+      "footprintIds": [
+        "lib_71b331d0",
+        "lib_5536d258"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_01x03",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_10ae3d02",
+      "name": "Header 1x04",
+      "prefix": "J",
+      "value": "Conn_01x04",
+      "category": "Connectors",
+      "description": "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_e5d9571a",
+      "footprintIds": [
+        "lib_3da89767",
+        "lib_13e29bef"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_01x04",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_11ae3e95",
+      "name": "Header 1x05",
+      "prefix": "J",
+      "value": "Conn_01x05",
+      "category": "Connectors",
+      "description": "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_e6d958ad",
+      "footprintIds": [
+        "lib_c66142c6",
+        "lib_8e0ddfae"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_01x05",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_eae39dc",
+      "name": "Header 1x06",
+      "prefix": "J",
+      "value": "Conn_01x06",
+      "category": "Connectors",
+      "description": "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_e3d953f4",
+      "footprintIds": [
+        "lib_e81608b5",
+        "lib_c1fc5fd"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_01x06",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_14ae434e",
+      "name": "Header 1x08",
+      "prefix": "J",
+      "value": "Conn_01x08",
+      "category": "Connectors",
+      "description": "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_d9d94436",
+      "footprintIds": [
+        "lib_3b8570e3",
+        "lib_49f30a5b"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_01x08",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_12b07ebf",
+      "name": "Header 1x10",
+      "prefix": "J",
+      "value": "Conn_01x10",
+      "category": "Connectors",
+      "description": "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_e7db98d7",
+      "footprintIds": [
+        "lib_bcd85f60",
+        "lib_82695768"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_01x10",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_14b081e5",
+      "name": "Header 1x12",
+      "prefix": "J",
+      "value": "Conn_01x12",
+      "category": "Connectors",
+      "description": "Generic connector, single row, 01x12, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_e9db9bfd",
+      "footprintIds": [
+        "lib_faadeb1a",
+        "lib_1962fba2"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_01x12",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_10b07b99",
+      "name": "Header 1x16",
+      "prefix": "J",
+      "value": "Conn_01x16",
+      "category": "Connectors",
+      "description": "Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_e5db95b1",
+      "footprintIds": [
+        "lib_24915496",
+        "lib_7afbd5fe"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_01x16",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_a0a90f84",
+      "name": "Header 1x20",
+      "prefix": "J",
+      "value": "Conn_01x20",
+      "category": "Connectors",
+      "description": "Generic connector, single row, 01x20, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_55d3f73c",
+      "footprintIds": [
+        "lib_361d38d5",
+        "lib_5fcd429d"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_01x20",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_da3ebd12",
+      "name": "Header 2x02",
+      "prefix": "J",
+      "value": "Conn_02x02_Odd_Even",
+      "category": "Connectors",
+      "description": "Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_1a38741a",
+      "footprintIds": [
+        "lib_de0f39a0",
+        "lib_2cdd08"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_02x02_Odd_Even",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_f9eb8bb3",
+      "name": "Header 2x03",
+      "prefix": "J",
+      "value": "Conn_02x03_Odd_Even",
+      "category": "Connectors",
+      "description": "Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_54e6337b",
+      "footprintIds": [
+        "lib_102edf79",
+        "lib_798d89a1"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_02x03_Odd_Even",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_d4769e54",
+      "name": "Header 2x04",
+      "prefix": "J",
+      "value": "Conn_02x04_Odd_Even",
+      "category": "Connectors",
+      "description": "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_f988c01c",
+      "footprintIds": [
+        "lib_318446d6",
+        "lib_22c89d9e"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_02x04_Odd_Even",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_2549e55d",
+      "name": "Header 2x05",
+      "prefix": "J",
+      "value": "Conn_02x05_Odd_Even",
+      "category": "Connectors",
+      "description": "Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_b99c74a5",
+      "footprintIds": [
+        "lib_ae73a437",
+        "lib_9499b29f"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_02x05_Odd_Even",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_e796b926",
+      "name": "Header 2x06",
+      "prefix": "J",
+      "value": "Conn_02x06_Odd_Even",
+      "category": "Connectors",
+      "description": "Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_b156956e",
+      "footprintIds": [
+        "lib_a772d9ac",
+        "lib_554df394"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_02x06_Odd_Even",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_15acf388",
+      "name": "Header 2x08",
+      "prefix": "J",
+      "value": "Conn_02x08_Odd_Even",
+      "category": "Connectors",
+      "description": "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_81d8cfc0",
+      "footprintIds": [
+        "lib_3d5d982",
+        "lib_e694739a"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_02x08_Odd_Even",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_e6dfdca3",
+      "name": "Header 2x10",
+      "prefix": "J",
+      "value": "Conn_02x10_Odd_Even",
+      "category": "Connectors",
+      "description": "Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_311c77eb",
+      "footprintIds": [
+        "lib_3bfe17dd",
+        "lib_8c7dd4a5"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_02x10_Odd_Even",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_cc355cc9",
+      "name": "Header 2x12",
+      "prefix": "J",
+      "value": "Conn_02x12_Odd_Even",
+      "category": "Connectors",
+      "description": "Generic connector, double row, 02x12, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_548be8d1",
+      "footprintIds": [
+        "lib_8d1c374f",
+        "lib_c5fbc657"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_02x12_Odd_Even",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_1d1430d",
+      "name": "Header 2x16",
+      "prefix": "J",
+      "value": "Conn_02x16_Odd_Even",
+      "category": "Connectors",
+      "description": "Generic connector, double row, 02x16, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_2bf44f15",
+      "footprintIds": [
+        "lib_2af15f23",
+        "lib_7967c12b"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_02x16_Odd_Even",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_fc136f9a",
+      "name": "Header 2x20",
+      "prefix": "J",
+      "value": "Conn_02x20_Odd_Even",
+      "category": "Connectors",
+      "description": "Generic connector, double row, 02x20, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "keywords": "connector",
+      "mpn": "",
+      "symbolId": "lib_c1031122",
+      "footprintIds": [
+        "lib_a974e3a8",
+        "lib_29b1efb0"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector_Generic:Conn_02x20_Odd_Even",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_2939c9b5",
+      "name": "NE556",
+      "prefix": "U",
+      "value": "NE556",
+      "category": "Timers",
+      "description": "Dual Precision Timers, DIP-14/SOIC-14",
+      "keywords": "dual timer",
+      "mpn": "",
+      "symbolId": "lib_a3dba939",
+      "footprintIds": [
+        "lib_e4a79552"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Timer:NE556",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_c870615b",
+      "name": "LM386",
+      "prefix": "U",
+      "value": "LM386",
+      "category": "Analog",
+      "description": "Low Voltage Audio Power Amplifier, DIP-8/SOIC-8/SSOP-8",
+      "keywords": "single Power opamp",
+      "mpn": "",
+      "symbolId": "lib_f3e62bf9",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Amplifier_Audio:LM386",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_ffa207be",
+      "name": "MCP6002-xP",
+      "prefix": "U",
+      "value": "MCP6002-xP",
+      "category": "Analog",
+      "description": "1MHz, Low-Power Op Amp, DIP-8",
+      "keywords": "dual opamp",
+      "mpn": "",
+      "symbolId": "lib_d4767664",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Amplifier_Operational:MCP6002-xP",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_5204a79e",
+      "name": "MAX232",
+      "prefix": "U",
+      "value": "MAX232",
+      "category": "Interfaces",
+      "description": "Dual RS232 driver/receiver, 5V supply, 120kb/s, 0C-70C",
+      "keywords": "rs232 uart transceiver line-driver",
+      "mpn": "",
+      "symbolId": "lib_338bd1e0",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_UART:MAX232",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_3e28afcf",
+      "name": "MAX3232",
+      "prefix": "U",
+      "value": "MAX3232",
+      "category": "Interfaces",
+      "description": "3.0V to 5.5V, Low-Power, up to 1Mbps, True RS-232 Transceivers Using Four 0.1μF External Capacitors",
+      "keywords": "rs232 uart transceiver line-driver",
+      "mpn": "",
+      "symbolId": "lib_a51df471",
+      "footprintIds": [
+        "lib_b45ab858"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_UART:MAX3232",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_b1efcbd1",
+      "name": "MAX485E",
+      "prefix": "U",
+      "value": "MAX485E",
+      "category": "Interfaces",
+      "description": "Half duplex RS-485/RS-422, 2.5 Mbps, ±15kV electro-static discharge (ESD) protection, no slew-rate, no low-power shutdown, with receiver/driver enable, 32 receiver drive capability, DIP-8 and SOIC-8",
+      "keywords": "transceiver",
+      "mpn": "",
+      "symbolId": "lib_bae6781b",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Interface_UART:MAX485E",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_d53dd253",
+      "name": "24LC256",
+      "prefix": "U",
+      "value": "24LC256",
+      "category": "Memory",
+      "description": "I2C Serial EEPROM, 256Kb, DIP-8/SOIC-8/TSSOP-8/DFN-8",
+      "keywords": "I2C Serial EEPROM",
+      "mpn": "",
+      "symbolId": "lib_7af2fb31",
+      "footprintIds": [
+        "lib_9fae7bf7"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Memory_EEPROM:24LC256",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_d2d38ac",
+      "name": "USB_C_Receptacle_USB2.0_16P",
+      "prefix": "J",
+      "value": "USB_C_Receptacle_USB2.0_16P",
+      "category": "Connectors",
+      "description": "USB 2.0-only 16P Type-C Receptacle connector",
+      "keywords": "usb universal serial bus type-C USB2.0",
+      "mpn": "",
+      "symbolId": "lib_aa5eef9c",
+      "footprintIds": [
+        "lib_e4b037cd"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Connector:USB_C_Receptacle_USB2.0_16P",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    },
+    {
+      "id": "lib_54d1153b",
+      "name": "MountingHole",
+      "prefix": "H",
+      "value": "MountingHole",
+      "category": "Mechanical",
+      "description": "Mounting Hole without connection",
+      "keywords": "mounting hole",
+      "mpn": "",
+      "symbolId": "lib_b66d77eb",
+      "footprintIds": [
+        "lib_1ab32b3f",
+        "lib_475c22e3",
+        "lib_a23f79bd",
+        "lib_2f706ba"
+      ],
+      "source": {
+        "release": "9.0.0",
+        "symbol": "Mechanical:MountingHole",
+        "license": "CC-BY-SA-4.0 with KiCad exception"
+      }
+    }
+  ],
+  "symbols": [
+    "lib_9c47370",
+    "lib_3bb5b200",
+    "lib_6bd3516f",
+    "lib_474f64bc",
+    "lib_5f10ecc",
+    "lib_5feb4b1b",
+    "lib_8c8bdaf1",
+    "lib_e94b91e",
+    "lib_b4f35cca",
+    "lib_1e8bf4a3",
+    "lib_3c3c2e86",
+    "lib_17ae482f",
+    "lib_f53942cd",
+    "lib_f3393fa7",
+    "lib_44bfb7b0",
+    "lib_44bd7919",
+    "lib_8b86875b",
+    "lib_b9d1b4f7",
+    "lib_b4d1ad18",
+    "lib_efdc1006",
+    "lib_6e939da9",
+    "lib_6c939a83",
+    "lib_129fcda2",
+    "lib_fe188313",
+    "lib_50d90618",
+    "lib_acd75855",
+    "lib_ea37ff6a",
+    "lib_500129c7",
+    "lib_9b017b60",
+    "lib_97dfd52e",
+    "lib_5b728b4c",
+    "lib_9819741f",
+    "lib_ef7a9f7",
+    "lib_546bc482",
+    "lib_89c9b4c4",
+    "lib_2586c481",
+    "lib_1849ebf8",
+    "lib_165b31f3",
+    "lib_42dc4164",
+    "lib_40dc3e3e",
+    "lib_f1fe6e29",
+    "lib_e8d71232",
+    "lib_770bbfb7",
+    "lib_64f39e7b",
+    "lib_b95db74",
+    "lib_d95de9a",
+    "lib_795d528",
+    "lib_d981d31",
+    "lib_8992d037",
+    "lib_f9a946d6",
+    "lib_f07afd6c",
+    "lib_f578c6b4",
+    "lib_7e714f9a",
+    "lib_4af67df1",
+    "lib_5ad19cc5",
+    "lib_2d79ec86",
+    "lib_4c46426b",
+    "lib_4e464591",
+    "lib_52464bdd",
+    "lib_bd4db013",
+    "lib_495309a5",
+    "lib_43530033",
+    "lib_4450c32f",
+    "lib_555799b7",
+    "lib_53579691",
+    "lib_17db9914",
+    "lib_13db92c8",
+    "lib_19db9c3a",
+    "lib_9b73071e",
+    "lib_517377bf",
+    "lib_c5401f0b",
+    "lib_aa10ecd6",
+    "lib_790ca60d",
+    "lib_d6f8729c",
+    "lib_8b3e94d6",
+    "lib_7c3e7d39",
+    "lib_b94d9d6c",
+    "lib_8c3c5ec6",
+    "lib_ec8ae082",
+    "lib_129a1ab0",
+    "lib_e15925fd",
+    "lib_b4e45fb0",
+    "lib_bb688176",
+    "lib_609e47f9",
+    "lib_d9ac7357",
+    "lib_9669fc6",
+    "lib_ed66cff0",
+    "lib_a57f938a",
+    "lib_76897daf",
+    "lib_de020dd8",
+    "lib_8fe2e519",
+    "lib_ba7cfcce",
+    "lib_202f14c3",
+    "lib_180f3d1b",
+    "lib_3ae9e52a",
+    "lib_b990ac47",
+    "lib_fc4a3053",
+    "lib_ebdd06d",
+    "lib_e3d03302",
+    "lib_19b4553b",
+    "lib_7705ecb1",
+    "lib_24aed562",
+    "lib_13d26b26",
+    "lib_a46bccb1",
+    "lib_78698365",
+    "lib_251cbcff",
+    "lib_d37c5591",
+    "lib_8c8fdb97",
+    "lib_c132e88a",
+    "lib_c032e6f7",
+    "lib_8eff3253",
+    "lib_9dff49f0",
+    "lib_ee704e09",
+    "lib_acff618d",
+    "lib_e0e80c94",
+    "lib_7d996107",
+    "lib_3c80ed59",
+    "lib_1742aa2c",
+    "lib_afd366d6",
+    "lib_dfd94da8",
+    "lib_e0d94f3b",
+    "lib_e5d9571a",
+    "lib_e6d958ad",
+    "lib_e3d953f4",
+    "lib_d9d94436",
+    "lib_e7db98d7",
+    "lib_e9db9bfd",
+    "lib_e5db95b1",
+    "lib_55d3f73c",
+    "lib_1a38741a",
+    "lib_54e6337b",
+    "lib_f988c01c",
+    "lib_b99c74a5",
+    "lib_b156956e",
+    "lib_81d8cfc0",
+    "lib_311c77eb",
+    "lib_548be8d1",
+    "lib_2bf44f15",
+    "lib_c1031122",
+    "lib_a3dba939",
+    "lib_f3e62bf9",
+    "lib_d4767664",
+    "lib_338bd1e0",
+    "lib_a51df471",
+    "lib_bae6781b",
+    "lib_7af2fb31",
+    "lib_aa5eef9c",
+    "lib_b66d77eb"
+  ],
+  "footprints": [
+    "Package_DIP:DIP-8_W7.62mm",
+    "Package_DIP:DIP-14_W7.62mm",
+    "Package_DIP:DIP-24_W15.24mm",
+    "Package_TO_SOT_THT:TO-220-3_Vertical",
+    "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+    "Package_TO_SOT_SMD:SOT-23-5",
+    "Package_TO_SOT_THT:TO-92_Inline",
+    "Package_TO_SOT_THT:TO-126-3_Vertical",
+    "Package_TO_SOT_SMD:SOT-23",
+    "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+    "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal",
+    "Diode_SMD:D_SMA",
+    "Diode_THT:D_DO-201AD_P15.24mm_Horizontal",
+    "Package_TO_SOT_SMD:TSOT-23-5",
+    "Package_DIP:DIP-16_W7.62mm",
+    "Package_DIP:DIP-20_W7.62mm",
+    "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+    "Package_SO:MSOP-10_3x3mm_P0.5mm",
+    "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+    "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm",
+    "Package_DIP:DIP-28_W7.62mm",
+    "Package_DIP:DIP-18_W7.62mm",
+    "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm",
+    "Package_QFP:TQFP-32_7x7mm_P0.8mm",
+    "Package_QFP:TQFP-44_10x10mm_P0.8mm",
+    "Package_QFP:TQFP-100_14x14mm_P0.5mm",
+    "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm",
+    "Package_QFP:LQFP-48_7x7mm_P0.5mm",
+    "Package_QFP:LQFP-144_20x20mm_P0.5mm",
+    "Package_TO_SOT_SMD:SOT-563",
+    "Package_SO:MSOP-8_3x3mm_P0.65mm",
+    "Package_LGA:Bosch_LGA-8_2x2.5mm_P0.65mm_ClockwisePinNumbering",
+    "Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y",
+    "Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm",
+    "Package_LGA:LGA-28_5.2x3.8mm_P0.5mm",
+    "Package_LGA:Bosch_LGA-14_3x2.5mm_P0.5mm",
+    "Package_SO:SOIC-8_5.3x5.3mm_P1.27mm",
+    "RF_Module:ESP-12E",
+    "RF_Module:ESP32-WROOM-32",
+    "RF_Module:ESP32-C3-DevKitM-1",
+    "RF_Module:HOPERF_RFM69HW",
+    "Module:Arduino_UNO_R3",
+    "Module:Arduino_Nano",
+    "Package_DIP:DIP-4_W7.62mm",
+    "Package_DIP:DIP-6_W7.62mm",
+    "Relay_THT:Relay_SPDT_Omron-G5LE-1",
+    "Relay_THT:Relay_SPDT_Omron_G5V-1",
+    "Relay_THT:Relay_DPDT_Omron_G5V-2",
+    "Resistor_SMD:R_0402_1005Metric",
+    "Resistor_SMD:R_0603_1608Metric",
+    "Resistor_SMD:R_0805_2012Metric",
+    "Resistor_SMD:R_1206_3216Metric",
+    "Resistor_SMD:R_1210_3225Metric",
+    "Resistor_SMD:R_2010_5025Metric",
+    "Resistor_SMD:R_2512_6332Metric",
+    "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+    "Capacitor_SMD:C_0402_1005Metric",
+    "Capacitor_SMD:C_0603_1608Metric",
+    "Capacitor_SMD:C_0805_2012Metric",
+    "Capacitor_SMD:C_1206_3216Metric",
+    "Capacitor_SMD:C_1210_3225Metric",
+    "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm",
+    "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+    "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+    "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "Inductor_SMD:L_0805_2012Metric",
+    "Inductor_SMD:L_1206_3216Metric",
+    "LED_THT:LED_D3.0mm",
+    "LED_THT:LED_D5.0mm",
+    "LED_SMD:LED_0603_1608Metric",
+    "LED_SMD:LED_0805_2012Metric",
+    "LED_SMD:LED_1206_3216Metric",
+    "Crystal:Crystal_HC49-4H_Vertical",
+    "Crystal:Crystal_HC49-U_Vertical",
+    "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical",
+    "Button_Switch_THT:SW_PUSH_6mm",
+    "TestPoint:TestPoint_Pad_D1.0mm",
+    "TestPoint:TestPoint_Pad_D2.0mm",
+    "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+    "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_2x10_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_2x12_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_2x12_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_2x16_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_2x16_P2.54mm_Vertical",
+    "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical",
+    "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical",
+    "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "MountingHole:MountingHole_2.2mm_M2",
+    "MountingHole:MountingHole_2.7mm_M2.5",
+    "MountingHole:MountingHole_3.2mm_M3",
+    "MountingHole:MountingHole_4.3mm_M4",
+    "Package_DIP:DIP-24_W7.62mm",
+    "Package_DIP:DIP-28_W15.24mm",
+    "Package_DIP:DIP-32_W7.62mm",
+    "Package_DIP:DIP-32_W15.24mm",
+    "Package_DIP:DIP-40_W15.24mm",
+    "Package_QFP:LQFP-32_7x7mm_P0.8mm",
+    "Package_QFP:LQFP-44_10x10mm_P0.8mm",
+    "Package_QFP:LQFP-64_10x10mm_P0.5mm",
+    "Package_QFP:LQFP-64_14x14mm_P0.8mm",
+    "Package_QFP:LQFP-100_14x14mm_P0.5mm",
+    "Package_QFP:LQFP-208_28x28mm_P0.5mm",
+    "Resistor_SMD:R_01005_0402Metric",
+    "Resistor_SMD:R_0201_0603Metric",
+    "Resistor_SMD:R_0612_1632Metric",
+    "Resistor_SMD:R_0815_2038Metric",
+    "Resistor_SMD:R_1020_2550Metric",
+    "Resistor_SMD:R_1218_3246Metric",
+    "Resistor_SMD:R_1812_4532Metric",
+    "Capacitor_SMD:CP_Elec_10x10.5",
+    "Capacitor_SMD:CP_Elec_10x10",
+    "Capacitor_SMD:CP_Elec_10x12.5",
+    "Capacitor_SMD:CP_Elec_10x12.6",
+    "Capacitor_SMD:CP_Elec_10x14.3",
+    "Capacitor_SMD:CP_Elec_10x7.7",
+    "Capacitor_SMD:CP_Elec_10x7.9",
+    "Capacitor_SMD:CP_Elec_16x17.5",
+    "Capacitor_SMD:CP_Elec_16x22",
+    "Capacitor_SMD:CP_Elec_18x17.5",
+    "Capacitor_SMD:CP_Elec_18x22",
+    "Capacitor_SMD:CP_Elec_3x5.3",
+    "Capacitor_SMD:CP_Elec_3x5.4",
+    "Capacitor_SMD:CP_Elec_4x3.9",
+    "Package_SO:Analog_MSOP-12-16_3x4.039mm_P0.5mm",
+    "Package_SO:Infineon_PG-DSO-12-11",
+    "Package_SO:Infineon_PG-DSO-12-9",
+    "Package_SO:Infineon_PG-DSO-20-30",
+    "Package_SO:Infineon_PG-DSO-20-32",
+    "Package_SO:Infineon_PG-DSO-20-87",
+    "Package_SO:Infineon_PG-DSO-20-U03_7.5x12.8mm",
+    "Package_SO:Infineon_PG-DSO-8-24_4x5mm",
+    "Package_SO:Infineon_PG-DSO-8-59_7.5x6.3mm",
+    "Package_SO:Infineon_PG-TSDSO-14-22",
+    "Package_SO:Infineon_SOIC-20W_7.6x12.8mm_P1.27mm",
+    "Package_SO:MFSOP6-4_4.4x3.6mm_P1.27mm",
+    "Package_SO:MFSOP6-5_4.4x3.6mm_P1.27mm",
+    "Package_SO:MSOP-12_3x4.039mm_P0.65mm",
+    "Package_SO:MSOP-16_3x4.039mm_P0.5mm",
+    "Package_SO:OnSemi_Micro8",
+    "Package_SO:PowerIntegrations_SO-8",
+    "Package_SO:PowerIntegrations_SO-8B",
+    "Package_TO_SOT_SMD:ATPAK-2",
+    "Package_TO_SOT_SMD:Analog_KS-4",
+    "Package_TO_SOT_SMD:Diodes_SOT-553",
+    "Package_TO_SOT_SMD:HVSOF6",
+    "Package_TO_SOT_SMD:Infineon_PG-HDSOP-10-1",
+    "Package_TO_SOT_SMD:Infineon_PG-TO-220-7Lead_TabPin8",
+    "MountingHole:MountingHole_2.1mm",
+    "MountingHole:MountingHole_2.2mm_M2_DIN965",
+    "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad",
+    "MountingHole:MountingHole_2.2mm_M2_ISO14580",
+    "MountingHole:MountingHole_2.2mm_M2_ISO14580_Pad",
+    "MountingHole:MountingHole_2.2mm_M2_ISO7380",
+    "MountingHole:MountingHole_2.2mm_M2_ISO7380_Pad"
+  ]
+}

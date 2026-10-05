@@ -1,66 +1,41 @@
-# CIRCUITBENCH 1.0.0 verification
+# CIRCUITBENCH v1.2.0 — verification report
 
-Verified in the release workspace on 2026-10-05. This report distinguishes software evidence from outstanding physical validation.
+Software verification completed 2026-10-05 UTC. No physical hardware was built.
 
-## Automated application suite
+## Automated results
 
-**67 passing groups**, no uncaught browser errors:
+`CHROMIUM_EXECUTABLE=/tmp/chromium npm test` passed with **108 PASS lines** in `verification/v1.2-final-tests.log`. This includes the existing core, library, release and browser suites, six new board-editing engine groups and eleven new board-editing browser workflows. Chromium ran against static HTTP and standalone file:// installations; the new workflow runs offline.
 
-| Suite | Groups | Evidence |
-| --- | ---: | --- |
-| Core engine | 12 | Shared model, geometry, net changes, checks, export conventions and validation |
-| Independent ZIP check | 1 | JSZip verifies CRC and every exported entry |
-| Extended engine | 12 | Actual schema 1 fixture migration, wire split/merge/junctions, label connectivity, pin renumbering, libraries, plated drill voids, pad shapes, separated zone islands, thermal fill and process findings |
-| Release engine | 12 | Router detours/refusal, cleanup, block isolation, sheet ports/cycles, invalid libraries/classes, rotated front/back interchange, blocked unsupported imports, mirrored silk, baselines, chord tolerance and benchmark |
-| Browser workflow | 20 | Cold start in a static subfolder, schematic/PCB editing, keyboard undo/redo, footprints, JSON round trip, malformed imports, reports, fabrication ZIP, themes, vias, pan/grid, recovery, offline reload, mobile editing and standalone HTML |
-| Advanced browser | 10 | Real WebGL geometry and image export, board tools, locks/devices, sheets/blocks, baseline comparison, KiCad preview/import/undo, multi-tab conflicts, schema 2 reload and corrupt-data protection |
+New coverage:
 
-The browser suites use Playwright with headless Chromium 153.0.8010.0 on Linux. Desktop widths 1440/1500 px and a 390 × 844 touch viewport were exercised. Installed offline reload and direct `file://` use passed. WebGL ran through software rendering. Firefox, Safari, real mobile hardware, assistive technologies and production TLS server configurations were not independently tested.
+- True mirrored board view and B shortcut; flipping leaves the design model unchanged and switches the active copper side. Assembly annotations remain readable.
+- Back-view dragging, arrow-key nudging, undo/redo, pointer-centered zoom and panning use consistent world coordinates.
+- Direct text authoring defaults to the active side; back text is mirrored for normal underside reading. Text and image editing/rotation remain available in the inspector.
+- PNG image import, unsupported-file rejection, monochrome preview, transparent holes, physical width/aspect ratio, position and chosen side. Image conversion rejects empty/oversized/invalid data; serialization retains bounded integer runs.
+- Actual ink area, nested clear regions, islands, rotation and mirror handedness; DRC on image feature size, board edges and mask clearance.
+- Interactive outer-edge insertion, numeric corner edits, handle dragging, keyboard movement, cancellable drafts and invalid crossing rejection.
+- Width/height/thickness edits, proportional custom-boundary scaling, unchanged component/routing/hole/cutout/artwork positions, undo and redo.
+- Editing embedded artwork without the original file, bottom 3D viewing, autosave/reload, view preference persistence and JSON transfer to an independent standalone browser context.
+- Desktop and 390 px mobile workflows, including a dark-theme board view and image dialog, with no horizontal page overflow or uncaught browser errors.
 
-The 150-component/300-pad benchmark completed validation and actual geometry checks in **687 ms** during the final aggregate run. Earlier runs were approximately 1.6 seconds. This is a bounded synthetic fixture, not a performance guarantee or a worst-case zone benchmark.
+Screenshots were inspected for the image preview, edited board, outline dialog, bottom 3D view and mobile dark interface. Selected screenshots are included in `verification/v1.2-*.png`.
 
-## Independent manufacturing validation
+## Independent manufacturing checks
 
-Gerbonara 1.6.3 parses the exported files; Shapely reconstructs their planar geometry independently of the JavaScript polygon engine.
+`tests/board-artwork-manufacturing.test.py` uses Gerbonara and Shapely to compare exported Gerbers against independently reconstructed artwork from stored raster rectangles. It checks both sides, nested holes/islands, rotation and handedness, plus every edited outer/cutout segment. Front artwork symmetric difference: **0.000000 mm²**. A mirrored, 37° rotated back image differed by **0.001808 mm²** after integer-grid quantization, within the fixture's 0.004 mm² tolerance. Exported regions are individually valid polygons.
 
-- All eight copper/mask/paste/silk layers matched the intended geometry in a fixture containing rotated front/back pads, solid/thermal copper, a cutout, a via, text, rectangular/oval SMDs and plated/nonplated slots. Symmetric-difference areas were below 0.0001 mm² (reported as 0.0 at eight decimals).
-- Separate plated and nonplated drill files matched hole counts, positions and diameters; G85 slots matched lengths and angles. Coordinate tolerance was 0.00015 mm; slot-length tolerance 0.0002 mm; slot-angle tolerance 0.02°.
-- The outline/cutout file had the expected closed contour segment count.
-- The routed reference's nine Gerbers and two drill files were independently parsed, including valid empty paste/bottom-silk layers where no such artwork exists.
+`tests/board-artwork-native.test.py` uses KiCad 7.0.11's pcbnew to load native board output and independently verify every image rectangle's vertices, side and filled state, together with outer/cutout edge counts. Native save also passed. No CIRCUITBENCH geometry functions are called by either independent test.
 
-These tests verify the exported files against the application's geometry. They do not constitute fabricator acceptance or physical manufacturing evidence.
+The existing expanded catalog manufacturing fixture was also rerun after polygon-union changes. All eight copper/mask/paste/silk layers matched their geometric expectations with 0.0 mm² rounded symmetric difference; plated/nonplated drill positions, diameters and slots, and edge/cutout segment counts passed. Logs: `verification/v1.2-manufacturing-tests.log`, `v1.2-artwork-manufacturing.log`, `v1.2-artwork-native.log`.
 
-## Native KiCad validation
+## Defects found and corrected during verification
 
-KiCad **7.0.11** successfully loaded and saved the export fixture. Native `pcbnew` confirmed all ten pad positions, sizes and absolute angles, including a back-side footprint rotated 37.5° and a locally rotated oval slot pad. Position tolerance was 0.000002 mm. A native save was reimported and compared by reference/pin identity; coordinates and net names were preserved. Native KiCad also plotted all nine requested manufacturing layers from the exported board.
+Pixel rectangles initially produced self-touching contours at shared edges. Strictly simple polygon output fixes clear holes/islands. Rotating adjacent rectangles before union additionally introduced small shared-edge rounding slivers at arbitrary angles; images now merge on the exact integer raster before scaling, mirroring and rotation. Independent readers verified the corrected result.
 
-Native plotting confirms syntactic acceptance and usable board objects; it does not establish full ERC/DRC equivalence. Zone fills use different engines and exported source zones must be refilled in KiCad. Unsupported-feature tests confirm blocking diagnostics and prevention of fabrication export for incomplete imports.
+The old custom-outline inspector size fields refused edits; they now use the same boundary-resize operation as the new dialog. Bottom text now starts near the right board edge in canonical coordinates, keeping its default mirrored placement on the board. New toolbar theme transitions were removed so controls stay readable during theme changes.
 
-## Reference design and visual checks
+## Practical limits
 
-`examples/routed-reference.circuitbench.json` contains five components, seven track objects, two mounting holes and authored front silk. All logical nets are routed; the implemented checks return zero findings. This fixture remains **unfabricated and electrically untested**. The default starter project intentionally has unrouted nets for editing practice.
+Outline editing is polygonal (3–200 corners); curved edges have no dedicated arc controls. Images are monochrome PNG/JPEG/WebP conversions, limited to 256 pixels per axis, 6,000 rectangles each and 12,000 total, within the existing 5 MB project limit. SVG import and color silk are not implemented. Source binaries are not retained; changing conversion settings after reopening requires reimporting the source. Width/position/rotation/side remain editable.
 
-Desktop, dark-theme, mobile, schematic, review, zone-board and actual 3D renders were captured. Desktop, schematic, mobile, zone-board and 3D screenshots were visually inspected. A PDF design report was generated and checked for content. Screenshot evidence is in `docs/`; the source test scripts reproduce the workflow captures.
-
-## Reproduce
-
-```sh
-python3 build.py
-npm ci
-npx playwright install chromium
-npm test
-
-# Run release.test.cjs first to generate the native fixture.
-node tests/manufacturing-fixture.cjs
-python3 -m pip install gerbonara==1.6.3 shapely
-python3 tests/manufacturing.test.py
-
-# In a Python environment with KiCad's pcbnew module:
-python3 tests/native-kicad.test.py
-```
-
-`CHROMIUM_EXECUTABLE` selects an existing browser. Browser tests create temporary local HTTP servers. Test dependencies are not runtime app dependencies. The release contains scripts and compact verification logs; generated intermediate files are omitted from the distribution.
-
-## Outstanding validation
-
-Physical PCB fabrication, component-fit checks, assembly, continuity/short testing and powered electrical behavior remain open. Also unverified: complete native KiCad/LibrePCB project compatibility, worst-case maximum-complexity performance, screen-reader completeness, and Firefox/Safari behavior. The v1.0 label denotes the documented software release scope.
+The board importer warns and omits native image polygons; use full CIRCUITBENCH JSON for editable round trips. Gerber coordinates stay canonical regardless of the view. Fabricator DFM, physical footprint checks, board fabrication, assembly and electrical testing remain outstanding. Earlier release evidence is retained in `TEST-REPORT-v1.1.md` and `TEST-REPORT-v1.0.md`.

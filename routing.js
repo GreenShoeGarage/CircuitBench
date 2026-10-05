@@ -4,7 +4,8 @@ function routeBetween(p,a,b,net,layer,width,grid=.5){
  if(!p.nets.includes(net)||!['F','B'].includes(layer)||!Number.isFinite(width)||width<.05||width>10)throw Error('Choose a valid net, layer and track width.');
  const clearance=C.designRule(p,net,'clearance')+.012,r=width/2,material=G.boardMaterial(p,p.rules.edge+r+.012),obs=[];
  for(let item of C.rawCopper(p)){if((item.layer==='both'||item.layer===layer)&&item.net!==net){let paths=G.offset(item.paths,Math.max(clearance,C.designRule(p,item.net,'clearance')+.012)+r);obs.push({paths,bounds:G.bounds(paths)});}}
- for(let h of p.holes){let paths=G.offset([G.drillPolygon(h)],clearance+r);obs.push({paths,bounds:G.bounds(paths)});}
+ for(let k of C.keepouts?C.keepouts(p):[])if(k.prohibit.tracks&&(k.layers.includes('*.Cu')||k.layers.includes(layer+'.Cu'))){let paths=G.offset([k.points],r);obs.push({paths,bounds:G.bounds(paths)});}
+ for(let h of C.holes(p)){let paths=G.offset([G.drillPolygon(h)],clearance+r);obs.push({paths,bounds:G.bounds(paths)});}
  // Zones regenerate around tracks, so their previous fills are not fixed obstacles.
  const pointOK=q=>G.inside(q,material)&&!obs.some(o=>q.x>=o.bounds.minX&&q.x<=o.bounds.maxX&&q.y>=o.bounds.minY&&q.y<=o.bounds.maxY&&G.inside(q,o.paths));
  function lineOK(u,v){if(!pointOK(u)||!pointOK(v))return false;const bb=G.bounds([[u,v]]);for(let paths of [material,...obs.filter(o=>G.boxesNear(o.bounds,bb)).map(o=>o.paths)])for(let poly of paths)for(let i=0;i<poly.length;i++)if(C.segDistance(u,v,poly[i],poly[(i+1)%poly.length])<.00005)return false;return true;}

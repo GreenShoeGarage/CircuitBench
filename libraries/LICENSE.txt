@@ -1,0 +1,28 @@
+CIRCUITBENCH bundled component catalog — adapted from KiCad 9.0.0 libraries.
+Copyright the KiCad library contributors.
+
+The files catalog.json, selection.json, ../catalog.js and upstream/** contain
+library data licensed under Creative Commons Attribution-ShareAlike 4.0
+International, with the KiCad design-use exception below. The application code
+is separately licensed GPL-3.0-only. Library data has not been relicensed GPL.
+
+License: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+Original library license document: UPSTREAM-LICENSE.md (retained unchanged).
+Symbols: https://gitlab.com/kicad/libraries/kicad-symbols/-/tree/9.0.0
+Footprints: https://gitlab.com/kicad/libraries/kicad-footprints/-/tree/9.0.0
+
+KiCad exception:
+To the extent that the creation of electronic designs that use 'Licensed
+Material' can be considered to be 'Adapted Material', then the copyright holder
+waives article 3 of the license with respect to these designs and any generated
+files which use data provided as part of the 'Licensed Material'.
+
+Modifications by CIRCUITBENCH: curated selection; conversion into JSON; inherited
+symbol expansion; footprint recentering; arc polygonization; layout offsets for
+symbol units; stable physical pad identities; native pin/pad mapping and source
+metadata. The upstream source subset and converter are included. Body heights
+are a 3 mm editable estimate, not measurements from the source footprints.
+
+The exception permits design use without imposing the library license on the
+design. Redistribution of library collections retains the attribution and
+share-alike obligations. No endorsement by KiCad is implied. No warranty.

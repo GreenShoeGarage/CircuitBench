@@ -1,0 +1,3 @@
+PASS independent Gerber F artwork: area, holes, islands, rotation and handedness; delta 0.000000 mm²
+PASS independent Gerber B artwork: area, holes, islands, rotation and handedness; delta 0.001808 mm²
+PASS independent Gerber edited outer boundary and retained cutout positions

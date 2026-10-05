@@ -1,0 +1,28 @@
+{
+  "devices": 148,
+  "symbols": 148,
+  "footprints": 190,
+  "excluded": [
+    "Regulator_Linear:MCP1700-3302E_TO — Missing symbol",
+    "Regulator_Linear:LM2940CT-5.0 — Missing symbol",
+    "Diode:BAT54 — Missing symbol",
+    "Diode:1N4733A — Missing symbol",
+    "Amplifier_Operational:MCP6002-xP — ENOENT: no such file or directory, open '/workspace/scratch/ddc7385d993f/library-sources/kicad-footprints-9.0.0/.pretty/undefined.kicad_mod'",
+    "Amplifier_Operational:OPA2134PA — Missing symbol",
+    "Amplifier_Operational:TLV2372IP — Missing symbol",
+    "Amplifier_Audio:LM386 — ENOENT: no such file or directory, open '/workspace/scratch/ddc7385d993f/library-sources/kicad-footprints-9.0.0/.pretty/undefined.kicad_mod'",
+    "Amplifier_Audio:LM386N-1 — Missing symbol",
+    "Interface_UART:MAX232 — ENOENT: no such file or directory, open '/workspace/scratch/ddc7385d993f/library-sources/kicad-footprints-9.0.0/.pretty/undefined.kicad_mod'",
+    "Interface_UART:MAX485E — ENOENT: no such file or directory, open '/workspace/scratch/ddc7385d993f/library-sources/kicad-footprints-9.0.0/.pretty/undefined.kicad_mod'",
+    "Interface_UART:SN75176BP — Missing symbol",
+    "Interface_UART:MAX3232 — ENOENT: no such file or directory, open '/workspace/scratch/ddc7385d993f/library-sources/kicad-footprints-9.0.0/.pretty/undefined.kicad_mod'",
+    "Memory_EEPROM:24LC256 — ENOENT: no such file or directory, open '/workspace/scratch/ddc7385d993f/library-sources/kicad-footprints-9.0.0/.pretty/undefined.kicad_mod'",
+    "Memory_EEPROM:24LC02B — Missing symbol",
+    "Memory_Flash:W25Q64JVSS — Missing symbol",
+    "Driver_Motor:ULN2003A — Missing symbol",
+    "Driver_Motor:ULN2803A — Missing symbol",
+    "Relay:SRD-05VDC-SL-C — Missing symbol",
+    "MCU_Module:RaspberryPi_Pico — Unsupported thru_hole / custom pad 3. Entry was not imported.",
+    "Connector:USB_B_Micro — ENOENT: no such file or directory, open '/workspace/scratch/ddc7385d993f/library-sources/kicad-footprints-9.0.0/Connector_USB.pretty/USB_Micro-B_Amphenol_10118194-0001LF.kicad_mod'"
+  ]
+}

@@ -1,14 +1,14 @@
-# v1.0 compatibility contract
+# v1.2 compatibility contract
 
 ## CIRCUITBENCH files
 
 Schema 2 is authoritative. Schema 1 migrates in memory, preserving coordinates, footprints, nets and copper. New fields include pad shapes, sheet membership and assembly defaults; explicit wires are generated from the legacy topology. Legacy net assignments become explicit labels, so deleting migrated wires does not disconnect those labels. Opening files does not overwrite their sources.
 
-The graph uses stable component/pin and junction identities. Symbols/footprints must have one-to-one matching pin numbers; repeated physical pads with the same number are unsupported. Libraries use `format: circuitbench-library`, `schema: 1` with separate symbol, footprint, device and block collections. This is not a native KiCad or LibrePCB library format.
+The graph uses stable component/pin and junction identities. Logical pins and physical pad IDs are distinct. Multiple pads may share one logical pin; explicit mappings are stored with reusable devices. Symbol units share a single physical footprint. Libraries use `format: circuitbench-library`, `schema: 1` with separate symbol, footprint, device and block collections. Native KiCad symbol/footprint library readers convert the supported subset into this model; see LIBRARY-GUIDE.md.
 
 ## KiCad board interchange
 
-Export targets board format `20221018`. Native verification used **KiCad 7.0.11**. This is a two-layer PCB subset, not a complete project round trip. Newer files are accepted only when their geometry fits the supported parser and validator. `.kicad_sch`, `.kicad_pro`, external libraries/models and rule files are not imported.
+Export targets board format `20221018`. Native verification used **KiCad 7.0.11**. This is a two-layer PCB subset, not a complete project round trip. Newer files are accepted only when their geometry fits the supported parser and validator. `.kicad_sch`, `.kicad_pro`, external STEP models and rule files are not imported. Native `.kicad_sym`/`.kicad_mod` library import is a separate workflow from board import.
 
 | Feature | Export | Import |
 | --- | --- | --- |
@@ -52,3 +52,18 @@ Connectivity includes plated drill voids and separates fill islands. It is a pla
 - JLCPCB capabilities: <https://jlcpcb.com/capabilities/pcb-capabilities>
 
 The conservative JLCPCB example uses 0.25 mm width/clearance, 0.5 mm edge gap, 0.15 mm annular ring, 0.45 mm hole gap, 0.05 mm mask expansion, 0.15 mm mask web/minimum silk feature and 0.2 mm silk-to-mask gap. These include engineering margin and cover only part of the process. The consulted 2-layer/1 oz published width/space minimum was 0.10/0.10 mm; confirm current order-specific requirements.
+
+## v1.1 export extensions
+
+Board export additionally writes rounded rectangle pads, repeated pad numbers, selective paste/mask layers, separate paste apertures, component nonplated holes, footprint silkscreen and keepouts. The older board importer remains a bounded subset and can issue blocking diagnostics when reopening these richer exports. Continue those native boards in KiCad or reopen the full CIRCUITBENCH project JSON. Library import and board import have different capability boundaries.
+
+
+## v1.2 board editing and image extension
+
+The board view preference is stored locally, outside the design. Flipping never mirrors the saved PCB or manufacturing exports. Flip also selects the corresponding active copper layer; changing the copper dropdown independently leaves the viewing orientation intact.
+
+`p.silk` additionally accepts `kind: "image"`: `name`, center `x/y`, physical `sizeX/sizeY`, `rotation`, `layer`, `mirror`, integer `pixelWidth/pixelHeight` and `runs`. Each run is `[pixelX, pixelY, pixelWidth, pixelHeight]`. No original binary image or external URL is stored. Limits: 256 pixels per axis, 6,000 runs per image, 12,000 image runs total, within the existing 300 silk-object / 5 MB project limits. Raster import accepts PNG/JPEG/WebP up to 10 MB and 16 megapixels. Transparent pixels (alpha < 128) are always clear. There is no SVG import or color silk.
+
+Images export as filled geometry on F.SilkS/B.SilkS in Gerber and as filled `gr_poly` rectangles in KiCad. The bounded native board importer does not reconstruct those image objects: it warns about omitted graphics. Reopen the CIRCUITBENCH JSON for a complete editable round trip. KiCad text continues to use native typography, which differs from the app's vector font. v1.1 and earlier reject image-bearing projects; v1.2 continues to read earlier schema 1/2 projects.
+
+Outline editing supports simple closed polygons with 3–200 vertices and no self-intersections. The minimum X and Y remain zero; dimensions are the maximum X/Y. Width/height changes scale only the outer boundary about that origin, independently by axis; components, tracks, vias, holes, cutouts, artwork and zone source boundaries retain their physical dimensions/coordinates. Review reports objects outside the resulting material. Curved outlines are still represented by polygon segments.

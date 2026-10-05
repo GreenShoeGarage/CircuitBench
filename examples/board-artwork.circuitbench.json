@@ -1,0 +1,262 @@
+{
+  "format": "circuitbench",
+  "schema": 2,
+  "version": "1.2.0",
+  "title": "Silkscreen and board shape demo",
+  "revision": "A",
+  "board": {
+    "width": 72,
+    "height": 50,
+    "thickness": 2,
+    "outline": [
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 36,
+        "y": 6.25
+      },
+      {
+        "x": 72,
+        "y": 0
+      },
+      {
+        "x": 72,
+        "y": 50
+      },
+      {
+        "x": 0,
+        "y": 50
+      }
+    ],
+    "origin": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "rules": {
+    "clearance": 0.25,
+    "edge": 0.5,
+    "minWidth": 0.25,
+    "annular": 0.15,
+    "mask": 0.05,
+    "drill": 0.25,
+    "maskWeb": 0.1,
+    "courtyard": 0.25,
+    "silk": 0.15,
+    "silkLine": 0.15
+  },
+  "components": [
+    {
+      "id": "idmh5vj9l0h1",
+      "kind": "smd2",
+      "ref": "R1",
+      "value": "10k",
+      "mpn": "",
+      "body": [
+        2,
+        1.25
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": -1.1,
+          "y": 0,
+          "diameter": 1.2,
+          "drill": 0,
+          "type": "passive",
+          "mount": "smd",
+          "net": "",
+          "nc": true,
+          "shape": "circle",
+          "width": 1.2,
+          "height": 1.2,
+          "rotation": 0,
+          "labelNet": "",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 1.1,
+          "y": 0,
+          "diameter": 1.2,
+          "drill": 0,
+          "type": "passive",
+          "mount": "smd",
+          "net": "",
+          "nc": true,
+          "shape": "circle",
+          "width": 1.2,
+          "height": 1.2,
+          "rotation": 0,
+          "labelNet": "",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 18,
+        "y": 13,
+        "rotation": 0,
+        "side": "B"
+      },
+      "sch": {
+        "x": 20,
+        "y": 20,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 3,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "smd2",
+        "pins": []
+      },
+      "footprintName": "smd2"
+    }
+  ],
+  "tracks": [],
+  "vias": [],
+  "nets": [
+    "GND",
+    "+5V"
+  ],
+  "assumptions": "Software demonstration of front/back text, embedded image artwork, custom outline, dimensions, a cutout and a mechanical hole. Not an electrically functional design.",
+  "evidence": "Exercised in v1.2 offline UI, persistence, undo and 3D workflows. Independent export tests use a separate nested-ring fixture.",
+  "baseline": null,
+  "sheets": [
+    {
+      "id": "main",
+      "name": "Main circuit",
+      "parent": null
+    }
+  ],
+  "wires": [],
+  "junctions": [],
+  "labels": [],
+  "ports": [],
+  "holes": [
+    {
+      "id": "hole",
+      "x": 5,
+      "y": 6,
+      "drill": 3,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false
+    }
+  ],
+  "cutouts": [
+    {
+      "id": "cutout",
+      "points": [
+        {
+          "x": 50,
+          "y": 5
+        },
+        {
+          "x": 55,
+          "y": 5
+        },
+        {
+          "x": 55,
+          "y": 8
+        },
+        {
+          "x": 50,
+          "y": 8
+        }
+      ]
+    }
+  ],
+  "silk": [
+    {
+      "id": "idqz7cer563v",
+      "kind": "text",
+      "layer": "F",
+      "x": 8,
+      "y": 33,
+      "text": "FRONT 1",
+      "size": 1.4,
+      "rotation": 0,
+      "width": 0.2,
+      "mirror": false
+    },
+    {
+      "id": "ida6n11zdquo",
+      "kind": "text",
+      "layer": "B",
+      "x": 55,
+      "y": 35,
+      "text": "BACK REV B",
+      "size": 1.4,
+      "rotation": 0,
+      "width": 0.2,
+      "mirror": true
+    },
+    {
+      "pixelWidth": 64,
+      "pixelHeight": 48,
+      "runs": [
+        [
+          3,
+          3,
+          18,
+          27
+        ],
+        [
+          30,
+          3,
+          27,
+          6
+        ],
+        [
+          30,
+          9,
+          7,
+          11
+        ],
+        [
+          50,
+          9,
+          7,
+          11
+        ],
+        [
+          30,
+          20,
+          27,
+          6
+        ],
+        [
+          3,
+          30,
+          54,
+          13
+        ]
+      ],
+      "sizeX": 20,
+      "sizeY": 15,
+      "id": "id5eodcn8udu",
+      "kind": "image",
+      "name": "logo.png",
+      "rotation": 37,
+      "x": 31,
+      "y": 22,
+      "layer": "B",
+      "mirror": true
+    }
+  ],
+  "zones": [],
+  "library": {
+    "symbols": [],
+    "footprints": [],
+    "devices": [],
+    "blocks": []
+  },
+  "netClasses": [],
+  "importNotes": []
+}

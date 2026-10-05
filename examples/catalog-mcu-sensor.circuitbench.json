@@ -1,0 +1,4173 @@
+{
+  "format": "circuitbench",
+  "schema": 2,
+  "version": "1.2.0",
+  "title": "Catalog reference — microcontroller and sensor",
+  "revision": "A",
+  "board": {
+    "width": 100,
+    "height": 80,
+    "thickness": 1.6,
+    "outline": [],
+    "origin": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "rules": {
+    "clearance": 0.25,
+    "edge": 0.5,
+    "minWidth": 0.25,
+    "annular": 0.15,
+    "mask": 0.05,
+    "drill": 0.25,
+    "maskWeb": 0.1,
+    "courtyard": 0.25,
+    "silk": 0.15,
+    "silkLine": 0.15
+  },
+  "components": [
+    {
+      "id": "idhua4rorq3w",
+      "kind": "device",
+      "ref": "U1",
+      "value": "ATmega328P-P",
+      "mpn": "ATmega328P-P",
+      "body": [
+        6.35,
+        35.56
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "number": "1",
+          "pin": "1",
+          "name": "~{RESET}/PC6",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": -16.51,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "roundrect",
+          "radiusRatio": 0.15625,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "RESET",
+          "labelNet": "RESET",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "2",
+          "number": "2",
+          "pin": "2",
+          "name": "PD0",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": -13.97,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "3",
+          "number": "3",
+          "pin": "3",
+          "name": "PD1",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": -11.43,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "4",
+          "number": "4",
+          "pin": "4",
+          "name": "PD2",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": -8.89,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "5",
+          "number": "5",
+          "pin": "5",
+          "name": "PD3",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": -6.35,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "6",
+          "number": "6",
+          "pin": "6",
+          "name": "PD4",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": -3.81,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "7",
+          "number": "7",
+          "pin": "7",
+          "name": "VCC",
+          "type": "power_in",
+          "x": -3.81,
+          "y": -1.27,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "+5V",
+          "labelNet": "+5V",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "8",
+          "number": "8",
+          "pin": "8",
+          "name": "GND",
+          "type": "power_in",
+          "x": -3.81,
+          "y": 1.27,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "GND",
+          "labelNet": "GND",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "9",
+          "number": "9",
+          "pin": "9",
+          "name": "XTAL1/PB6",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": 3.81,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "10",
+          "number": "10",
+          "pin": "10",
+          "name": "XTAL2/PB7",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": 6.35,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "11",
+          "number": "11",
+          "pin": "11",
+          "name": "PD5",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": 8.89,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "12",
+          "number": "12",
+          "pin": "12",
+          "name": "PD6",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": 11.43,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "13",
+          "number": "13",
+          "pin": "13",
+          "name": "PD7",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": 13.97,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "14",
+          "number": "14",
+          "pin": "14",
+          "name": "PB0",
+          "type": "bidirectional",
+          "x": -3.81,
+          "y": 16.51,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "15",
+          "number": "15",
+          "pin": "15",
+          "name": "PB1",
+          "type": "bidirectional",
+          "x": 3.81,
+          "y": 16.51,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "16",
+          "number": "16",
+          "pin": "16",
+          "name": "PB2",
+          "type": "bidirectional",
+          "x": 3.81,
+          "y": 13.97,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "17",
+          "number": "17",
+          "pin": "17",
+          "name": "PB3",
+          "type": "bidirectional",
+          "x": 3.81,
+          "y": 11.43,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "18",
+          "number": "18",
+          "pin": "18",
+          "name": "PB4",
+          "type": "bidirectional",
+          "x": 3.81,
+          "y": 8.89,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "19",
+          "number": "19",
+          "pin": "19",
+          "name": "PB5",
+          "type": "bidirectional",
+          "x": 3.81,
+          "y": 6.35,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "20",
+          "number": "20",
+          "pin": "20",
+          "name": "AVCC",
+          "type": "power_in",
+          "x": 3.81,
+          "y": 3.81,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "+5V",
+          "labelNet": "+5V",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "21",
+          "number": "21",
+          "pin": "21",
+          "name": "AREF",
+          "type": "passive",
+          "x": 3.81,
+          "y": 1.27,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "22",
+          "number": "22",
+          "pin": "22",
+          "name": "GND",
+          "type": "passive",
+          "x": 3.81,
+          "y": -1.27,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "GND",
+          "labelNet": "GND",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "23",
+          "number": "23",
+          "pin": "23",
+          "name": "PC0",
+          "type": "bidirectional",
+          "x": 3.81,
+          "y": -3.81,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "24",
+          "number": "24",
+          "pin": "24",
+          "name": "PC1",
+          "type": "bidirectional",
+          "x": 3.81,
+          "y": -6.35,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "25",
+          "number": "25",
+          "pin": "25",
+          "name": "PC2",
+          "type": "bidirectional",
+          "x": 3.81,
+          "y": -8.89,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "26",
+          "number": "26",
+          "pin": "26",
+          "name": "PC3",
+          "type": "bidirectional",
+          "x": 3.81,
+          "y": -11.43,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "27",
+          "number": "27",
+          "pin": "27",
+          "name": "PC4",
+          "type": "bidirectional",
+          "x": 3.81,
+          "y": -13.97,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "SDA",
+          "labelNet": "SDA",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "28",
+          "number": "28",
+          "pin": "28",
+          "name": "PC5",
+          "type": "bidirectional",
+          "x": 3.81,
+          "y": -16.51,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "SCL",
+          "labelNet": "SCL",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        }
+      ],
+      "pcb": {
+        "x": 28,
+        "y": 30,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 20,
+        "y": 25,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 3,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "native",
+        "pins": [
+          {
+            "n": "21",
+            "name": "AREF",
+            "type": "passive",
+            "x": -15.24,
+            "y": -30.48,
+            "angle": 0,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "7",
+            "name": "VCC",
+            "type": "power_in",
+            "x": 0,
+            "y": -38.1,
+            "angle": 90,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "22",
+            "name": "GND",
+            "type": "passive",
+            "x": 0,
+            "y": 38.1,
+            "angle": 270,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "8",
+            "name": "GND",
+            "type": "power_in",
+            "x": 0,
+            "y": 38.1,
+            "angle": 270,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "20",
+            "name": "AVCC",
+            "type": "power_in",
+            "x": 2.54,
+            "y": -38.1,
+            "angle": 90,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "14",
+            "name": "PB0",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": -30.48,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "15",
+            "name": "PB1",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": -27.94,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "16",
+            "name": "PB2",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": -25.4,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "17",
+            "name": "PB3",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": -22.86,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "18",
+            "name": "PB4",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": -20.32,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "19",
+            "name": "PB5",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": -17.78,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "9",
+            "name": "XTAL1/PB6",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": -15.24,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "10",
+            "name": "XTAL2/PB7",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": -12.7,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "23",
+            "name": "PC0",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": -7.62,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "24",
+            "name": "PC1",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": -5.08,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "25",
+            "name": "PC2",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": -2.54,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "26",
+            "name": "PC3",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 0,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "27",
+            "name": "PC4",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 2.54,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "28",
+            "name": "PC5",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 5.08,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "1",
+            "name": "~{RESET}/PC6",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 7.62,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "2",
+            "name": "PD0",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 12.7,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "3",
+            "name": "PD1",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 15.24,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "4",
+            "name": "PD2",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 17.78,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "5",
+            "name": "PD3",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 20.32,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "6",
+            "name": "PD4",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 22.86,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "11",
+            "name": "PD5",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 25.4,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "12",
+            "name": "PD6",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 27.94,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "13",
+            "name": "PD7",
+            "type": "bidirectional",
+            "x": 15.24,
+            "y": 30.48,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          }
+        ],
+        "graphics": [
+          {
+            "kind": "polyline",
+            "points": [
+              {
+                "x": -12.7,
+                "y": 35.56
+              },
+              {
+                "x": 12.7,
+                "y": 35.56
+              },
+              {
+                "x": 12.7,
+                "y": -35.56
+              },
+              {
+                "x": -12.7,
+                "y": -35.56
+              },
+              {
+                "x": -12.7,
+                "y": 35.56
+              }
+            ],
+            "width": 0.254,
+            "fill": "background",
+            "unit": 0,
+            "layer": "F.Fab"
+          }
+        ],
+        "units": [
+          {
+            "n": 1,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      },
+      "footprintName": "Package_DIP:DIP-28_W7.62mm",
+      "footprintGraphics": [
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -2.65,
+              "y": -17.84
+            },
+            {
+              "x": -2.65,
+              "y": 17.84
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -2.65,
+              "y": 17.84
+            },
+            {
+              "x": 2.65,
+              "y": 17.84
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -1,
+              "y": -17.84
+            },
+            {
+              "x": -2.65,
+              "y": -17.84
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 2.65,
+              "y": -17.84
+            },
+            {
+              "x": 1,
+              "y": -17.84
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 2.65,
+              "y": 17.84
+            },
+            {
+              "x": 2.65,
+              "y": -17.84
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 1,
+              "y": -17.84
+            },
+            {
+              "x": 0.995974,
+              "y": -17.750361
+            },
+            {
+              "x": 0.98393,
+              "y": -17.661443
+            },
+            {
+              "x": 0.963963,
+              "y": -17.573963
+            },
+            {
+              "x": 0.936235,
+              "y": -17.488625
+            },
+            {
+              "x": 0.900969,
+              "y": -17.406116
+            },
+            {
+              "x": 0.858449,
+              "y": -17.327101
+            },
+            {
+              "x": 0.809017,
+              "y": -17.252215
+            },
+            {
+              "x": 0.753071,
+              "y": -17.182061
+            },
+            {
+              "x": 0.691063,
+              "y": -17.117205
+            },
+            {
+              "x": 0.62349,
+              "y": -17.058169
+            },
+            {
+              "x": 0.550897,
+              "y": -17.005427
+            },
+            {
+              "x": 0.473869,
+              "y": -16.959404
+            },
+            {
+              "x": 0.393025,
+              "y": -16.920472
+            },
+            {
+              "x": 0.309017,
+              "y": -16.888943
+            },
+            {
+              "x": 0.222521,
+              "y": -16.865072
+            },
+            {
+              "x": 0.134233,
+              "y": -16.84905
+            },
+            {
+              "x": 0.044865,
+              "y": -16.841007
+            },
+            {
+              "x": -0.044865,
+              "y": -16.841007
+            },
+            {
+              "x": -0.134233,
+              "y": -16.84905
+            },
+            {
+              "x": -0.222521,
+              "y": -16.865072
+            },
+            {
+              "x": -0.309017,
+              "y": -16.888943
+            },
+            {
+              "x": -0.393025,
+              "y": -16.920472
+            },
+            {
+              "x": -0.473869,
+              "y": -16.959404
+            },
+            {
+              "x": -0.550897,
+              "y": -17.005427
+            },
+            {
+              "x": -0.62349,
+              "y": -17.058169
+            },
+            {
+              "x": -0.691063,
+              "y": -17.117205
+            },
+            {
+              "x": -0.753071,
+              "y": -17.182061
+            },
+            {
+              "x": -0.809017,
+              "y": -17.252215
+            },
+            {
+              "x": -0.858449,
+              "y": -17.327101
+            },
+            {
+              "x": -0.900969,
+              "y": -17.406116
+            },
+            {
+              "x": -0.936235,
+              "y": -17.488625
+            },
+            {
+              "x": -0.963963,
+              "y": -17.573963
+            },
+            {
+              "x": -0.98393,
+              "y": -17.661443
+            },
+            {
+              "x": -0.995974,
+              "y": -17.750361
+            },
+            {
+              "x": -1,
+              "y": -17.84
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -4.87,
+              "y": -18.04
+            },
+            {
+              "x": 4.86,
+              "y": -18.04
+            },
+            {
+              "x": 4.86,
+              "y": 18.04
+            },
+            {
+              "x": -4.87,
+              "y": 18.04
+            },
+            {
+              "x": -4.87,
+              "y": -18.04
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.175,
+              "y": -16.78
+            },
+            {
+              "x": -2.175,
+              "y": -17.78
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.175,
+              "y": 17.78
+            },
+            {
+              "x": -3.175,
+              "y": -16.78
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -2.175,
+              "y": -17.78
+            },
+            {
+              "x": 3.175,
+              "y": -17.78
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.175,
+              "y": -17.78
+            },
+            {
+              "x": 3.175,
+              "y": 17.78
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.175,
+              "y": 17.78
+            },
+            {
+              "x": -3.175,
+              "y": 17.78
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        }
+      ],
+      "mountingHoles": [],
+      "apertures": [],
+      "keepouts": [],
+      "librarySource": {
+        "device": {
+          "release": "9.0.0",
+          "symbol": "MCU_Microchip_ATmega:ATmega328P-P",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "symbol": {
+          "format": "KiCad symbol",
+          "file": "MCU_Microchip_ATmega.kicad_sym",
+          "name": "ATmega328P-P",
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-symbols/-/blob/9.0.0/MCU_Microchip_ATmega.kicad_sym",
+          "sha256": "df945ecebc04ebcdbab0367550cf908f4bd573185c88fd28bf44538fcba04df6",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "footprint": {
+          "format": "KiCad footprint",
+          "file": "Package_DIP.pretty/DIP-28_W7.62mm.kicad_mod",
+          "originOffset": {
+            "x": 3.81,
+            "y": 16.509999999999998
+          },
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/blob/9.0.0/Package_DIP.pretty/DIP-28_W7.62mm.kicad_mod",
+          "sha256": "ddd8b98ec43a58e00ed71199e61fbb6f6e24a58ad73ec20ea42b2de76bec93ff",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "datasheet": "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf",
+        "catalogId": "lib_ae2a756c",
+        "version": "1.2.0"
+      },
+      "deviceName": "ATmega328P-P"
+    },
+    {
+      "id": "idc0b2j8o4ka",
+      "kind": "device",
+      "ref": "U2",
+      "value": "MCP9808_MSOP",
+      "mpn": "MCP9808_MSOP",
+      "body": [
+        3,
+        3
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "number": "1",
+          "pin": "1",
+          "name": "SDA",
+          "type": "bidirectional",
+          "x": -2.1125,
+          "y": -0.975,
+          "width": 1.625,
+          "height": 0.4,
+          "diameter": 0.4,
+          "drill": 0,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "roundrect",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "smd",
+          "net": "SDA",
+          "labelNet": "SDA",
+          "nc": false,
+          "paste": true,
+          "mask": true,
+          "maskSides": [
+            "F"
+          ]
+        },
+        {
+          "n": "2",
+          "number": "2",
+          "pin": "2",
+          "name": "SCL",
+          "type": "input",
+          "x": -2.1125,
+          "y": -0.325,
+          "width": 1.625,
+          "height": 0.4,
+          "diameter": 0.4,
+          "drill": 0,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "roundrect",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "smd",
+          "net": "SCL",
+          "labelNet": "SCL",
+          "nc": false,
+          "paste": true,
+          "mask": true,
+          "maskSides": [
+            "F"
+          ]
+        },
+        {
+          "n": "3",
+          "number": "3",
+          "pin": "3",
+          "name": "Alert",
+          "type": "output",
+          "x": -2.1125,
+          "y": 0.325,
+          "width": 1.625,
+          "height": 0.4,
+          "diameter": 0.4,
+          "drill": 0,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "roundrect",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "smd",
+          "net": "",
+          "labelNet": "",
+          "nc": true,
+          "paste": true,
+          "mask": true,
+          "maskSides": [
+            "F"
+          ]
+        },
+        {
+          "n": "4",
+          "number": "4",
+          "pin": "4",
+          "name": "GND",
+          "type": "power_in",
+          "x": -2.1125,
+          "y": 0.975,
+          "width": 1.625,
+          "height": 0.4,
+          "diameter": 0.4,
+          "drill": 0,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "roundrect",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "smd",
+          "net": "GND",
+          "labelNet": "GND",
+          "nc": false,
+          "paste": true,
+          "mask": true,
+          "maskSides": [
+            "F"
+          ]
+        },
+        {
+          "n": "5",
+          "number": "5",
+          "pin": "5",
+          "name": "A2",
+          "type": "input",
+          "x": 2.1125,
+          "y": 0.975,
+          "width": 1.625,
+          "height": 0.4,
+          "diameter": 0.4,
+          "drill": 0,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "roundrect",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "smd",
+          "net": "GND",
+          "labelNet": "GND",
+          "nc": false,
+          "paste": true,
+          "mask": true,
+          "maskSides": [
+            "F"
+          ]
+        },
+        {
+          "n": "6",
+          "number": "6",
+          "pin": "6",
+          "name": "A1",
+          "type": "input",
+          "x": 2.1125,
+          "y": 0.325,
+          "width": 1.625,
+          "height": 0.4,
+          "diameter": 0.4,
+          "drill": 0,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "roundrect",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "smd",
+          "net": "GND",
+          "labelNet": "GND",
+          "nc": false,
+          "paste": true,
+          "mask": true,
+          "maskSides": [
+            "F"
+          ]
+        },
+        {
+          "n": "7",
+          "number": "7",
+          "pin": "7",
+          "name": "A0",
+          "type": "input",
+          "x": 2.1125,
+          "y": -0.325,
+          "width": 1.625,
+          "height": 0.4,
+          "diameter": 0.4,
+          "drill": 0,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "roundrect",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "smd",
+          "net": "GND",
+          "labelNet": "GND",
+          "nc": false,
+          "paste": true,
+          "mask": true,
+          "maskSides": [
+            "F"
+          ]
+        },
+        {
+          "n": "8",
+          "number": "8",
+          "pin": "8",
+          "name": "V_{DD}",
+          "type": "power_in",
+          "x": 2.1125,
+          "y": -0.975,
+          "width": 1.625,
+          "height": 0.4,
+          "diameter": 0.4,
+          "drill": 0,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "roundrect",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "smd",
+          "net": "+5V",
+          "labelNet": "+5V",
+          "nc": false,
+          "paste": true,
+          "mask": true,
+          "maskSides": [
+            "F"
+          ]
+        }
+      ],
+      "pcb": {
+        "x": 68,
+        "y": 25,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 75,
+        "y": 25,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 3,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "native",
+        "pins": [
+          {
+            "n": "1",
+            "name": "SDA",
+            "type": "bidirectional",
+            "x": -10.16,
+            "y": -7.62,
+            "angle": 0,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "2",
+            "name": "SCL",
+            "type": "input",
+            "x": -10.16,
+            "y": -5.08,
+            "angle": 0,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "7",
+            "name": "A0",
+            "type": "input",
+            "x": -10.16,
+            "y": 2.54,
+            "angle": 0,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "6",
+            "name": "A1",
+            "type": "input",
+            "x": -10.16,
+            "y": 5.08,
+            "angle": 0,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "5",
+            "name": "A2",
+            "type": "input",
+            "x": -10.16,
+            "y": 7.62,
+            "angle": 0,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "8",
+            "name": "V_{DD}",
+            "type": "power_in",
+            "x": 0,
+            "y": -12.7,
+            "angle": 90,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "4",
+            "name": "GND",
+            "type": "power_in",
+            "x": 0,
+            "y": 12.7,
+            "angle": 270,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "3",
+            "name": "Alert",
+            "type": "output",
+            "x": 10.16,
+            "y": 0,
+            "angle": 180,
+            "length": 2.54,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          }
+        ],
+        "graphics": [
+          {
+            "kind": "polyline",
+            "points": [
+              {
+                "x": -7.62,
+                "y": -10.16
+              },
+              {
+                "x": 7.62,
+                "y": -10.16
+              },
+              {
+                "x": 7.62,
+                "y": 10.16
+              },
+              {
+                "x": -7.62,
+                "y": 10.16
+              },
+              {
+                "x": -7.62,
+                "y": -10.16
+              }
+            ],
+            "width": 0.254,
+            "fill": "background",
+            "unit": 0,
+            "layer": "F.Fab"
+          }
+        ],
+        "units": [
+          {
+            "n": 1,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      },
+      "footprintName": "Package_SO:MSOP-8_3x3mm_P0.65mm",
+      "footprintGraphics": [
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 0,
+              "y": -1.61
+            },
+            {
+              "x": -1.5,
+              "y": -1.61
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 0,
+              "y": -1.61
+            },
+            {
+              "x": 1.5,
+              "y": -1.61
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 0,
+              "y": 1.61
+            },
+            {
+              "x": -1.5,
+              "y": 1.61
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 0,
+              "y": 1.61
+            },
+            {
+              "x": 1.5,
+              "y": 1.61
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -2.2125,
+              "y": -1.435
+            },
+            {
+              "x": -2.4525,
+              "y": -1.765
+            },
+            {
+              "x": -1.9725,
+              "y": -1.765
+            },
+            {
+              "x": -2.2125,
+              "y": -1.435
+            }
+          ],
+          "width": 0.12,
+          "fill": "solid",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.18,
+              "y": -1.75
+            },
+            {
+              "x": -3.18,
+              "y": 1.75
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.18,
+              "y": 1.75
+            },
+            {
+              "x": 3.18,
+              "y": 1.75
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.18,
+              "y": -1.75
+            },
+            {
+              "x": -3.18,
+              "y": -1.75
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.18,
+              "y": 1.75
+            },
+            {
+              "x": 3.18,
+              "y": -1.75
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -1.5,
+              "y": -0.75
+            },
+            {
+              "x": -0.75,
+              "y": -1.5
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -1.5,
+              "y": 1.5
+            },
+            {
+              "x": -1.5,
+              "y": -0.75
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -0.75,
+              "y": -1.5
+            },
+            {
+              "x": 1.5,
+              "y": -1.5
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 1.5,
+              "y": -1.5
+            },
+            {
+              "x": 1.5,
+              "y": 1.5
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 1.5,
+              "y": 1.5
+            },
+            {
+              "x": -1.5,
+              "y": 1.5
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        }
+      ],
+      "mountingHoles": [],
+      "apertures": [],
+      "keepouts": [],
+      "librarySource": {
+        "device": {
+          "release": "9.0.0",
+          "symbol": "Sensor_Temperature:MCP9808_MSOP",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "symbol": {
+          "format": "KiCad symbol",
+          "file": "Sensor_Temperature.kicad_sym",
+          "name": "MCP9808_MSOP",
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-symbols/-/blob/9.0.0/Sensor_Temperature.kicad_sym",
+          "sha256": "8d3efcb2d2f73047a1d718accbddd240397bae16fa329a6bc8a23ff8fee83806",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "footprint": {
+          "format": "KiCad footprint",
+          "file": "Package_SO.pretty/MSOP-8_3x3mm_P0.65mm.kicad_mod",
+          "originOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/blob/9.0.0/Package_SO.pretty/MSOP-8_3x3mm_P0.65mm.kicad_mod",
+          "sha256": "e430340f863cad7414775bdf73a68df3139487482e8c1b80ddee4832cb22a022",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "datasheet": "http://ww1.microchip.com/downloads/en/DeviceDoc/22203b.pdf",
+        "catalogId": "lib_e545b3cb",
+        "version": "1.2.0"
+      },
+      "deviceName": "MCP9808_MSOP"
+    },
+    {
+      "id": "idlwlhnhkodf",
+      "kind": "device",
+      "ref": "R1",
+      "value": "4k7",
+      "mpn": "",
+      "body": [
+        10.16,
+        2.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "number": "1",
+          "pin": "1",
+          "name": "~",
+          "type": "passive",
+          "x": -5.08,
+          "y": 0,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "+5V",
+          "labelNet": "+5V",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "2",
+          "number": "2",
+          "pin": "2",
+          "name": "~",
+          "type": "passive",
+          "x": 5.08,
+          "y": 0,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "oval",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "SDA",
+          "labelNet": "SDA",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        }
+      ],
+      "pcb": {
+        "x": 60,
+        "y": 43,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 130,
+        "y": 25,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 3,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "native",
+        "pins": [
+          {
+            "n": "1",
+            "name": "~",
+            "type": "passive",
+            "x": 0,
+            "y": -3.81,
+            "angle": 90,
+            "length": 1.27,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "2",
+            "name": "~",
+            "type": "passive",
+            "x": 0,
+            "y": 3.81,
+            "angle": 270,
+            "length": 1.27,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          }
+        ],
+        "graphics": [
+          {
+            "kind": "polyline",
+            "points": [
+              {
+                "x": -1.016,
+                "y": 2.54
+              },
+              {
+                "x": 1.016,
+                "y": 2.54
+              },
+              {
+                "x": 1.016,
+                "y": -2.54
+              },
+              {
+                "x": -1.016,
+                "y": -2.54
+              },
+              {
+                "x": -1.016,
+                "y": 2.54
+              }
+            ],
+            "width": 0.254,
+            "fill": "none",
+            "unit": 0,
+            "layer": "F.Fab"
+          }
+        ],
+        "units": [
+          {
+            "n": 1,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      },
+      "footprintName": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "footprintGraphics": [
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -4.04,
+              "y": 0
+            },
+            {
+              "x": -3.27,
+              "y": 0
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.27,
+              "y": -1.37
+            },
+            {
+              "x": -3.27,
+              "y": 1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.27,
+              "y": 1.37
+            },
+            {
+              "x": 3.27,
+              "y": 1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.27,
+              "y": -1.37
+            },
+            {
+              "x": -3.27,
+              "y": -1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.27,
+              "y": 1.37
+            },
+            {
+              "x": 3.27,
+              "y": -1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 4.04,
+              "y": 0
+            },
+            {
+              "x": 3.27,
+              "y": 0
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -6.13,
+              "y": -1.5
+            },
+            {
+              "x": -6.13,
+              "y": 1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -6.13,
+              "y": 1.5
+            },
+            {
+              "x": 6.13,
+              "y": 1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 6.13,
+              "y": -1.5
+            },
+            {
+              "x": -6.13,
+              "y": -1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 6.13,
+              "y": 1.5
+            },
+            {
+              "x": 6.13,
+              "y": -1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -5.08,
+              "y": 0
+            },
+            {
+              "x": -3.15,
+              "y": 0
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.15,
+              "y": -1.25
+            },
+            {
+              "x": -3.15,
+              "y": 1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.15,
+              "y": 1.25
+            },
+            {
+              "x": 3.15,
+              "y": 1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.15,
+              "y": -1.25
+            },
+            {
+              "x": -3.15,
+              "y": -1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.15,
+              "y": 1.25
+            },
+            {
+              "x": 3.15,
+              "y": -1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 5.08,
+              "y": 0
+            },
+            {
+              "x": 3.15,
+              "y": 0
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        }
+      ],
+      "mountingHoles": [],
+      "apertures": [],
+      "keepouts": [],
+      "librarySource": {
+        "device": {
+          "release": "9.0.0",
+          "symbol": "Device:R",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "symbol": {
+          "format": "KiCad symbol",
+          "file": "Device.kicad_sym",
+          "name": "R",
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-symbols/-/blob/9.0.0/Device.kicad_sym",
+          "sha256": "ba4244a1cfc2c4ae49aff472f9b1938c7ad83b2aebd867cad36b2e03eded1c69",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "footprint": {
+          "format": "KiCad footprint",
+          "file": "Resistor_THT.pretty/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.kicad_mod",
+          "originOffset": {
+            "x": 5.08,
+            "y": 0
+          },
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/blob/9.0.0/Resistor_THT.pretty/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.kicad_mod",
+          "sha256": "4f4a647f5e4480df37b9cde40c7482e41d95eecfe1f9c81ef02b2a7d9277f2a7",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "datasheet": "~",
+        "catalogId": "lib_66d60469",
+        "version": "1.2.0"
+      },
+      "deviceName": "Resistor"
+    },
+    {
+      "id": "idxrg7i98bx8",
+      "kind": "device",
+      "ref": "R2",
+      "value": "4k7",
+      "mpn": "",
+      "body": [
+        10.16,
+        2.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "number": "1",
+          "pin": "1",
+          "name": "~",
+          "type": "passive",
+          "x": -5.08,
+          "y": 0,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "+5V",
+          "labelNet": "+5V",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "2",
+          "number": "2",
+          "pin": "2",
+          "name": "~",
+          "type": "passive",
+          "x": 5.08,
+          "y": 0,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "oval",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "SCL",
+          "labelNet": "SCL",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        }
+      ],
+      "pcb": {
+        "x": 60,
+        "y": 55,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 185,
+        "y": 25,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 3,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "native",
+        "pins": [
+          {
+            "n": "1",
+            "name": "~",
+            "type": "passive",
+            "x": 0,
+            "y": -3.81,
+            "angle": 90,
+            "length": 1.27,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "2",
+            "name": "~",
+            "type": "passive",
+            "x": 0,
+            "y": 3.81,
+            "angle": 270,
+            "length": 1.27,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          }
+        ],
+        "graphics": [
+          {
+            "kind": "polyline",
+            "points": [
+              {
+                "x": -1.016,
+                "y": 2.54
+              },
+              {
+                "x": 1.016,
+                "y": 2.54
+              },
+              {
+                "x": 1.016,
+                "y": -2.54
+              },
+              {
+                "x": -1.016,
+                "y": -2.54
+              },
+              {
+                "x": -1.016,
+                "y": 2.54
+              }
+            ],
+            "width": 0.254,
+            "fill": "none",
+            "unit": 0,
+            "layer": "F.Fab"
+          }
+        ],
+        "units": [
+          {
+            "n": 1,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      },
+      "footprintName": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "footprintGraphics": [
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -4.04,
+              "y": 0
+            },
+            {
+              "x": -3.27,
+              "y": 0
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.27,
+              "y": -1.37
+            },
+            {
+              "x": -3.27,
+              "y": 1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.27,
+              "y": 1.37
+            },
+            {
+              "x": 3.27,
+              "y": 1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.27,
+              "y": -1.37
+            },
+            {
+              "x": -3.27,
+              "y": -1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.27,
+              "y": 1.37
+            },
+            {
+              "x": 3.27,
+              "y": -1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 4.04,
+              "y": 0
+            },
+            {
+              "x": 3.27,
+              "y": 0
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -6.13,
+              "y": -1.5
+            },
+            {
+              "x": -6.13,
+              "y": 1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -6.13,
+              "y": 1.5
+            },
+            {
+              "x": 6.13,
+              "y": 1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 6.13,
+              "y": -1.5
+            },
+            {
+              "x": -6.13,
+              "y": -1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 6.13,
+              "y": 1.5
+            },
+            {
+              "x": 6.13,
+              "y": -1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -5.08,
+              "y": 0
+            },
+            {
+              "x": -3.15,
+              "y": 0
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.15,
+              "y": -1.25
+            },
+            {
+              "x": -3.15,
+              "y": 1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.15,
+              "y": 1.25
+            },
+            {
+              "x": 3.15,
+              "y": 1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.15,
+              "y": -1.25
+            },
+            {
+              "x": -3.15,
+              "y": -1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.15,
+              "y": 1.25
+            },
+            {
+              "x": 3.15,
+              "y": -1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 5.08,
+              "y": 0
+            },
+            {
+              "x": 3.15,
+              "y": 0
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        }
+      ],
+      "mountingHoles": [],
+      "apertures": [],
+      "keepouts": [],
+      "librarySource": {
+        "device": {
+          "release": "9.0.0",
+          "symbol": "Device:R",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "symbol": {
+          "format": "KiCad symbol",
+          "file": "Device.kicad_sym",
+          "name": "R",
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-symbols/-/blob/9.0.0/Device.kicad_sym",
+          "sha256": "ba4244a1cfc2c4ae49aff472f9b1938c7ad83b2aebd867cad36b2e03eded1c69",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "footprint": {
+          "format": "KiCad footprint",
+          "file": "Resistor_THT.pretty/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.kicad_mod",
+          "originOffset": {
+            "x": 5.08,
+            "y": 0
+          },
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/blob/9.0.0/Resistor_THT.pretty/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.kicad_mod",
+          "sha256": "4f4a647f5e4480df37b9cde40c7482e41d95eecfe1f9c81ef02b2a7d9277f2a7",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "datasheet": "~",
+        "catalogId": "lib_66d60469",
+        "version": "1.2.0"
+      },
+      "deviceName": "Resistor"
+    },
+    {
+      "id": "idjtmcp7vyfu",
+      "kind": "device",
+      "ref": "R3",
+      "value": "10k",
+      "mpn": "",
+      "body": [
+        10.16,
+        2.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "number": "1",
+          "pin": "1",
+          "name": "~",
+          "type": "passive",
+          "x": -5.08,
+          "y": 0,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "+5V",
+          "labelNet": "+5V",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "2",
+          "number": "2",
+          "pin": "2",
+          "name": "~",
+          "type": "passive",
+          "x": 5.08,
+          "y": 0,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "oval",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "RESET",
+          "labelNet": "RESET",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        }
+      ],
+      "pcb": {
+        "x": 20,
+        "y": 58,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 20,
+        "y": 85,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 3,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "native",
+        "pins": [
+          {
+            "n": "1",
+            "name": "~",
+            "type": "passive",
+            "x": 0,
+            "y": -3.81,
+            "angle": 90,
+            "length": 1.27,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "2",
+            "name": "~",
+            "type": "passive",
+            "x": 0,
+            "y": 3.81,
+            "angle": 270,
+            "length": 1.27,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          }
+        ],
+        "graphics": [
+          {
+            "kind": "polyline",
+            "points": [
+              {
+                "x": -1.016,
+                "y": 2.54
+              },
+              {
+                "x": 1.016,
+                "y": 2.54
+              },
+              {
+                "x": 1.016,
+                "y": -2.54
+              },
+              {
+                "x": -1.016,
+                "y": -2.54
+              },
+              {
+                "x": -1.016,
+                "y": 2.54
+              }
+            ],
+            "width": 0.254,
+            "fill": "none",
+            "unit": 0,
+            "layer": "F.Fab"
+          }
+        ],
+        "units": [
+          {
+            "n": 1,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      },
+      "footprintName": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "footprintGraphics": [
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -4.04,
+              "y": 0
+            },
+            {
+              "x": -3.27,
+              "y": 0
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.27,
+              "y": -1.37
+            },
+            {
+              "x": -3.27,
+              "y": 1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.27,
+              "y": 1.37
+            },
+            {
+              "x": 3.27,
+              "y": 1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.27,
+              "y": -1.37
+            },
+            {
+              "x": -3.27,
+              "y": -1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.27,
+              "y": 1.37
+            },
+            {
+              "x": 3.27,
+              "y": -1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 4.04,
+              "y": 0
+            },
+            {
+              "x": 3.27,
+              "y": 0
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -6.13,
+              "y": -1.5
+            },
+            {
+              "x": -6.13,
+              "y": 1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -6.13,
+              "y": 1.5
+            },
+            {
+              "x": 6.13,
+              "y": 1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 6.13,
+              "y": -1.5
+            },
+            {
+              "x": -6.13,
+              "y": -1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 6.13,
+              "y": 1.5
+            },
+            {
+              "x": 6.13,
+              "y": -1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -5.08,
+              "y": 0
+            },
+            {
+              "x": -3.15,
+              "y": 0
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.15,
+              "y": -1.25
+            },
+            {
+              "x": -3.15,
+              "y": 1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.15,
+              "y": 1.25
+            },
+            {
+              "x": 3.15,
+              "y": 1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.15,
+              "y": -1.25
+            },
+            {
+              "x": -3.15,
+              "y": -1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.15,
+              "y": 1.25
+            },
+            {
+              "x": 3.15,
+              "y": -1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 5.08,
+              "y": 0
+            },
+            {
+              "x": 3.15,
+              "y": 0
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        }
+      ],
+      "mountingHoles": [],
+      "apertures": [],
+      "keepouts": [],
+      "librarySource": {
+        "device": {
+          "release": "9.0.0",
+          "symbol": "Device:R",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "symbol": {
+          "format": "KiCad symbol",
+          "file": "Device.kicad_sym",
+          "name": "R",
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-symbols/-/blob/9.0.0/Device.kicad_sym",
+          "sha256": "ba4244a1cfc2c4ae49aff472f9b1938c7ad83b2aebd867cad36b2e03eded1c69",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "footprint": {
+          "format": "KiCad footprint",
+          "file": "Resistor_THT.pretty/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.kicad_mod",
+          "originOffset": {
+            "x": 5.08,
+            "y": 0
+          },
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/blob/9.0.0/Resistor_THT.pretty/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.kicad_mod",
+          "sha256": "4f4a647f5e4480df37b9cde40c7482e41d95eecfe1f9c81ef02b2a7d9277f2a7",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "datasheet": "~",
+        "catalogId": "lib_66d60469",
+        "version": "1.2.0"
+      },
+      "deviceName": "Resistor"
+    },
+    {
+      "id": "idumuwepbuk7",
+      "kind": "device",
+      "ref": "C1",
+      "value": "100nF",
+      "mpn": "",
+      "body": [
+        5,
+        2.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "number": "1",
+          "pin": "1",
+          "name": "~",
+          "type": "passive",
+          "x": -2.5,
+          "y": 0,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "+5V",
+          "labelNet": "+5V",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "n": "2",
+          "number": "2",
+          "pin": "2",
+          "name": "~",
+          "type": "passive",
+          "x": 2.5,
+          "y": 0,
+          "width": 1.6,
+          "height": 1.6,
+          "diameter": 1.6,
+          "drill": 0.8,
+          "slot": 0,
+          "rotation": 0,
+          "shape": "circle",
+          "radiusRatio": 0.25,
+          "pasteMargin": 0,
+          "zoneConnect": -1,
+          "mount": "tht",
+          "net": "GND",
+          "labelNet": "GND",
+          "nc": false,
+          "paste": false,
+          "mask": true,
+          "maskSides": [
+            "F",
+            "B"
+          ]
+        }
+      ],
+      "pcb": {
+        "x": 42,
+        "y": 60,
+        "rotation": 0,
+        "side": "F"
+      },
+      "sch": {
+        "x": 75,
+        "y": 85,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 3,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "native",
+        "pins": [
+          {
+            "n": "1",
+            "name": "~",
+            "type": "passive",
+            "x": 0,
+            "y": -3.81,
+            "angle": 90,
+            "length": 2.794,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          },
+          {
+            "n": "2",
+            "name": "~",
+            "type": "passive",
+            "x": 0,
+            "y": 3.81,
+            "angle": 270,
+            "length": 2.794,
+            "shape": "line",
+            "unit": 1,
+            "hidden": false
+          }
+        ],
+        "graphics": [
+          {
+            "kind": "polyline",
+            "points": [
+              {
+                "x": -2.032,
+                "y": -0.762
+              },
+              {
+                "x": 2.032,
+                "y": -0.762
+              }
+            ],
+            "width": 0.508,
+            "fill": "none",
+            "unit": 0,
+            "layer": "F.Fab"
+          },
+          {
+            "kind": "polyline",
+            "points": [
+              {
+                "x": -2.032,
+                "y": 0.762
+              },
+              {
+                "x": 2.032,
+                "y": 0.762
+              }
+            ],
+            "width": 0.508,
+            "fill": "none",
+            "unit": 0,
+            "layer": "F.Fab"
+          }
+        ],
+        "units": [
+          {
+            "n": 1,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      },
+      "footprintName": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+      "footprintGraphics": [
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -2.62,
+              "y": -1.37
+            },
+            {
+              "x": -2.62,
+              "y": -1.055
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -2.62,
+              "y": -1.37
+            },
+            {
+              "x": 2.62,
+              "y": -1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -2.62,
+              "y": 1.055
+            },
+            {
+              "x": -2.62,
+              "y": 1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -2.62,
+              "y": 1.37
+            },
+            {
+              "x": 2.62,
+              "y": 1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 2.62,
+              "y": -1.37
+            },
+            {
+              "x": 2.62,
+              "y": -1.055
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 2.62,
+              "y": 1.055
+            },
+            {
+              "x": 2.62,
+              "y": 1.37
+            }
+          ],
+          "width": 0.12,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.SilkS"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.55,
+              "y": -1.5
+            },
+            {
+              "x": -3.55,
+              "y": 1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -3.55,
+              "y": 1.5
+            },
+            {
+              "x": 3.55,
+              "y": 1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.55,
+              "y": -1.5
+            },
+            {
+              "x": -3.55,
+              "y": -1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 3.55,
+              "y": 1.5
+            },
+            {
+              "x": 3.55,
+              "y": -1.5
+            }
+          ],
+          "width": 0.05,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.CrtYd"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -2.5,
+              "y": -1.25
+            },
+            {
+              "x": -2.5,
+              "y": 1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": -2.5,
+              "y": 1.25
+            },
+            {
+              "x": 2.5,
+              "y": 1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 2.5,
+              "y": -1.25
+            },
+            {
+              "x": -2.5,
+              "y": -1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        },
+        {
+          "kind": "polyline",
+          "points": [
+            {
+              "x": 2.5,
+              "y": 1.25
+            },
+            {
+              "x": 2.5,
+              "y": -1.25
+            }
+          ],
+          "width": 0.1,
+          "fill": "none",
+          "unit": 1,
+          "layer": "F.Fab"
+        }
+      ],
+      "mountingHoles": [],
+      "apertures": [],
+      "keepouts": [],
+      "librarySource": {
+        "device": {
+          "release": "9.0.0",
+          "symbol": "Device:C",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "symbol": {
+          "format": "KiCad symbol",
+          "file": "Device.kicad_sym",
+          "name": "C",
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-symbols/-/blob/9.0.0/Device.kicad_sym",
+          "sha256": "ba4244a1cfc2c4ae49aff472f9b1938c7ad83b2aebd867cad36b2e03eded1c69",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "footprint": {
+          "format": "KiCad footprint",
+          "file": "Capacitor_THT.pretty/C_Disc_D5.0mm_W2.5mm_P5.00mm.kicad_mod",
+          "originOffset": {
+            "x": 2.5,
+            "y": 0
+          },
+          "release": "9.0.0",
+          "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/blob/9.0.0/Capacitor_THT.pretty/C_Disc_D5.0mm_W2.5mm_P5.00mm.kicad_mod",
+          "sha256": "cf70cd5f9aec5bb2b99724e1f654d8011da6dea5fb246f4d7578f07c768720d6",
+          "license": "CC-BY-SA-4.0 with KiCad exception"
+        },
+        "datasheet": "~",
+        "catalogId": "lib_55d5e9a6",
+        "version": "1.2.0"
+      },
+      "deviceName": "Capacitor"
+    }
+  ],
+  "tracks": [],
+  "vias": [],
+  "nets": [
+    "GND",
+    "+5V",
+    "RESET",
+    "SDA",
+    "SCL"
+  ],
+  "assumptions": "Unrouted I2C sensor reference. Internal MCU oscillator assumed; firmware and fuse configuration are outside this PCB workbench. Unused signal pins are intentionally marked NC. Supply limits and pull-ups require datasheet review.",
+  "evidence": "Catalog definitions, pin mapping and schema round-trip exercised. Routing and hardware validation remain to be completed.",
+  "baseline": null,
+  "sheets": [
+    {
+      "id": "main",
+      "name": "Main circuit",
+      "parent": null
+    }
+  ],
+  "wires": [],
+  "junctions": [],
+  "labels": [],
+  "ports": [],
+  "holes": [],
+  "cutouts": [],
+  "silk": [],
+  "zones": [],
+  "library": {
+    "symbols": [],
+    "footprints": [],
+    "devices": [],
+    "blocks": []
+  },
+  "netClasses": [],
+  "importNotes": []
+}

@@ -1,17 +1,20 @@
 {
   "name": "circuitbench",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "description": "Local-first schematic and two-layer PCB workbench",
   "license": "GPL-3.0-only",
   "scripts": {
-    "test": "node tests/core.test.cjs && node tests/advanced.test.cjs && node tests/release.test.cjs && node tests/browser.test.cjs && node tests/advanced-browser.test.cjs",
+    "test": "node tests/core.test.cjs && node tests/advanced.test.cjs && node tests/release.test.cjs && node tests/library.test.cjs && node tests/library-fixtures.cjs && node tests/board-editing.test.cjs && node tests/browser.test.cjs && node tests/advanced-browser.test.cjs && node tests/library-browser.test.cjs && node tests/board-editing-browser.test.cjs",
     "test:core": "node tests/core.test.cjs",
     "test:browser": "node tests/browser.test.cjs",
     "test:engine": "node tests/core.test.cjs && node tests/advanced.test.cjs && node tests/release.test.cjs",
     "test:manufacturing": "node tests/manufacturing-fixture.cjs && python3 tests/manufacturing.test.py",
     "build": "python3 build.py",
-    "build:viewer": "esbuild viewer-entry.js --bundle --minify --format=iife --global-name=CB3D --outfile=vendor/viewer.js"
+    "build:viewer": "esbuild viewer-entry.js --bundle --minify --format=iife --global-name=CB3D --outfile=vendor/viewer.js",
+    "test:library": "node tests/library.test.cjs && node tests/library-fixtures.cjs && node tests/library-browser.test.cjs",
+    "build:catalog": "node scripts/rebuild-catalog.cjs",
+    "test:board": "node tests/board-editing.test.cjs && node tests/board-editing-browser.test.cjs"
   },
   "devDependencies": {
     "jszip": "3.10.1",

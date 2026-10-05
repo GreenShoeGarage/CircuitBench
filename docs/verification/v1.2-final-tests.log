@@ -1,0 +1,122 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> circuitbench@1.2.0 test
+> node tests/core.test.cjs && node tests/advanced.test.cjs && node tests/release.test.cjs && node tests/library.test.cjs && node tests/library-fixtures.cjs && node tests/board-editing.test.cjs && node tests/browser.test.cjs && node tests/advanced-browser.test.cjs && node tests/library-browser.test.cjs && node tests/board-editing-browser.test.cjs
+
+PASS Example is a valid project with exactly six remaining connections
+PASS Actual copper joins two pads and displacement breaks it
+PASS Crossing segments connect same-net copper without shared vertices
+PASS Different-net tracks crossing on the same layer cause a short
+PASS Clearance, edge, trace width and annular ring rules catch violations
+PASS SMD pads only connect on their physical layer
+PASS Unassigned pins remain distinct; NC declarations and output conflicts work
+PASS Net merging updates pins, tracks and vias coherently
+PASS Rotation and bottom mirroring use one consistent transform
+PASS Project JSON preserves all geometry and rejects malformed or future input
+PASS Gerber and drill share a lower-left origin without mirroring bottom
+PASS Connecting two unassigned pins creates a new named net
+12 core test groups passed
+PASS independent ZIP CRC and contents
+PASS Schema 1 migration preserves geometry, nets, and backup compatibility
+PASS Explicit wire connects and deleting it splits an unnamed net
+PASS Junction split and branch maintain one electrical net
+PASS Explicit matching labels remain connected after a drawing wire is removed
+PASS Renumbering updates wire anchors without changing electrical identity
+PASS Reusable symbol and footprint applications retain nets and reject mismatched pin maps
+PASS A trace wholly inside a plated drill void does not connect to the pad
+PASS Rectangular pad dimensions and rotation control real copper geometry
+PASS Disconnected copper-zone islands do not falsely resolve an airwire
+PASS Copper plane joins same-net pads and clears a foreign-net pad
+PASS Mask, drill, courtyard and silkscreen checks expose fabrication conflicts
+PASS Manufacturing output includes separate plated/NPTH drills, paste, silk and placement
+12 extended test groups passed
+PASS Router detours around foreign copper and a drilled slot with rule clearance
+PASS Router refuses an impassable layer instead of crossing a barrier
+PASS Track cleanup preserves geometry and removes redundant vertices
+PASS Repeated block instances have unique references and isolated nets
+PASS Child sheet ports merge nets explicitly and reject hierarchy cycles
+PASS Malformed library and duplicate net-class assignments are rejected
+PASS Board interchange preserves rotated front/back rectangles, ovals and slots
+PASS Unsupported KiCad geometry creates blocking diagnostics and cannot fabricate
+PASS Bottom text mirrors actual manufacturing geometry
+PASS Object baselines detect placement changes and reject recursive snapshots
+PASS Curved pad approximations stay within two microns across permitted sizes
+BENCHMARK 150 components / 300 pads: 682 ms
+PASS 150-component benchmark validates and completes real geometry checks
+12 release engine test groups passed
+PASS Entire catalog has valid source-linked devices, separate counts and compatible package variants
+PASS Old schema 1 and 2 projects preserve physical geometry and connectivity
+PASS Native symbols preserve inheritance, electrical roles and source pinouts
+PASS Multi-unit devices share one footprint and moving a unit carries wire endpoints
+PASS Repeated USB shield pads share one logical net, stay physically separate and do not create duplicate drivers
+PASS Explicit pin mappings survive save, placement, net assignment and symbol export
+BENCHMARK 144: 28ms, 256: 19ms
+PASS 144 and 256 pin parts validate, render geometry and export without the former 40 pin cap
+PASS Roundrect corners, auxiliary paste apertures, mounting holes and keepouts are retained
+PASS Import rejects malformed and unsupported copper rather than creating a partial footprint
+PASS Portable library JSON and project snapshots remain independent of installed catalog updates
+10 library engine test groups passed
+PASS catalog-only regulated LED board: 8 components, 13 tracks, 0 unrouted, 0 error findings
+PASS catalog microcontroller/sensor project validates with explicit supply, reset and I2C nets
+PASS Monochrome conversion preserves white holes, islands, transparency and inverted colors
+PASS Silkscreen image geometry has correct physical area, dimensions and back-side handedness
+PASS Project roundtrip retains editable images; malformed rasters and excessive artwork are rejected
+PASS Custom outline resize preserves component, track, hole, cutout and artwork placement
+PASS Image feature size, pad clearance and board-edge checks operate on actual ink
+PASS Artwork is exported on both silkscreen layers with filled native polygons and cut lines
+6 board editing engine groups passed
+PASS Cold start at a static subfolder
+PASS Fresh start and component placement
+PASS Pointer-based schematic connectivity
+PASS Pad-to-pad routing resolves the actual airwire
+PASS Keyboard editing and undo/redo
+PASS Footprint editing, duplicate, delete, rotation
+PASS Autosave survives reload
+PASS JSON download/import round trip
+PASS Malformed imports preserve the current project
+PASS Review, baseline and evidence register
+PASS Fabrication ZIP download with valid CRC
+PASS Printable PDF design report
+PASS Light, dark and high-contrast themes
+PASS Named nets, renaming, via placement and numeric via editing
+PASS Pan, fit and rendered snap grid
+PASS Previous autosave recovery and undo of recovery
+PASS Offline reload at the installed subfolder
+PASS 390 px touch layout: panels, placement and property edit
+PASS Standalone file:// HTML works without a server
+PASS No uncaught browser errors
+PASS Real WebGL assembly meshes, bottom view, explode and image export
+PASS Board tools create slotted holes, thermal zones and mirrored silkscreen
+PASS Placement locks and saved device library
+PASS Child sheets and reusable block capture/placement
+PASS Full snapshot baseline and object-level comparison
+PASS Native KiCad UI export, preview, import and undo
+PASS Multi-tab conflict pauses autosave and explicitly adopts the saved copy
+PASS Schema 2 reload preserves libraries, blocks and baseline
+PASS Corrupt stored data remains untouched while autosave is paused
+PASS No uncaught errors across advanced workflows
+PASS Search, source preview, package preview, favorites and named-device placement
+PASS Native symbol graphics and functional logical-pin targets in schematic
+PASS Layer switch visibly dims inactive copper, controls placement side and single-layer visibility
+PASS Saved devices persist in IndexedDB and project snapshots through reload
+PASS Native .kicad_sym import runs in a worker, previews and binds exact default footprints
+PASS Native footprint import and explicit symbol-to-pad device mapping
+PASS Multi-unit component offsets are editable without multiplying the physical footprint
+PASS Repeated physical pads receive one logical net assignment through the inspector
+PASS Bundled catalog, source previews and placement work on a cold offline reload
+PASS Responsive light/dark UI with no horizontal page overflow or uncaught errors
+PASS Library backup transfers to a separate standalone installation through ZIP; unsupported entries are explained
+PASS Dropdown drives actual routed copper onto B.Cu
+12 library browser test groups passed
+PASS Flip button and B shortcut mirror the view without changing design geometry
+PASS Direct text tool chooses the active side and edits readable underside text
+PASS Offline image import, monochrome preview, transparent holes, size and side; unsupported files preserve the project
+PASS Drag and arrow-key movement follow the mirrored screen direction with undo/redo
+PASS Back-view zoom stays under the pointer and panning follows the pointer
+PASS Interactive outer-edge insertion and numeric corner edits commit valid outlines and reject crossings
+PASS Outline handle dragging and keyboard steps stay in a cancellable draft
+PASS Dimension controls scale the custom cut line and retain physical object sizes and positions
+PASS Image remains editable without the source file and renders in the underside 3D view
+PASS Autosave and portable JSON restore images, outline, dimensions and the viewing preference offline
+PASS Mobile dark view and image dialog fit the viewport; no uncaught browser errors
+11 board editing browser groups passed

@@ -1,6 +1,6 @@
 # CIRCUITBENCH development roadmap
 
-Status: v1.0.0 software release, 2026-10-05.
+Status: v1.2.0 software release, 2026-10-05.
 
 | Batch | Delivered | Verification |
 | --- | --- | --- |
@@ -34,3 +34,26 @@ The earlier roadmap required a physically fabricated and assembled reference boa
 7. Additional browser/accessibility coverage and richer nonvisual editing.
 
 No future dates are committed. Each expansion needs its own compatibility tests and evidence.
+
+## v1.1 library repair — delivered
+
+| Batch | Result | Evidence |
+| --- | --- | --- |
+| 1 | Populated searchable catalog and active-layer repair | Source previews, package selection and actual B.Cu route test |
+| 2 | Larger parts, logical/physical mappings and multi-unit symbols | 144/256-pin tests; USB repeated pads; moving an LM358 unit |
+| 3 | Native library ingestion and reusable offline storage | Worker conversion, folder/ZIP support, source provenance and snapshot isolation |
+| 4 | Usability, transfer and release verification | Catalog-only routed LED supply, native KiCad check, fresh offline reload, standalone ZIP-library transfer, responsive UI |
+
+Remaining candidates: additional native custom-pad forms, richer native board round trips, physically verified body heights and package fit, and broader device coverage based on real projects. The physical reference-board gate remains open.
+
+
+## v1.2 board editing — delivered
+
+| Capability | Result | Evidence |
+| --- | --- | --- |
+| Both sides | Mirrored back view, active side, B shortcut, persistent view preference | Back-view drag/nudge/pan/zoom and unchanged model checks |
+| Silkscreen | Direct text tool, editable monochrome images, actual manufacturing geometry | Offline import, undo, JSON transfer, 3D, independent Gerber/native KiCad readers |
+| Outer cut line | Interactive corners, edge insertion, numeric input, validation and cancellable draft | Browser corner edits, invalid crossing rejection and native boundary checks |
+| Overall dimensions | Width, height and thickness; proportional custom-boundary scaling | Object placement invariance, undo/redo and cutout export checks |
+
+Possible later extensions include curved-outline controls, vector SVG image import, a richer text font and image-conversion workers for larger artwork. These are not part of v1.2.
