@@ -1,0 +1,488 @@
+{
+  "format": "circuitbench",
+  "schema": 2,
+  "version": "1.6.0",
+  "title": "Snap-fit instrument",
+  "revision": "A",
+  "board": {
+    "width": 60,
+    "height": 40,
+    "thickness": 1.6,
+    "outline": [
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 60,
+        "y": 0
+      },
+      {
+        "x": 60,
+        "y": 34
+      },
+      {
+        "x": 54,
+        "y": 40
+      },
+      {
+        "x": 0,
+        "y": 40
+      }
+    ],
+    "origin": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "rules": {
+    "clearance": 0.25,
+    "edge": 0.5,
+    "minWidth": 0.25,
+    "annular": 0.15,
+    "mask": 0.05,
+    "drill": 0.25,
+    "maskWeb": 0.1,
+    "courtyard": 0.25,
+    "silk": 0.15,
+    "silkLine": 0.15
+  },
+  "components": [
+    {
+      "id": "idcqtk9pvx8o",
+      "kind": "custom",
+      "ref": "X1",
+      "value": "Custom part",
+      "mpn": "",
+      "body": [
+        10,
+        8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": -5,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "",
+          "nc": true,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 5,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "",
+          "nc": true,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 25,
+        "y": 20,
+        "rotation": 30,
+        "side": "F"
+      },
+      "sch": {
+        "x": 20,
+        "y": 20,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 12,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "custom",
+        "pins": []
+      },
+      "footprintName": "custom"
+    },
+    {
+      "id": "id7xn461ftdb",
+      "kind": "smd2",
+      "ref": "R1",
+      "value": "10k",
+      "mpn": "",
+      "body": [
+        5,
+        5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": -1.1,
+          "y": 0,
+          "diameter": 1.2,
+          "drill": 0,
+          "type": "passive",
+          "mount": "smd",
+          "net": "",
+          "nc": true,
+          "shape": "circle",
+          "width": 1.2,
+          "height": 1.2,
+          "rotation": 0,
+          "labelNet": "",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 1.1,
+          "y": 0,
+          "diameter": 1.2,
+          "drill": 0,
+          "type": "passive",
+          "mount": "smd",
+          "net": "",
+          "nc": true,
+          "shape": "circle",
+          "width": 1.2,
+          "height": 1.2,
+          "rotation": 0,
+          "labelNet": "",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 38,
+        "y": 23,
+        "rotation": 0,
+        "side": "B"
+      },
+      "sch": {
+        "x": 20,
+        "y": 20,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 4,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "smd2",
+        "pins": []
+      },
+      "footprintName": "smd2"
+    }
+  ],
+  "tracks": [],
+  "vias": [],
+  "nets": [
+    "GND",
+    "+5V"
+  ],
+  "assumptions": "Two copper layers. Board dimensions and footprints must be checked against your actual parts and fabricator capabilities.",
+  "evidence": "",
+  "baseline": null,
+  "sheets": [
+    {
+      "id": "main",
+      "name": "Main circuit",
+      "parent": null
+    }
+  ],
+  "wires": [],
+  "junctions": [],
+  "labels": [],
+  "ports": [],
+  "holes": [
+    {
+      "id": "hole0",
+      "x": 5,
+      "y": 5,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false
+    },
+    {
+      "id": "hole1",
+      "x": 55,
+      "y": 5,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false
+    },
+    {
+      "id": "hole2",
+      "x": 50,
+      "y": 35,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false
+    },
+    {
+      "id": "hole3",
+      "x": 5,
+      "y": 35,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false
+    }
+  ],
+  "cutouts": [],
+  "silk": [],
+  "zones": [],
+  "library": {
+    "symbols": [],
+    "footprints": [],
+    "devices": [],
+    "blocks": []
+  },
+  "netClasses": [],
+  "importNotes": [],
+  "enclosureWorkshop": {
+    "app": "CASEBENCH",
+    "schema": 4,
+    "version": "1.6.0",
+    "title": "Snap-fit instrument enclosure",
+    "created": "2026-10-05T05:08:03.740Z",
+    "updated": "2026-10-05T05:08:03.740Z",
+    "source": {
+      "filename": "Snap-fit instrument.circuitbench-mechanical.json",
+      "text": "{\"app\":\"CIRCUITBENCH_MECHANICAL\",\"schema\":1,\"units\":\"mm\",\"coordinateSystem\":\"top-left-x-right-y-down-pcb-underside-z0\",\"producer\":{\"app\":\"CIRCUITBENCH\",\"version\":\"1.6.0\"},\"source\":{\"app\":\"CIRCUITBENCH\",\"schema\":2,\"version\":\"1.6.0\",\"id\":\"circuitbench-board\",\"title\":\"Snap-fit instrument\"},\"requiredExtensions\":[],\"board\":{\"width\":60,\"height\":40,\"thickness\":1.6,\"shape\":\"polygon\",\"points\":[{\"x\":0,\"y\":0},{\"x\":60,\"y\":0},{\"x\":60,\"y\":34},{\"x\":54,\"y\":40},{\"x\":0,\"y\":40}]},\"components\":[{\"id\":\"idcqtk9pvx8o\",\"ref\":\"X1\",\"name\":\"custom\",\"value\":\"Custom part\",\"category\":\"\",\"placement\":{\"x\":25,\"y\":20,\"rotation\":30,\"side\":\"top\"},\"envelope\":{\"width\":10,\"depth\":8,\"height\":12,\"kind\":\"custom\",\"evidence\":\"representative\"},\"pads\":[{\"number\":\"1\",\"x\":-5,\"y\":0,\"w\":1.8,\"h\":1.8,\"drill\":0.8,\"slot\":0,\"rotation\":0,\"shape\":\"circle\",\"layers\":\"both\"},{\"number\":\"2\",\"x\":5,\"y\":0,\"w\":1.8,\"h\":1.8,\"drill\":0.8,\"slot\":0,\"rotation\":0,\"shape\":\"circle\",\"layers\":\"both\"}],\"mountingHoles\":[],\"references\":{},\"sourceNote\":\"CIRCUITBENCH placed footprint and editable body envelope\",\"footprintVerified\":false},{\"id\":\"id7xn461ftdb\",\"ref\":\"R1\",\"name\":\"smd2\",\"value\":\"10k\",\"category\":\"\",\"placement\":{\"x\":38,\"y\":23,\"rotation\":0,\"side\":\"bottom\"},\"envelope\":{\"width\":5,\"depth\":5,\"height\":4,\"kind\":\"smd2\",\"evidence\":\"representative\"},\"pads\":[{\"number\":\"1\",\"x\":-1.1,\"y\":0,\"w\":1.2,\"h\":1.2,\"drill\":0,\"slot\":0,\"rotation\":0,\"shape\":\"circle\",\"layers\":\"bottom\"},{\"number\":\"2\",\"x\":1.1,\"y\":0,\"w\":1.2,\"h\":1.2,\"drill\":0,\"slot\":0,\"rotation\":0,\"shape\":\"circle\",\"layers\":\"bottom\"}],\"mountingHoles\":[],\"references\":{},\"sourceNote\":\"CIRCUITBENCH placed footprint and editable body envelope\",\"footprintVerified\":false}],\"holes\":[{\"id\":\"hole0\",\"x\":5,\"y\":5,\"drill\":3.2,\"slot\":0,\"rotation\":0,\"plated\":false},{\"id\":\"hole1\",\"x\":55,\"y\":5,\"drill\":3.2,\"slot\":0,\"rotation\":0,\"plated\":false},{\"id\":\"hole2\",\"x\":50,\"y\":35,\"drill\":3.2,\"slot\":0,\"rotation\":0,\"plated\":false},{\"id\":\"hole3\",\"x\":5,\"y\":35,\"drill\":3.2,\"slot\":0,\"rotation\":0,\"plated\":false}],\"mountOwners\":{},\"vias\":[],\"cutouts\":[],\"assumptions\":[\"Two copper layers. Board dimensions and footprints must be checked against your actual parts and fabricator capabilities.\"],\"evidence\":[\"No physical fit evidence recorded.\"]}",
+      "fingerprint": {
+        "algorithm": "FNV-1a-32 UTF-16 (change hint, not a security digest)",
+        "value": "acd7d59b"
+      },
+      "isExample": false
+    },
+    "review": {
+      "notes": "",
+      "objects": {},
+      "mounting": {},
+      "baseline": null
+    },
+    "view": {
+      "mode": "easy",
+      "theme": "light",
+      "preset": "iso",
+      "top": true,
+      "bottom": true,
+      "pads": true,
+      "holes": true,
+      "labels": true,
+      "ghost": false,
+      "envelopes": false,
+      "scene": "exploded",
+      "showReferences": true
+    },
+    "settings": {
+      "margin": 3,
+      "wall": 2.4,
+      "floor": 2.4,
+      "roof": 2.4,
+      "radius": 4,
+      "autoSize": true,
+      "innerWidth": 80,
+      "innerDepth": 60,
+      "offsetX": 0,
+      "offsetY": 0,
+      "autoHeight": true,
+      "height": 24,
+      "autoSupport": true,
+      "supportHeight": 6,
+      "bottomClearance": 1.2,
+      "topClearance": 3,
+      "leadAllowance": 2,
+      "lipDepth": 2.5,
+      "lipWall": 1.4,
+      "fit": 0.3,
+      "supportDiameter": 6,
+      "supportBore": 2.6,
+      "closure": false,
+      "closureDiameter": 9.8,
+      "boltDiameter": 3.4,
+      "nutFlats": 5.8,
+      "nutDepth": 2.6,
+      "headDiameter": 6.4,
+      "headDepth": 1,
+      "minFeature": 0.8,
+      "bedWidth": 220,
+      "bedDepth": 220,
+      "layerHeight": 0.2,
+      "printerName": "Uncalibrated FDM profile",
+      "curveSegments": 24
+    },
+    "overrides": {},
+    "supports": {
+      "hole0": {
+        "enabled": true,
+        "bore": 2.6
+      },
+      "hole1": {
+        "enabled": true,
+        "bore": 2.6
+      },
+      "hole2": {
+        "enabled": true,
+        "bore": 2.6
+      },
+      "hole3": {
+        "enabled": true,
+        "bore": 2.6
+      }
+    },
+    "closures": {},
+    "features": [],
+    "envelopes": [],
+    "revisions": [],
+    "calibrations": [],
+    "generated": true,
+    "system": {
+      "schema": 1,
+      "shell": {
+        "family": "rounded",
+        "points": [
+          [
+            -45,
+            -30
+          ],
+          [
+            35,
+            -30
+          ],
+          [
+            45,
+            -20
+          ],
+          [
+            45,
+            30
+          ],
+          [
+            -45,
+            30
+          ]
+        ],
+        "slope": 8,
+        "edgeIds": [
+          "edge-0",
+          "edge-1",
+          "edge-2",
+          "edge-3",
+          "edge-4"
+        ],
+        "edgeCoordinates": [
+          [
+            -45,
+            -30
+          ],
+          [
+            35,
+            -30
+          ],
+          [
+            45,
+            -20
+          ],
+          [
+            45,
+            30
+          ],
+          [
+            -45,
+            30
+          ]
+        ]
+      },
+      "closure": {
+        "type": "snap",
+        "rail": 2,
+        "engagement": 1.2,
+        "flex": 1.2,
+        "pin": 2.5,
+        "knuckle": 8
+      },
+      "hardware": {
+        "name": "Editable small PCB screw envelope",
+        "shaft": 2,
+        "length": 6,
+        "headDiameter": 4,
+        "headHeight": 2,
+        "washerDiameter": 4,
+        "washerThickness": 0.2,
+        "nutFlats": 5.8,
+        "nutHeight": 2.6,
+        "insertDiameter": 4.6,
+        "insertLength": 5,
+        "accessDiameter": 6,
+        "accessLength": 15,
+        "evidence": "nominal",
+        "source": ""
+      },
+      "process": {
+        "material": "Not specified",
+        "nozzle": 0.4,
+        "settingsNote": ""
+      },
+      "retention": {
+        "type": "standoffs",
+        "axis": "x",
+        "width": 3,
+        "overlap": 1,
+        "clearance": 0.3,
+        "barHeight": 2
+      },
+      "boards": [],
+      "objects": [],
+      "steps": [],
+      "evidence": [],
+      "library": {
+        "hardware": [],
+        "envelopes": [],
+        "groups": []
+      },
+      "orientations": {
+        "base": "bottom",
+        "lid": "top"
+      },
+      "recipe": null
+    },
+    "workflow": {
+      "schema": 1,
+      "fitFrame": {
+        "web": 5,
+        "band": 3,
+        "keepFeatures": true,
+        "heightRefs": true
+      },
+      "adjustments": [],
+      "interfaces": [],
+      "library": []
+    },
+    "integration": {
+      "schema": 1,
+      "supportMode": "blind",
+      "boreDepth": 4,
+      "nutPockets": false,
+      "manualSupports": [],
+      "migrationNotes": []
+    }
+  }
+}

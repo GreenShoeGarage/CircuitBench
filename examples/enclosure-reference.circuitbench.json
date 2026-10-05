@@ -1,0 +1,379 @@
+{
+  "format": "circuitbench",
+  "schema": 2,
+  "version": "1.3.0",
+  "title": "Enclosure reference",
+  "revision": "A",
+  "board": {
+    "width": 60,
+    "height": 40,
+    "thickness": 1.6,
+    "outline": [
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 60,
+        "y": 0
+      },
+      {
+        "x": 60,
+        "y": 34
+      },
+      {
+        "x": 54,
+        "y": 40
+      },
+      {
+        "x": 0,
+        "y": 40
+      }
+    ],
+    "origin": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "rules": {
+    "clearance": 0.25,
+    "edge": 0.5,
+    "minWidth": 0.25,
+    "annular": 0.15,
+    "mask": 0.05,
+    "drill": 0.25,
+    "maskWeb": 0.1,
+    "courtyard": 0.25,
+    "silk": 0.15,
+    "silkLine": 0.15
+  },
+  "components": [
+    {
+      "id": "idcqtk9pvx8o",
+      "kind": "custom",
+      "ref": "X1",
+      "value": "Custom part",
+      "mpn": "",
+      "body": [
+        10,
+        8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": -5,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "",
+          "nc": true,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 5,
+          "y": 0,
+          "diameter": 1.8,
+          "drill": 0.8,
+          "type": "passive",
+          "mount": "tht",
+          "net": "",
+          "nc": true,
+          "shape": "circle",
+          "width": 1.8,
+          "height": 1.8,
+          "rotation": 0,
+          "labelNet": "",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 25,
+        "y": 20,
+        "rotation": 30,
+        "side": "F"
+      },
+      "sch": {
+        "x": 20,
+        "y": 20,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 12,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "custom",
+        "pins": []
+      },
+      "footprintName": "custom"
+    },
+    {
+      "id": "id7xn461ftdb",
+      "kind": "smd2",
+      "ref": "R1",
+      "value": "10k",
+      "mpn": "",
+      "body": [
+        5,
+        5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "name": "1",
+          "x": -1.1,
+          "y": 0,
+          "diameter": 1.2,
+          "drill": 0,
+          "type": "passive",
+          "mount": "smd",
+          "net": "",
+          "nc": true,
+          "shape": "circle",
+          "width": 1.2,
+          "height": 1.2,
+          "rotation": 0,
+          "labelNet": "",
+          "slot": 0
+        },
+        {
+          "n": "2",
+          "name": "2",
+          "x": 1.1,
+          "y": 0,
+          "diameter": 1.2,
+          "drill": 0,
+          "type": "passive",
+          "mount": "smd",
+          "net": "",
+          "nc": true,
+          "shape": "circle",
+          "width": 1.2,
+          "height": 1.2,
+          "rotation": 0,
+          "labelNet": "",
+          "slot": 0
+        }
+      ],
+      "pcb": {
+        "x": 38,
+        "y": 23,
+        "rotation": 0,
+        "side": "B"
+      },
+      "sch": {
+        "x": 20,
+        "y": 20,
+        "rotation": 0
+      },
+      "sheet": "main",
+      "height": 4,
+      "courtyard": 0.25,
+      "locked": false,
+      "symbol": {
+        "kind": "smd2",
+        "pins": []
+      },
+      "footprintName": "smd2"
+    }
+  ],
+  "tracks": [],
+  "vias": [],
+  "nets": [
+    "GND",
+    "+5V"
+  ],
+  "assumptions": "Two copper layers. Board dimensions and footprints must be checked against your actual parts and fabricator capabilities.",
+  "evidence": "",
+  "baseline": null,
+  "sheets": [
+    {
+      "id": "main",
+      "name": "Main circuit",
+      "parent": null
+    }
+  ],
+  "wires": [],
+  "junctions": [],
+  "labels": [],
+  "ports": [],
+  "holes": [
+    {
+      "id": "hole0",
+      "x": 5,
+      "y": 5,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false
+    },
+    {
+      "id": "hole1",
+      "x": 55,
+      "y": 5,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false
+    },
+    {
+      "id": "hole2",
+      "x": 50,
+      "y": 35,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false
+    },
+    {
+      "id": "hole3",
+      "x": 5,
+      "y": 35,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false
+    }
+  ],
+  "cutouts": [],
+  "silk": [],
+  "zones": [],
+  "library": {
+    "symbols": [],
+    "footprints": [],
+    "devices": [],
+    "blocks": []
+  },
+  "netClasses": [],
+  "importNotes": [],
+  "enclosure": {
+    "schema": 1,
+    "clearance": 3,
+    "wall": 2,
+    "floor": 2,
+    "lid": 2,
+    "headroom": 3,
+    "underClearance": 1,
+    "leadClearance": 2,
+    "standoffHeight": 6,
+    "standoffDiameter": 6,
+    "bore": 2.6,
+    "boreDepth": 4,
+    "boreMode": "blind",
+    "heightMode": "auto",
+    "insideHeight": 25,
+    "lipDepth": 2,
+    "lipWall": 1.2,
+    "fit": 0.25,
+    "mounts": [
+      {
+        "id": "idln1l5anpe0",
+        "anchor": "hole0",
+        "x": 5,
+        "y": 5,
+        "enabled": true,
+        "diameter": null,
+        "bore": null
+      },
+      {
+        "id": "idvl028l6nn9",
+        "anchor": "hole1",
+        "x": 55,
+        "y": 5,
+        "enabled": true,
+        "diameter": null,
+        "bore": null
+      },
+      {
+        "id": "idjtxeykaofr",
+        "anchor": "hole2",
+        "x": 50,
+        "y": 35,
+        "enabled": true,
+        "diameter": null,
+        "bore": null
+      },
+      {
+        "id": "ids5bm4r00gg",
+        "anchor": "hole3",
+        "x": 5,
+        "y": 35,
+        "enabled": true,
+        "diameter": null,
+        "bore": null
+      }
+    ],
+    "openings": [
+      {
+        "id": "front",
+        "name": "Front rectangle",
+        "face": "front",
+        "shape": "rect",
+        "u": 35,
+        "v": 10,
+        "width": 10,
+        "height": 6
+      },
+      {
+        "id": "back",
+        "name": "Back round",
+        "face": "back",
+        "shape": "circle",
+        "u": 40,
+        "v": 12,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "left",
+        "name": "Left slot",
+        "face": "left",
+        "shape": "slot",
+        "u": 25,
+        "v": 12,
+        "width": 14,
+        "height": 4
+      },
+      {
+        "id": "right",
+        "name": "Right vertical slot",
+        "face": "right",
+        "shape": "slot",
+        "u": 25,
+        "v": 12,
+        "width": 4,
+        "height": 12
+      },
+      {
+        "id": "lid",
+        "name": "Lid rectangle",
+        "face": "lid",
+        "shape": "rect",
+        "u": 35,
+        "v": 25,
+        "width": 12,
+        "height": 8
+      },
+      {
+        "id": "floor",
+        "name": "Floor round",
+        "face": "floor",
+        "shape": "circle",
+        "u": 35,
+        "v": 35,
+        "width": 5,
+        "height": 5
+      }
+    ]
+  }
+}

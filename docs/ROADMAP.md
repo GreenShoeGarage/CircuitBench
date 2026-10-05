@@ -1,6 +1,6 @@
 # CIRCUITBENCH development roadmap
 
-Status: v1.2.0 software release, 2026-10-05.
+Status: v1.6.0 software release, 2026-10-05.
 
 | Batch | Delivered | Verification |
 | --- | --- | --- |
@@ -57,3 +57,32 @@ Remaining candidates: additional native custom-pad forms, richer native board ro
 | Overall dimensions | Width, height and thickness; proportional custom-boundary scaling | Object placement invariance, undo/redo and cutout export checks |
 
 Possible later extensions include curved-outline controls, vector SVG image import, a richer text font and image-conversion workers for larger artwork. These are not part of v1.2.
+
+
+## v1.3 enclosure generator — delivered
+
+| Capability | Result | Evidence |
+| --- | --- | --- |
+| Board fit | Rectangular shell around PCB/body envelopes, top/bottom heights and lift | Engine sizing and independent STL dimensions |
+| PCB supports | Hole-linked standoffs, height, per-post overrides, blind/through/solid bores | Actual mounting coordinates, material/void and clearance checks |
+| Punchouts | Round/rectangular/slot openings on six faces; dragging, numbers and component alignment | Browser workflows and independent point-in-solid checks |
+| Preview and output | Exploded assembly, base/lid STL, print ZIP, editable JSON and report | Offline workflow, closed single solids, binary ZIP checks |
+
+The original v1.3 scope ended at the lift-off lid. The following batches extend it; physical printing and PCB fit remain unverified.
+
+
+## v1.4–v1.6 — delivered
+
+| Batch | Delivered capability | Verification |
+| --- | --- | --- |
+| v1.4 | v1.3 migration; rounded corners; screw ears/internal bosses/inserts; text/SVG/vents; stable component links; retained bore styles | Migration dimensions, transformed coordinates, source revisions, actual voids and closed exports |
+| v1.5 | Full-scale fit frames; targeted coupons; local corrections; connector/LED/display/button interfaces; named 3MF | Independent STL/3MF parsing, reduced material, accessory interference checks, browser exports |
+| v1.6 | Seven shell families; service panels; four-board/device assemblies; rails/cradles/hold-downs; recipes; sliding, snap-fit and pin-hinge mechanisms | Real solids, corresponding closure coupons, source/recipe transfer, sampled 0–120° hinge clearance, offline desktop/mobile workflows |
+
+## Next evidence and extensions
+
+1. Print the fit coupons and reference enclosure; record real PCB, connector, fastener, insert, sliding, snap and hinge fit. Use measured corrections without scaling the PCB.
+2. Qualify more real project geometries and browser/assistive-technology combinations.
+3. Consider an opposite-edge hinge latch/pin lock, broader closure/shell combinations, concave outline following and richer curves after those hardware trials.
+
+These are future work, with no committed dates. The v1.6 release does not claim printed strength, fatigue, sealing, thermal performance, electrical certification or industrial CAD equivalence.

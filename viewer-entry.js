@@ -15,3 +15,28 @@ export function create(host,p,C){
  function view(name){let span=Math.max(p.board.width,p.board.height,20)*1.1,t=controls.target;camera.position.set(t.x+span*.7,t.y-span*.8,t.z+span);if(name==='top')camera.position.set(t.x,t.y-.001,t.z+span*1.5);if(name==='bottom')camera.position.set(t.x,t.y+.001,t.z-span*1.5);controls.update();draw();}view('iso');
  return {view,explode(value){for(let m of bodies.children)m.position.z=m.userData.baseZ+(m.userData.side==='F'?1:-1)*value;draw();},visibility(key,value){({bodies,copper,silk})[key].visible=value;draw();},png:()=>renderer.domElement.toDataURL('image/png'),stats:()=>({meshes:group.children.length+bodies.children.length+copper.children.length+silk.children.length,bodies:bodies.children.length,renderer:renderer.info.render}),dispose(){dead=true;resize.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(o.material)for(let m of Array.isArray(o.material)?o.material:[o.material])m.dispose();});renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();}};
 }
+
+// Enclosure preview reuses the offline renderer and orbit controls. Geometry
+// comes from the same solid meshes that are written to STL.
+export function createEnclosure(host,C){
+ const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(40,1,.05,5000);camera.up.set(0,0,1);
+ const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));host.appendChild(renderer.domElement);renderer.domElement.tabIndex=0;renderer.domElement.setAttribute('aria-label','Enclosure preview. Drag to orbit; scroll to zoom; right-drag to pan.');
+ const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=false;controls.minDistance=5;controls.maxDistance=2500;
+ scene.add(new THREE.HemisphereLight(0xffffff,0x394d49,2.7));for(let [x,y,z,intensity] of [[50,-70,130,3],[-60,50,80,2]]){let l=new THREE.DirectionalLight(0xffffff,intensity);l.position.set(x,y,z);scene.add(l);}
+ const shell=new THREE.Group(),board=new THREE.Group(),bodies=new THREE.Group();scene.add(shell,board,bodies);let current=null,base=null,lid=null,dead=false,explode=15,ghost=true,showLid=true,showBoard=true;
+ const mat=(color)=>new THREE.MeshStandardMaterial({color,roughness:.65,side:THREE.DoubleSide});
+ function clear(group){for(let child of [...group.children]){child.traverse(o=>{o.geometry?.dispose();if(o.material)for(let m of Array.isArray(o.material)?o.material:[o.material])m.dispose();});group.remove(child);}}
+ function draw(){if(!dead)renderer.render(scene,camera);}
+ function mesh(data,color){let g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(data.positions,3));g.setIndex(new THREE.BufferAttribute(data.indices,1));g.computeVertexNormals();let m=new THREE.Mesh(g,mat(color));shell.add(m);return m;}
+ function path(poly,shape){let s=shape?new THREE.Shape():new THREE.Path();poly.forEach((q,i)=>i?s.lineTo(q.x,-q.y):s.moveTo(q.x,-q.y));s.closePath();return s;}
+ function refresh(){if(!current)return;base.material.transparent=ghost;base.material.opacity=ghost?.36:1;base.material.depthWrite=!ghost;lid.visible=showLid;lid.position.set(0,-current.depth,current.baseTop+current.config.lid+explode);lid.rotation.x=Math.PI;lid.scale.set(1,-1,1);board.visible=bodies.visible=showBoard;draw();}
+ function update(data,plan){let first=!current;current=plan;clear(shell);clear(board);clear(bodies);base=mesh(data.base,0x327485);base.scale.y=-1;lid=mesh(data.lid,0xd7b774);
+  const G=C.G,paths=G.difference(G.difference([plan.board.outline],plan.board.cutouts),plan.board.holes);
+  for(let region of G.splitRegions(G.union(paths))){let s=path(region[0],true);s.holes=region.slice(1).map(h=>path(h,false));let geometry=new THREE.ExtrudeGeometry(s,{depth:plan.pcbThickness,bevelEnabled:false,steps:1}),m=new THREE.Mesh(geometry,mat(0x206441));m.position.z=plan.pcbBottom;board.add(m);}
+  for(let c of plan.components){let m=new THREE.Mesh(new THREE.BoxGeometry(c.width,c.depth,c.height),mat(c.side==='B'?0x946a45:0x3c4143));m.position.set(c.x,-c.y,c.bottom+c.height/2);m.rotation.z=-c.rotation*Math.PI/180;bodies.add(m);}
+  const dark=document.body.dataset.theme!=='light';scene.background=new THREE.Color(dark?'#162a28':'#e8ede4');refresh();if(first)view('iso');
+ }
+ function view(name){if(!current)return;let p=current,span=Math.max(p.width,p.depth,p.totalHeight+explode)*1.5,t=new THREE.Vector3(p.width/2,-p.depth/2,p.totalHeight/2);controls.target.copy(t);camera.position.set(t.x+span*.65,t.y-span*.85,t.z+span*.85);if(name==='top')camera.position.set(t.x,t.y-.001,t.z+span*1.6);if(name==='front')camera.position.set(t.x,span,t.z+span*.12);if(name==='side')camera.position.set(p.width+span,t.y,t.z+span*.12);controls.update();draw();}
+ const resize=new ResizeObserver(()=>{if(dead)return;camera.aspect=host.clientWidth/host.clientHeight;camera.updateProjectionMatrix();renderer.setSize(host.clientWidth,host.clientHeight);draw();});resize.observe(host);controls.addEventListener('change',draw);
+ return {update,view,options(o){explode=o.explode??explode;ghost=o.ghost??ghost;showLid=o.lid??showLid;showBoard=o.board??showBoard;refresh();},png:()=>renderer.domElement.toDataURL('image/png'),stats:()=>({parts:shell.children.length,components:bodies.children.length,triangles:renderer.info.render.triangles}),dispose(){dead=true;resize.disconnect();controls.dispose();clear(shell);clear(board);clear(bodies);renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();}};
+}

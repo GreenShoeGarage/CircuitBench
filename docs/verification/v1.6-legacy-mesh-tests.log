@@ -1,0 +1,9 @@
+PASS independent STL base watertight, positive-volume, one solid, flat bed, XY dimensions
+PASS independent STL lid watertight, positive-volume, one solid, flat bed, XY dimensions
+PASS independent STL through watertight, positive-volume, one solid, flat bed, XY dimensions
+PASS independent STL solid-posts watertight, positive-volume, one solid, flat bed, XY dimensions
+PASS independent STL raised watertight, positive-volume, one solid, flat bed, XY dimensions
+PASS independent STL all six face openings cut through in the expected positions
+PASS independent STL four mounting-hole centers, fused standoffs and blind / through / solid bore styles
+PASS independent STL lid locating lip and per-side clearance
+PASS independent ZIP binary STL bytes and CRC

@@ -1,7 +1,7 @@
 {
   "format": "circuitbench",
   "schema": 2,
-  "version": "1.2.0",
+  "version": "1.6.0",
   "title": "Catalog reference — microcontroller and sensor",
   "revision": "A",
   "board": {
@@ -28,7 +28,7 @@
   },
   "components": [
     {
-      "id": "idhua4rorq3w",
+      "id": "idctlxdoi2hq",
       "kind": "device",
       "ref": "U1",
       "value": "ATmega328P-P",
@@ -1632,12 +1632,12 @@
         },
         "datasheet": "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf",
         "catalogId": "lib_ae2a756c",
-        "version": "1.2.0"
+        "version": "1.6.0"
       },
       "deviceName": "ATmega328P-P"
     },
     {
-      "id": "idc0b2j8o4ka",
+      "id": "idhzxrbtxwau",
       "kind": "device",
       "ref": "U2",
       "value": "MCP9808_MSOP",
@@ -2307,12 +2307,12 @@
         },
         "datasheet": "http://ww1.microchip.com/downloads/en/DeviceDoc/22203b.pdf",
         "catalogId": "lib_e545b3cb",
-        "version": "1.2.0"
+        "version": "1.6.0"
       },
       "deviceName": "MCP9808_MSOP"
     },
     {
-      "id": "idlwlhnhkodf",
+      "id": "id4qtf3c0c6r",
       "kind": "device",
       "ref": "R1",
       "value": "4k7",
@@ -2770,12 +2770,12 @@
         },
         "datasheet": "~",
         "catalogId": "lib_66d60469",
-        "version": "1.2.0"
+        "version": "1.6.0"
       },
       "deviceName": "Resistor"
     },
     {
-      "id": "idxrg7i98bx8",
+      "id": "idwb646npauz",
       "kind": "device",
       "ref": "R2",
       "value": "4k7",
@@ -3233,12 +3233,12 @@
         },
         "datasheet": "~",
         "catalogId": "lib_66d60469",
-        "version": "1.2.0"
+        "version": "1.6.0"
       },
       "deviceName": "Resistor"
     },
     {
-      "id": "idjtmcp7vyfu",
+      "id": "idt01yj5hw06",
       "kind": "device",
       "ref": "R3",
       "value": "10k",
@@ -3696,12 +3696,12 @@
         },
         "datasheet": "~",
         "catalogId": "lib_66d60469",
-        "version": "1.2.0"
+        "version": "1.6.0"
       },
       "deviceName": "Resistor"
     },
     {
-      "id": "idumuwepbuk7",
+      "id": "id78cr6pp1xf",
       "kind": "device",
       "ref": "C1",
       "value": "100nF",
@@ -4130,7 +4130,7 @@
         },
         "datasheet": "~",
         "catalogId": "lib_55d5e9a6",
-        "version": "1.2.0"
+        "version": "1.6.0"
       },
       "deviceName": "Capacitor"
     }

@@ -1,5 +1,26 @@
 # Changelog
 
+
+## 1.6.0 · 2026-10-05
+
+Completes the authorized v1.4, v1.5 and v1.6 enclosure batches, adapting CASEBENCH 2.3.1 workflows into CIRCUITBENCH with offline Manifold geometry and unified project persistence.
+
+- v1.4: migrate existing cases; screw/insert retention; rounded shells; raised/recessed text and SVG; vents; stable component-linked openings; blind/through/solid and manual supports.
+- v1.5: full-scale fit frames, closure/feature/hardware coupons, local fit corrections, functional connector/LED/display/button groups, named-part 3MF and complete project print packages.
+- v1.6: rounded/circular/oval/polygon/convex-following/tray/sloped families, service panels, additional PCBs/device envelopes, alternative board retention, reusable recipes, sliding/snap-fit/pin-hinge closures.
+- Corrected inherited hinge bridge bore interference, hinge-head clearance, retainer/post overlap, STL precision loss and support-bore cache invalidation. Added assembled printable-part collision findings.
+- Preserve active form drafts during background regeneration; use the parent save/recovery system; save whole CIRCUITBENCH projects from the enclosure editor. Physical print/fit testing remains outstanding.
+
+## 1.3.0 — 2026-10-05
+
+- Added a rectangular enclosure generated from the PCB outline, rotated component bodies, board thickness and editable front/back component heights. Automatic height includes PCB lift and headroom.
+- Added hole-linked standoffs that follow board and footprint mounting holes, with shared lift, individual diameter/bore overrides, enable/disable, manual supports, blind/through/solid bores and hole resynchronization.
+- Added resizable round, rectangular and slotted through-openings on all four walls, lid and floor; face dragging, numeric/keyboard positioning, component alignment, duplicate and delete.
+- Added an exact-solid 3D preview with see-through case, board/lid toggles, exploded assembly and PNG export; fit checks for underside clearance, supports, lip, opening edges and disconnected parts.
+- Added offline worker-based Manifold solids, millimeter binary STL for base and lift-off lid, a print ZIP, dimensions and printable fit report. Enclosure settings participate in project JSON, autosave, undo and baseline comparison.
+- Fixed ZIP encoding to preserve binary entries. Bundled all WASM bytes in the standalone HTML; no runtime fetches.
+- Verified 125 JavaScript/browser groups plus nine independent STL/ZIP checks. Printable meshes are closed single solids; no physical print or fit test was performed.
+
 ## 1.2.0 — 2026-10-05
 
 - Added a true mirrored back view, a Flip button and B shortcut, with side selection and readable assembly annotations. Dragging, nudging, routing, pan and pointer-centered zoom use unchanged board coordinates.

@@ -1,4 +1,4 @@
-# CIRCUITBENCH 1.2.0
+# CIRCUITBENCH 1.6.0
 
 **A self-hosted schematic and two-layer PCB workbench.**  
 Green Shoe Garage · Field Instrument · GNU GPL v3 only
@@ -7,17 +7,17 @@ Place → connect → lay out → route → inspect → export.
 
 CIRCUITBENCH combines an approachable component workflow with linked schematic and board editing in a local-first browser application. It is an original implementation inspired by LibrePCB and KiCad, not a browser port, fork, endorsed product or feature-equivalent replacement for either desktop suite.
 
-**This is the v1.2 software release with front/back board viewing, silkscreen images and direct board-shape controls.** A fully routed reference design and software verification are included. No board has been physically fabricated, assembled or electrically tested for this release. That original roadmap hardware gate remains open.
+**This v1.6 software release completes the v1.4–v1.6 enclosure batches: secure fastening, markings/vents, fit tools, functional interfaces, assemblies, recipes, and sliding, snap-fit and pin-hinge cases.** A fully routed reference design and software verification are included. No board has been physically fabricated, assembled or electrically tested for this release. That original roadmap hardware gate remains open.
 
 ## Run and self-host
 
-Open **`index.html`** directly in a modern browser. It contains the application, styles, 148 mapped devices, 148 symbols, 190 footprints, geometry libraries and 3D renderer. There are no runtime packages, CDN calls, accounts, backend services, telemetry or project uploads.
+Open **`index.html`** directly in a modern browser. It contains the application, styles, 148 mapped devices, 148 symbols, 190 footprints, geometry libraries, 3D renderer and a worker-based solid modeler. There are no runtime packages, CDN calls, accounts, backend services, telemetry or project uploads.
 
 For self-hosting, put **`index.html` and `sw.js`** together in a static directory such as `/circuitbench/`. Visit it over HTTPS. No build, database or environment variables are needed. The HTML works alone; the service worker enables installed offline reload after an initial HTTPS or localhost visit. Example Nginx and Caddy configurations are in `deploy/`.
 
 For local serving, run `python3 -m http.server 8000` in this directory and open <http://localhost:8000/>. On Windows, `py -m http.server 8000` may be appropriate. Deploy only the two runtime files if you do not want to expose the source/docs directory. This downloadable release has not been deployed to a public server.
 
-To upgrade: export JSON, replace both runtime files together, then reload online. The shell cache is versioned and installation-scoped. Schema 1 projects migrate on load; schema 2 is current. Projects with image artwork require v1.2 or newer. Retain the same origin to keep browser saves. A custom Content Security Policy must allow the bundled inline scripts/styles and local WebGL; use a tested hash-based policy if required.
+To upgrade: export JSON, replace both runtime files together, then reload online. The shell cache is versioned and installation-scoped. Schema 1 projects migrate on load; schema 2 is current. Projects with image artwork require v1.2 or newer. The new enclosure workbench requires v1.6; v1.3 settings migrate on first open and remain as a backup. Retain the same origin to keep browser saves. A custom Content Security Policy must allow the bundled inline scripts/styles and local WebGL, blob workers and WebAssembly compilation; use a tested hash-based policy if required.
 
 ## First design
 
@@ -31,7 +31,8 @@ To upgrade: export JSON, replace both runtime files together, then reload online
 8. **Route** begins on an assigned pad/via. Add manual corners and finish on the same net. With assistance enabled, the last segment avoids foreign copper, cutouts and mechanical holes. **Route to pin** searches a whole path. It does not push existing copper. Failure calls for repositioning, another layer or manual routing.
 9. To change layers, start a route and click a corner at the intended via. **Via transition** commits that segment, adds a through via and continues on the other layer. **Clean tracks** removes redundant vertices and identical duplicate tracks. Review the result.
 10. The PCB toolbar offers **Flip to back** (shortcut **B**), **Text**, **Image**, **Edit outline** and **Board size**. Drag outline corners or enter exact coordinates. Set width, height and thickness; custom outlines scale while components and routing retain their size and position. See `docs/PCB-EDITING.md`. **Board tools** adds cutouts, holes/slots, zones and additional manufacturing silk. **3D assembly** shows board thickness, holes, copper and dimensioned generic bodies, with orbit, top/bottom views, explode and PNG export.
-11. **Review & output** lists findings, BOM, assumptions/evidence and full-object baseline comparison. Export JSON and independently inspect manufacturing files before ordering.
+11. **Enclosure** opens a board-derived workbench. Choose the shell and closure, configure standoffs or other retention, add linked punchouts/text/SVG/vents, and review the fit. Access provides connector, LED, display and button assemblies. Print provides fit frames, coupons, STL, 3MF and a complete project ZIP. Advanced mode adds multi-board assemblies and recipes. See `docs/ENCLOSURE-GUIDE.md`. Ready-to-edit sliding, snap and hinge examples are in `examples/enclosure-*.circuitbench.json`.
+12. **Review & output** lists findings, BOM, assumptions/evidence and full-object baseline comparison. Export JSON and independently inspect manufacturing files before ordering.
 
 Tracks stay in place when parts move. Displaced connections become airwires; reroute or edit their vertices. Same-layer, same-net copper overlaps connect. Through-hole pads/vias bridge layers; SMD pads exist on their placement side.
 
@@ -86,7 +87,7 @@ Raw recovery downloads contain strings, not directly editable projects. Extract 
 
 Search **Add parts**, filter by category, mounting style or pin count, inspect the symbol and package, then **Place**. Devices include passives, LEDs/diodes, transistors, regulators, timers, amplifiers, logic, interfaces, MCUs, sensors, memories, modules, connectors, switches/relays and mounting holes. The original 12 templates remain in a separate expandable section. Variants share one device entry; component values do not inflate catalog counts.
 
-**Active layer** selects F.Cu or B.Cu. The active copper is bright and drawn above the inactive copper; the other side is dimmed and cannot intercept copper clicks. New PCB parts and routes use the chosen side. Uncheck **Show inactive copper (dimmed)** to hide the opposite copper. Both sides are viewed from above. Changing the dropdown cancels an unfinished route; use **Via transition** to commit a via and continue on the opposite layer.
+**Active layer** selects F.Cu or B.Cu. The active copper is bright and drawn above the inactive copper; the other side is dimmed and cannot intercept copper clicks. New PCB parts and routes use the chosen side. Uncheck **Show inactive copper (dimmed)** to hide the opposite copper. Use **Flip to back** for a mirrored underside view; the dropdown alone does not flip the view. Changing the dropdown cancels an unfinished route; use **Via transition** to commit a via and continue on the opposite layer.
 
 **Libraries** manages bundled, browser-local and project entries. Import `.kicad_sym`, `.kicad_mod`, a directory, ZIP, or library JSON. Conversion runs in a worker. Review counts and exclusions before saving. An exact native default-footprint name with matching pins can create a device automatically; otherwise use **Create device** and its explicit mapping table. Pin count alone does not establish package compatibility.
 
@@ -110,6 +111,7 @@ Rebuild the catalog entirely offline with `npm run build:catalog`, then `npm run
 | Nets / sheets | 256 nets; 40 sheets; 100 child ports |
 | Drawing | 1,000 wires; 500 junctions; 300 labels |
 | Board objects | 20 zones; 100 mechanical holes; 30 cutouts; 300 silk objects |
+| Enclosure | Four parallel PCBs; 160 authored features; 100 openings per vent pattern; 100 manual supports; bounded 120-second geometry worker |
 | Files | Project JSON up to 5 MB; library packs up to 50 MB expanded; native library files up to 10 MB each |
 
 Complex fills may pause the browser. Route search is bounded to 180,000 visits and may miss a geometrically possible route; it does not promise shortest or 45° routes. Inner layers, arbitrary curved copper, push-and-shove, external STEP, SPICE and native LibrePCB import are future work.
@@ -128,7 +130,7 @@ Light, dark and high-contrast themes, visible focus, labeled controls, modal foc
 
 ## Source and tests
 
-The HTML is ready to deploy. After source edits, `python3 build.py` concatenates the checked-in files with Python's standard library. Model extensions follow `core.js`: `model`, `geometry`, `eda`, `kicad`, `routing`, `blocks`, `hardening`, `library-engine`. UI modules follow `app.js`. `viewer-entry.js` builds the already-vendored 3D bundle.
+The HTML is ready to deploy. After source edits, `python3 build.py` concatenates the checked-in files with Python's standard library. Model extensions follow `core.js`: `model`, `geometry`, `eda`, `kicad`, `routing`, `blocks`, `hardening`, `library-engine`, `board-editing`, `enclosure`, `enclosure-adapter`. `enclosure-workshop/` contains the adapted CASEBENCH feature model/editor; `build_enclosure_workshop.py` embeds its UI and Manifold worker into the main standalone HTML. UI modules follow `app.js`. `viewer-entry.js` builds the already-vendored 3D bundle.
 
 ```sh
 npm ci
@@ -139,6 +141,6 @@ npm run build:viewer
 npm run build
 ```
 
-Set `CHROMIUM_EXECUTABLE` to use an installed browser. Independent manufacturing tests additionally use `gerbonara==1.6.3` and `shapely`; native tests use KiCad's `pcbnew`. See `docs/TEST-REPORT.md` for release evidence and `docs/ROADMAP.md` for completed batches and outstanding hardware work. No remote Git repository was created.
+Set `CHROMIUM_EXECUTABLE` to use an installed browser. `npm run test:enclosure` retains the v1.3 regression suite. `npm run test:workshop` tests the v1.6 feature model, exports and offline browser workflow; `npm run test:workshop-mesh` adds independent STL/3MF inspection. Independent STL checks use `trimesh==4.9.0`, `numpy` and `rtree`: run `npm run test:enclosure-mesh`. The checked-in Manifold JS/WASM require no install at runtime; `npm run build:manifold` refreshes both from the pinned npm dependency. Re-run `npm run build` after rebuilding either vendor bundle. Independent manufacturing tests additionally use `gerbonara==1.6.3` and `shapely`; native tests use KiCad's `pcbnew`. See `docs/TEST-REPORT.md` for release evidence and `docs/ROADMAP.md` for completed batches and outstanding hardware work. No remote Git repository was created.
 
-Copyright © 2026 Michael Parks / Green Shoe Garage. Application: **GPL-3.0-only**, full text in `LICENSE`. Clipper 6.4.2 is Boost-licensed; Three.js is MIT-licensed; notices are in `vendor/`. KiCad 9.0.0 library data is bundled under CC-BY-SA 4.0 with the KiCad exception; see `libraries/LICENSE.txt`. JSZip is MIT-licensed. No KiCad/LibrePCB application code or logos are bundled.
+Copyright © 2026 Michael Parks / Green Shoe Garage. Application: **GPL-3.0-only**, full text in `LICENSE`. Clipper 6.4.2 is Boost-licensed; Three.js is MIT-licensed; Manifold 3.5.4 is Apache-2.0-licensed; notices are in `vendor/`. KiCad 9.0.0 library data is bundled under CC-BY-SA 4.0 with the KiCad exception; see `libraries/LICENSE.txt`. JSZip is MIT-licensed. The integrated enclosure editor is adapted from Green Shoe Garage CASEBENCH 2.3.1 (MIT); its license and upstream BSP notices are retained in `enclosure-workshop/`. Active solid operations use Manifold; the retained primitive/export utilities include adapted CASEBENCH code. No KiCad/LibrePCB application code or logos are bundled.

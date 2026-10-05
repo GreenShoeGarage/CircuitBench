@@ -1,0 +1,24 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> circuitbench@1.3.0 test:enclosure
+> node tests/enclosure.test.cjs && node tests/enclosure-browser.test.cjs
+
+PASS Sizing uses front/back component heights, lead allowance, board thickness and rotated body bounds
+PASS Hole-linked standoffs follow board and footprint hole moves; small mechanical holes default off
+PASS Standoff defaults and overrides are configurable; holes, material and body conflicts are diagnosed
+PASS Openings reject face-edge breaks, warn on merging and protect floor-to-standoff attachment
+PASS Enclosure settings roundtrip with the project and malformed imports are rejected
+PASS Manifold creates fused one-piece base and lid with openings on all six faces
+PASS Binary STL header/count and ZIP payload preserve exact bytes
+PASS Through bores and raised supports change real solid geometry; repeat builds remain deterministic
+8 enclosure engine / solid groups passed
+PASS Standalone enclosure opens offline, uses existing holes and component heights, and builds both solids
+PASS Case dimensions and automatic height update from edited component bodies
+PASS Lift, bore and individual standoffs change real geometry, with clearance errors and undo
+PASS Round punchouts resize, align to parts, duplicate and delete; edge-breaking openings block export
+PASS Face dragging and keyboard placement work; slotted lid openings use editable physical dimensions
+PASS Enclosure view controls reveal supports, show assembled lid, and preserve usable 3D navigation
+PASS Print ZIP contains binary base/lid STL, complete project and dimensions; fit report opens for printing
+PASS Autosave, reload and project transfer retain settings, supports, punchouts and component heights offline
+PASS Mobile dark UI remains usable; offline WASM needs no network requests or uncaught errors
+9 enclosure browser groups passed
