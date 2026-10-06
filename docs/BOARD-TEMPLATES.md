@@ -1,4 +1,4 @@
-# Board templates · v1.7
+# Board templates · v1.8.2
 
 In **PCB layout**, select **Board templates**. The same picker is available in **Board size**. Choose a family, inspect the front-view preview, choose a clockwise quarter-turn rotation, and optionally include the mounting holes. **Apply board template** commits one undoable change. Cancel, Escape and closing the picker leave the project unchanged.
 
@@ -7,8 +7,9 @@ In **PCB layout**, select **Board templates**. The same picker is available in *
 | Arduino Uno R3 | 68.58 × 53.34 mm | Nine-corner stepped polygon | Four Ø3.2 mm |
 | Arduino MKR 28-pin | 61.5 × 25 mm | Rounded rectangle, R2 mm | Four optional Ø2.25 mm |
 | Raspberry Pi 40-pin | 65 × 56 mm | Legacy-style HAT outline, R3 mm | Four Ø2.7 mm |
+| Arduino GIGA R1 WiFi | 101.60 × 53.34 mm | Stepped outline, three R1 mm corners | Six Ø3.2 mm |
 
-These are the three presets in COPPERBENCH's **HATs, shields & carriers** section. They supply mechanical board geometry. Place your mating connectors from the component library and verify the chosen host's pinout, connector gender, engagement height and clearances. Header pads and electrical circuitry are not inserted by the shape picker.
+Uno, MKR and Raspberry Pi match COPPERBENCH's **HATs, shields & carriers** section. GIGA R1 WiFi uses Arduino's official ABX00063 CAD geometry, documented in [GIGA-R1-WIFI-SOURCE.md](GIGA-R1-WIFI-SOURCE.md). They supply mechanical board geometry. Place your mating connectors from the component library and verify the chosen host's pinout, connector gender, engagement height and clearances. Header pads and electrical circuitry are not inserted by the shape picker.
 
 ## Applying to an existing design
 
@@ -32,17 +33,20 @@ All coordinates are millimeters in the unrotated new board's front view, origin 
 
 Uno's polygon is `(0,0), (64.516,0), (66.04,1.524), (66.04,12.954), (68.58,15.494), (68.58,48.26), (66.04,50.8), (66.04,53.34), (0,53.34)`. The path closes automatically. Rounded corners match COPPERBENCH's 16 segments per quarter circle and 0.0001 mm coordinate precision; these are polygons, not analytic arcs. The same saved polygon drives the PCB view, manufacturing files and enclosure source.
 
+GIGA hole coordinates and CAD attribution are listed in [GIGA-R1-WIFI-SOURCE.md](GIGA-R1-WIFI-SOURCE.md).
+
 ## Fit notes
 
+- **GIGA R1 WiFi:** ABX00063 board shape and six mounting holes only. The small USB/audio connector anchor holes are deliberately excluded. Headers, installed component heights, USB/audio overhang and antenna/display access are not inserted by a board-shape template.
 - **Uno R3:** nominal R3 geometry, not a blanket claim for R4, Uno Q, Mega or clones. Verify USB and barrel connector clearances on the selected host.
 - **MKR:** nominal WiFi 1010 reference envelope. Exact variant body size and board-to-hole offsets require review. Turn mounting holes off if the target board does not use this pattern. Antenna and battery connector clearances remain design responsibilities.
 - **Raspberry Pi:** the 65 × 56 mm add-on/HAT outline, not an 85 mm host SBC outline. It does not cover Pico, Compute Module or original 26-pin boards. A board shape alone does not establish HAT or HAT+ compliance; verify model-specific connectors, cooling, standoffs and power requirements.
 
 ## Saved data and exports
 
-The finished outline and actual NPTH objects are saved in ordinary project geometry. Optional `board.template` and per-hole `boardTemplate` provenance identify the picker selection and unchanged generated holes; they do not replace actual coordinates. Metadata validates on import and survives JSON/autosave. Existing schema 1/2 projects without metadata continue to load. v1.7 is required for preset-aware replacement behavior.
+The finished outline and actual NPTH objects are saved in ordinary project geometry. Optional `board.template` and per-hole `boardTemplate` provenance identify the picker selection and unchanged generated holes; they do not replace actual coordinates. Metadata validates on import and survives JSON/autosave. Existing schema 1/2 projects without metadata continue to load. v1.7 is required for preset-aware replacement behavior; GIGA template metadata requires v1.8.2 or newer.
 
-Gerber Edge.Cuts, separate NPTH Excellon and native KiCad PCB exports contain the geometry. The enclosure handoff receives the same outline, holes, board thickness and existing component heights. Empty templates generate four enabled mounting supports by default; inspect bore dimensions and support settings for the actual hardware. Three portable blank project starters are included under `examples/board-*.circuitbench.json`.
+Gerber Edge.Cuts, separate NPTH Excellon and native KiCad PCB exports contain the geometry. The enclosure handoff receives the same outline, holes, board thickness and existing component heights. Empty templates generate one enabled support per mounting hole (six for GIGA, four for the other presets); inspect bore dimensions and support settings for the actual hardware. Four portable blank project starters are included under `examples/board-*.circuitbench.json`.
 
 ## Sources and attribution
 

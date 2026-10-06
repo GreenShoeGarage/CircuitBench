@@ -1,0 +1,10 @@
+PASS Offline picker previews four source families and rotation; Escape cancels without changing the board
+PASS Board size and toolbar both open the picker; apply, Undo and Redo retain the electrical design
+PASS MKR outline-only and Raspberry Pi with holes apply correctly; reapply creates no duplicate holes
+PASS Autosave reload and downloaded project JSON retain real outlines, hole provenance and preset choices
+PASS Enclosure workbench builds the selected Pi outline with four supports at its mounting-hole centers
+PASS GIGA six-hole preview, rotated Apply, Undo/Redo, idempotency, color preservation, autosave and clean-context JSON import
+PASS Existing enclosure synchronizes the rotated GIGA outline and all six correctly positioned standoffs
+PASS Mobile dark/high-contrast picker fits the viewport and exposes native keyboard controls
+PASS No uncaught browser errors or runtime network requests; visible release version matches
+9 board-template browser groups passed

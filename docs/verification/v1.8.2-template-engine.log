@@ -1,0 +1,12 @@
+PASS Four source dimensions, Uno stepped edge and rounded corner areas across four orientations
+PASS Mounting patterns retain source diameters and clockwise handedness without scaling
+PASS Applying a preset preserves electrical design, artwork, manual holes, thickness and outside objects
+PASS Reapply is idempotent, rotation keeps anchors, switching replaces only untouched preset holes
+PASS Atomic invalid requests, malformed metadata and hole limits reject without partial edits; JSON and legacy migrate
+PASS Gerber, Excellon and KiCad contain every boundary segment and NPTH at all orientations
+PASS Enclosure handoff uses all holes, stable support anchors and updated board dimensions
+PASS uno-r3 produces valid printable enclosure solids with all template supports
+PASS mkr produces valid printable enclosure solids with all template supports
+PASS pi40 produces valid printable enclosure solids with all template supports
+PASS giga-r1-wifi produces valid printable enclosure solids with all template supports
+11 board-template engine/export/solid groups passed

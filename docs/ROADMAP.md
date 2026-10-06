@@ -1,6 +1,6 @@
 # CIRCUITBENCH development roadmap
 
-Status: v1.8.1 software release, 2026-10-05. Board color selection and project persistence are delivered.
+Status: v1.8.2 software release, 2026-10-05. Board color selection and project persistence are delivered. Arduino GIGA R1 WiFi mechanical templates are included.
 
 | Batch | Delivered | Verification |
 | --- | --- | --- |

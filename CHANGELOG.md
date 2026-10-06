@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.8.2 — 2026-10-05
+
+- Added Arduino GIGA R1 WiFi (ABX00063) template from official Arduino CAD: 101.60 × 53.34 mm, stepped outline with rounded corners and six Ø3.2 mm mounting holes.
+- Generalized template-hole validation and picker counts to the selected family; retained atomic apply, stable hole IDs, undo/redo and project color.
+- Added GIGA geometry/export/enclosure coverage, browser workflow checks, a blank project example and source/license documentation.
+
 ## v1.8.1 — 2026-10-05
 
 - Added PCB layout → Board color with seven named presets, a native color picker and custom hex entry. Changes preview before Apply; Cancel/Escape preserve the project.

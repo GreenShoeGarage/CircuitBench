@@ -2,7 +2,7 @@
 (function(root){
 'use strict';
 const C=typeof module!=='undefined'?require('./core.js'):root.CB,base={...C};
-C.VERSION='1.8.1';
+C.VERSION='1.8.2';
 const id=()=>C.uid(),cl=C.clone;
 function migrate(input){let p=cl(input);if(p.format!=='circuitbench'||![1,2].includes(p.schema))throw Error('Unsupported project. Expected CIRCUITBENCH schema 1 or 2.');
  const legacy=p.schema===1;p.schema=2;p.version=C.VERSION;

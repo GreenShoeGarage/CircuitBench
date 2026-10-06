@@ -1,7 +1,7 @@
-/* CIRCUITBENCH v1.8.1 — GPL-3.0-only */
+/* CIRCUITBENCH v1.8.2 — GPL-3.0-only */
 (function(root){
 'use strict';
-const VERSION='1.8.1', clone=x=>JSON.parse(JSON.stringify(x)), uid=()=> 'id'+Math.random().toString(36).slice(2,12), round=x=>Math.round(x*1e6)/1e6;
+const VERSION='1.8.2', clone=x=>JSON.parse(JSON.stringify(x)), uid=()=> 'id'+Math.random().toString(36).slice(2,12), round=x=>Math.round(x*1e6)/1e6;
 const pad=(n,x,y,name=n,diameter=1.8,drill=.8,type='passive',mount='tht')=>({n:String(n),name:String(name),x,y,diameter,drill,type,mount,net:'',nc:false});
 const defs=[
  {key:'resistor',name:'Resistor · axial',prefix:'R',value:'1k',body:[6.3,2.5],pads:[pad(1,-5.08,0),pad(2,5.08,0)]},

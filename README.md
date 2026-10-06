@@ -1,4 +1,4 @@
-# CIRCUITBENCH 1.8.1
+# CIRCUITBENCH 1.8.2
 
 **A self-hosted schematic and two-layer PCB workbench.**  
 Green Shoe Garage · Field Instrument · GNU GPL v3 only
@@ -7,7 +7,9 @@ Place → connect → lay out → route → inspect → export.
 
 CIRCUITBENCH combines an approachable component workflow with linked schematic and board editing in a local-first browser application. It is an original implementation inspired by LibrePCB and KiCad, not a browser port, fork, endorsed product or feature-equivalent replacement for either desktop suite.
 
-**v1.8.1 adds PCB board colors.** Open **PCB layout → Board color**, choose a preset or custom color, then **Apply color**. The choice applies to both sides, the 3D assembly, enclosure previews and exported PCB SVGs. It is saved in project JSON and local autosave, supports undo/redo, and keeps older projects green. Labels adjust automatically for light colors. Solder-mask ordering colors must still be selected with your fabricator; Gerber and drill geometry do not change.
+**v1.8.2 adds Arduino GIGA R1 WiFi to Board templates**, including its CAD-derived stepped outline, six mounting holes, quarter-turn rotations, and six corresponding enclosure supports. See `docs/GIGA-R1-WIFI-SOURCE.md` for dimensions and source attribution.
+
+**v1.8.1 added PCB board colors.** Open **PCB layout → Board color**, choose a preset or custom color, then **Apply color**. The choice applies to both sides, the 3D assembly, enclosure previews and exported PCB SVGs. It is saved in project JSON and local autosave, supports undo/redo, and keeps older projects green. Labels adjust automatically for light colors. Solder-mask ordering colors must still be selected with your fabricator; Gerber and drill geometry do not change.
 
 **v1.8 adds quick ground, power and signal planes, lead-to-net assignment, and checked wire/plane connection previews inspired by COPPERBENCH.** Open **PCB layout → Nets & planes** to get started. Existing board templates and enclosure tools remain included. No board or enclosure has been physically fabricated or fit-tested for this release.
 
@@ -29,7 +31,7 @@ To upgrade: export JSON, replace both runtime files together, then reload online
 4. **Advanced mode** exposes footprint geometry, pin types, custom symbol positions, body heights and courtyards. **Libraries** saves symbols, footprints and devices. Symbols can have multiple units, and multiple physical pads can map to one logical pin. Create mapped device provides explicit pin-to-pad assignment. Verify actual parts against their datasheets.
 5. **Sheets** creates a parent/child sheet tree sharing one PCB. Labels are global; prefix local nets with their sheet name. Child ports explicitly bind an existing local net to a parent/global net. This is a flattened graph with sheet bindings, not native hierarchical schematic interchange.
 6. Shift-click parts, or use **Select for block**, then **Blocks** to save a circuit. With no group selected, capture the current sheet. Instances receive unique references and prefixed nets. Explicitly list shared nets. Blocks contain components and internal schematic wires; PCB copper is rerouted after placement.
-7. Choose **PCB layout → Board templates** for an Uno R3, MKR or Raspberry Pi HAT-layout outline and optional mounting holes, or keep a custom board. Then place footprints in **PCB layout** using drag, arrows or numeric properties. Back-side placement mirrors local X coordinates; board-editor rotation is clockwise. Lock settled placements.
+7. Choose **PCB layout → Board templates** for an Uno R3, MKR, Raspberry Pi HAT-layout or Arduino GIGA R1 WiFi outline and optional mounting holes, or keep a custom board. Then place footprints in **PCB layout** using drag, arrows or numeric properties. Back-side placement mirrors local X coordinates; board-editor rotation is clockwise. Lock settled placements.
 8. **Route** begins on an assigned pad/via. Add manual corners and finish on the same net. With assistance enabled, the last segment avoids foreign copper, cutouts and mechanical holes. **Route to pin** searches a whole path. It does not push existing copper. Failure calls for repositioning, another layer or manual routing.
 9. To change layers, start a route and click a corner at the intended via. **Via transition** commits that segment, adds a through via and continues on the other layer. **Clean tracks** removes redundant vertices and identical duplicate tracks. Review the result.
 10. The PCB toolbar offers **Flip to back** (shortcut **B**), **Text**, **Image**, **Edit outline** and **Board size**. Drag outline corners or enter exact coordinates. Set width, height and thickness; custom outlines scale while components and routing retain their size and position. See `docs/PCB-EDITING.md`. **Board tools** adds cutouts, holes/slots, zones and additional manufacturing silk. **3D assembly** shows board thickness, holes, copper and dimensioned generic bodies, with orbit, top/bottom views, explode and PNG export.
@@ -158,3 +160,5 @@ Run `npm run test:templates` for the board-preset model, manufacturing, enclosur
 Use **Nets & planes** for back-side GND or GND on both sides, per-face net selection, custom supply/signal planes, and physical connection status. Pick leads on the board or in the searchable table, assign a named net, then preview wires or a plane connection. Keep adds real checked tracks/vias in one undoable edit. Different-net leads are blocked; stale and cancelled previews cannot change the board.
 
 Read [Nets and planes](docs/NETS-AND-PLANES.md) for the workflow, settings, supported limits and export behavior. `examples/planes-and-wires.circuitbench.json` demonstrates two planes, a via connection and signal wiring. Run `npm run test:nets` for engine/browser checks or `npm run test:nets-manufacturing` for independent Gerbonara/Shapely export checks.
+
+GIGA R1 WiFi mechanical template data in `board-template-data.js` is adapted from Arduino S.r.l. hardware CAD under CC BY-SA 4.0. See `docs/GIGA-R1-WIFI-SOURCE.md` and `vendor/ARDUINO-GIGA-LICENSE.txt`.

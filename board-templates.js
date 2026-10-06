@@ -26,6 +26,7 @@ SOFTWARE.
  */
 (function(root){'use strict';
 const C=typeof module!=='undefined'?require('./board-editing'):root.CB;
+const sourced=typeof module!=='undefined'?require('./board-template-data'):root.CBBoardTemplateData;
 const definitions=[
  {id:'uno-r3',name:'Arduino Uno R3',tag:'Shield / carrier',width:68.58,height:53.34,radius:0,
   points:[[0,0],[64.516,0],[66.04,1.524],[66.04,12.954],[68.58,15.494],[68.58,48.26],[66.04,50.8],[66.04,53.34],[0,53.34]],
@@ -40,6 +41,7 @@ const definitions=[
   holes:[[3.5,3.5],[61.5,3.5],[3.5,52.5],[61.5,52.5]],drill:2.7,
   note:'65 × 56 mm legacy-style HAT outline, with GPIO along the top in the unrotated front view. This is an add-on board shape, not the 85 mm Pi host PCB, Pico, Compute Module or HAT/HAT+ certification.',
   sources:['https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-mechanical-drawing.pdf','https://datasheets.raspberrypi.com/hat/hat-plus-specification.pdf']}
+ ,sourced.gigaR1WiFi
 ];
 const get=id=>{const d=definitions.find(d=>d.id===id);if(!d)throw Error('Choose a supported board template.');return d;};
 const same=(a,b)=>Math.abs(a-b)<.00001;
@@ -71,7 +73,7 @@ function applyBoardTemplate(p,id,{rotation=0,holes=true}={}){
 const validate=C.validate;
 C.validate=function(input){const p=validate(input),check=t=>{if(!t||typeof t!=='object'||t.revision!==1||!definitions.some(d=>d.id===t.family))throw Error('Invalid board template metadata.');};
  if(p.board.template!==undefined){const t=p.board.template;check(t);if(![0,90,180,270].includes(t.rotation)||typeof t.holes!=='boolean')throw Error('Invalid board template options.');}
- for(const h of p.holes)if(h.boardTemplate!==undefined){const t=h.boardTemplate;check(t);if(!Number.isInteger(t.index)||t.index<0||t.index>3||![t.x,t.y,t.drill].every(Number.isFinite)||t.x<0||t.y<0||t.x>500||t.y>500||t.drill<.2||t.drill>30)throw Error('Invalid template hole provenance.');}
+ for(const h of p.holes)if(h.boardTemplate!==undefined){const t=h.boardTemplate;check(t);if(!Number.isInteger(t.index)||t.index<0||t.index>=get(t.family).holes.length||![t.x,t.y,t.drill].every(Number.isFinite)||t.x<0||t.y<0||t.x>500||t.y>500||t.drill<.2||t.drill>30)throw Error('Invalid template hole provenance.');}
  return p;
 };
 Object.assign(C,{boardTemplates:()=>C.clone(definitions),boardTemplate,applyBoardTemplate});

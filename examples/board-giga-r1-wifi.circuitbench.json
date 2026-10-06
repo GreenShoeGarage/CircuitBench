@@ -1,0 +1,401 @@
+{
+  "format": "circuitbench",
+  "schema": 2,
+  "version": "1.8.2",
+  "title": "Arduino GIGA R1 WiFi blank board",
+  "revision": "A",
+  "board": {
+    "width": 101.6,
+    "height": 53.34,
+    "thickness": 1.6,
+    "color": "#153e35",
+    "outline": [
+      {
+        "x": 0,
+        "y": 52.34
+      },
+      {
+        "x": 0,
+        "y": 1
+      },
+      {
+        "x": 0.0048,
+        "y": 0.902
+      },
+      {
+        "x": 0.0192,
+        "y": 0.8049
+      },
+      {
+        "x": 0.0431,
+        "y": 0.7097
+      },
+      {
+        "x": 0.0761,
+        "y": 0.6173
+      },
+      {
+        "x": 0.1181,
+        "y": 0.5286
+      },
+      {
+        "x": 0.1685,
+        "y": 0.4444
+      },
+      {
+        "x": 0.227,
+        "y": 0.3656
+      },
+      {
+        "x": 0.2929,
+        "y": 0.2929
+      },
+      {
+        "x": 0.3656,
+        "y": 0.227
+      },
+      {
+        "x": 0.4444,
+        "y": 0.1685
+      },
+      {
+        "x": 0.5286,
+        "y": 0.1181
+      },
+      {
+        "x": 0.6173,
+        "y": 0.0761
+      },
+      {
+        "x": 0.7097,
+        "y": 0.0431
+      },
+      {
+        "x": 0.8049,
+        "y": 0.0192
+      },
+      {
+        "x": 0.902,
+        "y": 0.0048
+      },
+      {
+        "x": 1,
+        "y": 0
+      },
+      {
+        "x": 97.536,
+        "y": 0
+      },
+      {
+        "x": 99.06,
+        "y": 1.524
+      },
+      {
+        "x": 99.06,
+        "y": 12.954
+      },
+      {
+        "x": 101.6,
+        "y": 15.494
+      },
+      {
+        "x": 101.6,
+        "y": 48.26
+      },
+      {
+        "x": 99.06,
+        "y": 50.8
+      },
+      {
+        "x": 99.06,
+        "y": 52.34
+      },
+      {
+        "x": 99.0552,
+        "y": 52.438
+      },
+      {
+        "x": 99.0408,
+        "y": 52.5351
+      },
+      {
+        "x": 99.0169,
+        "y": 52.6303
+      },
+      {
+        "x": 98.9839,
+        "y": 52.7227
+      },
+      {
+        "x": 98.9419,
+        "y": 52.8114
+      },
+      {
+        "x": 98.8915,
+        "y": 52.8956
+      },
+      {
+        "x": 98.833,
+        "y": 52.9744
+      },
+      {
+        "x": 98.7671,
+        "y": 53.0471
+      },
+      {
+        "x": 98.6944,
+        "y": 53.113
+      },
+      {
+        "x": 98.6156,
+        "y": 53.1715
+      },
+      {
+        "x": 98.5314,
+        "y": 53.2219
+      },
+      {
+        "x": 98.4427,
+        "y": 53.2639
+      },
+      {
+        "x": 98.3503,
+        "y": 53.2969
+      },
+      {
+        "x": 98.2551,
+        "y": 53.3208
+      },
+      {
+        "x": 98.158,
+        "y": 53.3352
+      },
+      {
+        "x": 98.06,
+        "y": 53.34
+      },
+      {
+        "x": 1,
+        "y": 53.34
+      },
+      {
+        "x": 0.902,
+        "y": 53.3352
+      },
+      {
+        "x": 0.8049,
+        "y": 53.3208
+      },
+      {
+        "x": 0.7097,
+        "y": 53.2969
+      },
+      {
+        "x": 0.6173,
+        "y": 53.2639
+      },
+      {
+        "x": 0.5286,
+        "y": 53.2219
+      },
+      {
+        "x": 0.4444,
+        "y": 53.1715
+      },
+      {
+        "x": 0.3656,
+        "y": 53.113
+      },
+      {
+        "x": 0.2929,
+        "y": 53.0471
+      },
+      {
+        "x": 0.227,
+        "y": 52.9744
+      },
+      {
+        "x": 0.1685,
+        "y": 52.8956
+      },
+      {
+        "x": 0.1181,
+        "y": 52.8114
+      },
+      {
+        "x": 0.0761,
+        "y": 52.7227
+      },
+      {
+        "x": 0.0431,
+        "y": 52.6303
+      },
+      {
+        "x": 0.0192,
+        "y": 52.5351
+      },
+      {
+        "x": 0.0048,
+        "y": 52.438
+      }
+    ],
+    "origin": {
+      "x": 0,
+      "y": 0
+    },
+    "template": {
+      "family": "giga-r1-wifi",
+      "revision": 1,
+      "rotation": 0,
+      "holes": true
+    }
+  },
+  "rules": {
+    "clearance": 0.25,
+    "edge": 0.5,
+    "minWidth": 0.25,
+    "annular": 0.15,
+    "mask": 0.05,
+    "drill": 0.25,
+    "maskWeb": 0.1,
+    "courtyard": 0.25,
+    "silk": 0.15,
+    "silkLine": 0.15
+  },
+  "components": [],
+  "tracks": [],
+  "vias": [],
+  "nets": [
+    "GND",
+    "+5V"
+  ],
+  "assumptions": "Mechanical outline and six mounting holes from Arduino ABX00063 CAD. Add and verify mating connectors, component heights and clearances before fabrication.",
+  "evidence": "Source geometry and attribution: docs/GIGA-R1-WIFI-SOURCE.md. No physical fit test performed.",
+  "baseline": null,
+  "sheets": [
+    {
+      "id": "main",
+      "name": "Main circuit",
+      "parent": null
+    }
+  ],
+  "wires": [],
+  "junctions": [],
+  "labels": [],
+  "ports": [],
+  "holes": [
+    {
+      "id": "id2087l0sgh0",
+      "x": 15.24,
+      "y": 2.54,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "giga-r1-wifi",
+        "revision": 1,
+        "index": 0,
+        "x": 15.24,
+        "y": 2.54,
+        "drill": 3.2
+      }
+    },
+    {
+      "id": "id5946pk0g70",
+      "x": 90.17,
+      "y": 2.54,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "giga-r1-wifi",
+        "revision": 1,
+        "index": 1,
+        "x": 90.17,
+        "y": 2.54,
+        "drill": 3.2
+      }
+    },
+    {
+      "id": "id67kkemdkeg",
+      "x": 66.04,
+      "y": 17.78,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "giga-r1-wifi",
+        "revision": 1,
+        "index": 2,
+        "x": 66.04,
+        "y": 17.78,
+        "drill": 3.2
+      }
+    },
+    {
+      "id": "iduwv2guk6o9",
+      "x": 66.0656,
+      "y": 45.7073,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "giga-r1-wifi",
+        "revision": 1,
+        "index": 3,
+        "x": 66.0656,
+        "y": 45.7073,
+        "drill": 3.2
+      }
+    },
+    {
+      "id": "idrp6rgh4bcy",
+      "x": 13.9956,
+      "y": 50.7873,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "giga-r1-wifi",
+        "revision": 1,
+        "index": 4,
+        "x": 13.9956,
+        "y": 50.7873,
+        "drill": 3.2
+      }
+    },
+    {
+      "id": "id8scp8xbyho",
+      "x": 96.52,
+      "y": 50.8,
+      "drill": 3.2,
+      "slot": 0,
+      "rotation": 0,
+      "plated": false,
+      "boardTemplate": {
+        "family": "giga-r1-wifi",
+        "revision": 1,
+        "index": 5,
+        "x": 96.52,
+        "y": 50.8,
+        "drill": 3.2
+      }
+    }
+  ],
+  "cutouts": [],
+  "silk": [],
+  "zones": [],
+  "library": {
+    "symbols": [],
+    "footprints": [],
+    "devices": [],
+    "blocks": []
+  },
+  "netClasses": [],
+  "importNotes": []
+}
